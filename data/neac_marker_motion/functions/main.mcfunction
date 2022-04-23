@@ -42,7 +42,7 @@
 #   このライブラリで自動的に付与されるタグを全て剥がすfunctionです。
 #   実行者はそれらのタグがついたマーカーに必ず変更してください。
 #
-# @within tag/function neac_marker_motion:
+# @within function neac_marker_motion:
 
 
 #ベクトル、到達目標位置用の取得に使うマーカー

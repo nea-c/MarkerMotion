@@ -2,8 +2,12 @@
 
 Markerを移動速度や重力、バウンド回数などを指定して動かすことができるライブラリデータパック。 
 
-## 動作要件 / 最新
-MinecraftJE 1.18.2 / NeAcMarkerMotion v1.0
+## 最新
+
+NeAcMarkerMotion v1.0
+
+## 動作要件
+MinecraftJE 1.18.2
 
 ## 使用方法
 
@@ -35,23 +39,47 @@ summon marker ~ ~ ~ {Tags:["A"],data:{NeAcMarkerMotion:{speed:{amount:150,loss:{
 </tbody></table>
 
 ### 補足
-* speed.amountのみで動作します。
-* 小数値はgravity以外は第3位まで、gravityは第2位まで設定できます。
+* `speed.amount`のみで動作します。
+* 小数値は`gravity以外は`第3位まで、`gravityは`第2位まで設定できます。
 * また、この説明は`neac_marker_motion:main`にも記述してあります。
 
 ### 返りタグ
-* NeAcMarkerMotion.on_block : ブロックに接触した時 (跳ねた場合は付与されません)
-* NeAcMarkerMotion.on_block.wall , NeAcMarkerMotion.on_block.y , NeAcMarkerMotion.on_block.[方角] : ブロックに接触した方角やカテゴリ (NeAcMarkerMotion.on_blockがない場合は付与されません)
-* NeAcMarkerMotion.speed.0 : スピードが0以下になった時
-* NeAcMarkerMotion.stopwith.hit : stopwith.hitがtrueかつ、hitタグを付与したエンティティがいた時
-* NeAcMarkerMotion.stop : 移動処理(main.function)が実行されないようになるタグ。
-　NeAcMarkerMotion.on_block,NeAcMarkerMotion.speed.0,NeAcMarkerMotion.stopwith.hitのタグがあれば必ず付与されています。
+* NeAcMarkerMotion.on_block
+```
+ブロックに接触した時 (跳ねた場合は付与されません)
+```
+* NeAcMarkerMotion.on_block.wall , NeAcMarkerMotion.on_block.y , NeAcMarkerMotion.on_block.[方角]
+```
+ブロックに接触した方角やカテゴリ (NeAcMarkerMotion.on_blockがない場合は付与されません)
+```
+* NeAcMarkerMotion.speed.0
+```
+スピードが0以下になった時
+```
+* NeAcMarkerMotion.stopwith.hit
+```
+stopwith.hitがtrueかつ、hitタグを付与したエンティティがいた時
+```
+* NeAcMarkerMotion.stop
+```
+移動処理(main.function)が実行されないようになるタグ。
+NeAcMarkerMotion.on_block, NeAcMarkerMotion.speed.0, NeAcMarkerMotion.stopwith.hitのタグがあれば必ず付与されています。
+```
 
 ### 返りNBT
-* Motion : 移動量 (この値を使って綺麗な繋がったパーティクル出したりとかが可能)
-* GravitySum : 重力の合計 (1秒毎にリセットとかで変な挙動できるかもしれない)
+* data.NeAcMarkerMotion.Motion
+```
+移動量。
+この値を使って綺麗な繋がったパーティクル出したりとかが可能。exampleを参照。
+```
+* data.NeAcMarkerMotion.GravitySum
+```
+重力の合計。
+1秒毎にリセットとかで変な挙動できるかもしれない。
+```
 
 ### ダメージを与える飛び道具として扱う際の当たり判定に関して
+
 このライブラリを呼ぶ前に判定に入れたいエンティティに対し`NeAcMarkerMotion.target`タグを付与します。
 
 distanceとかで範囲指定してあげると軽量化になると思います。
@@ -69,8 +97,8 @@ distanceとかで範囲指定してあげると軽量化になると思います
 
 ## クレジット
 
-* 一部引用: [SmartMotion](https://github.com/Irohamaru/SmartMotion)
-* サポート: [C.fuaim様](https://github.com/Cfuaim)
+* 移動ベクトル取得部分引用 ： [SmartMotion](https://github.com/Irohamaru/SmartMotion)
+* サポート ： [C.fuaim様](https://github.com/Cfuaim)　超感謝。
 
 ## ライセンス
 

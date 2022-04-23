@@ -119,3 +119,8 @@ distanceとかで範囲指定してあげると軽量化になると思います
 ## ライセンス
 
 [MIT Licence](https://github.com/nea-c/NeAcMarkerMotion/blob/master/LICENSE)に基づく
+
+## 更新履歴
+
+* v1.0
+ * 初版

@@ -1,7 +1,14 @@
 # NeAcMarkerMotion
 
-Markerを移動速度や重力、バウンド回数などを指定して動かすことができるライブラリ。 
+Markerを移動速度や重力、バウンド回数などを指定して動かすことができるライブラリデータパック。 
+
+## 動作要件 / 最新
+MinecraftJE 1.18.2 / NeAcMarkerMotion v1.0
+
 ## 使用方法
+
+### 絶対事項
+
 * 実行者はMarkerであること。
 * `neac_marker_motion:`を実行すること。
 
@@ -60,4 +67,11 @@ distanceとかで範囲指定してあげると軽量化になると思います
 実行者はそれらのタグがついたMarkerに必ず変更してください。
 
 
-### クレジット / Credit
+## クレジット
+
+* 一部引用: [SmartMotion](https://github.com/Irohamaru/SmartMotion)
+* サポート: [C.fuaim様](https://github.com/Cfuaim)
+
+## ライセンス
+
+[MIT Licence](https://github.com/nea-c/NeAcMarkerMotion/blob/master/LICENSE)に基づく

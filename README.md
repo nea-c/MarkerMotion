@@ -90,9 +90,25 @@ distanceとかで範囲指定してあげると軽量化になると思います
 
 
 ### tag_remove.mcfunction
-このライブラリで自動的に付与されるタグを全て剥がすfunctionです。
 
-実行者はそれらのタグがついたMarkerに必ず変更してください。
+このライブラリを実行したMarkerに自動的に付与されるタグを全て剥がすfunction。
+
+`neac_marker_motion:example/bounce_advanced`の挙動で利用しています。
+
+
+### exampleに関して
+
+上記で少し記述したように挙動の例をいくつか同梱しています。参考程度に。
+
+利用する際は必要ないため削除して構いませんが、
+
+削除する場合はこれらのファイル/フォルダを削除してください。
+
+`minecraft/tag/functions/tick.json`
+
+`neac_marker_motion/functions/example`
+
+`neac_marker_motion/tags/entity_types`
 
 
 ## クレジット

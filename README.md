@@ -4,7 +4,7 @@ Markerを移動速度や重力、バウンド回数などを指定して動か�
 
 ## 最新
 
-NeAcMarkerMotion v1.0
+v1.0
 
 ## 動作要件
 MinecraftJE 1.18.2

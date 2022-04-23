@@ -109,7 +109,7 @@
     #現在位置用マーカーを到達目標位置に向ける
         execute as @e[tag=NeAcMarkerMotion.this2,limit=1] at @s facing entity @e[tag=NeAcMarkerMotion.this,sort=furthest,limit=1] feet run tp @s ~ ~ ~ ~ ~
     #function再起で到達目標位置までの間にブロックがあるかチェック
-    #その際targetタグがいればヒット判定を返す　また、speed.hitstopがtrueであればNeAcMarkerMotion.stopwith.hitを返す
+    #その際targetタグがいればヒット判定を返す　また、stopwith.hitがtrueであればNeAcMarkerMotion.stopwith.hitを返す
         tag @s add NeAcMarkerMotion.me
         #hit時にそこで停止する処理用に一時的にスコア設定
             execute store result score #NeAcMarkerMotion.Temporary1 neac_value run data get entity @s data.NeAcMarkerMotion.stopwith.hit

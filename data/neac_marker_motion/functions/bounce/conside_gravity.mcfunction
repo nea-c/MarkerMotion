@@ -42,3 +42,4 @@ scoreboard players reset #NeAcMarkerMotion.Bounce.CG.YVec
 scoreboard players reset #NeAcMarkerMotion.Bounce.CG.YVec.Before
 scoreboard players reset #NeAcMarkerMotion.Bounce.CG.YVec.Before.copy
 scoreboard players reset #NeAcMarkerMotion.Bounce.CG.GravitySum
+scoreboard players reset #NeAcMarkerMotion.Bounce.CG.Temporary2

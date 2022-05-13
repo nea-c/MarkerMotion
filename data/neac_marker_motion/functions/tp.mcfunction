@@ -17,7 +17,7 @@ execute at @s unless entity @e[tag=NeAcMarkerMotion.this,limit=1,distance=..0.00
 execute at @s unless block ^ ^ ^0.003125 #neac_marker_motion:no_collision run tag @s add NeAcMarkerMotion.tp.blocked
 execute at @s unless entity @e[tag=NeAcMarkerMotion.this,limit=1,distance=..0.003125] if block ^ ^ ^0.003125 #neac_marker_motion:no_collision run tp @s ^ ^ ^0.003125
 
-execute if entity @e[tag=NeAcMarkerMotion.target,limit=1] at @s positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=NeAcMarkerMotion.target] positioned ~0.5 ~0.5 ~0.5 if entity @s[dx=0] run tag @s add NeAcMarkerMotion.hit
+execute if entity @e[tag=NeAcMarkerMotion.target,limit=1] at @s positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=NeAcMarkerMotion.target] run tag @s add NeAcMarkerMotion.hit
 execute as @a[tag=NeAcMarkerMotion.hit,gamemode=spectator] run tag @s remove NeAcMarkerMotion.hit
 execute if score #NeAcMarkerMotion.Temporary1 neac_value matches 1 if entity @e[tag=NeAcMarkerMotion.hit,limit=1] run tag @e[tag=NeAcMarkerMotion.me,limit=1] add NeAcMarkerMotion.stopwith.hit
 execute if score #NeAcMarkerMotion.Temporary1 neac_value matches 1 if entity @e[tag=NeAcMarkerMotion.hit,limit=1] run tag @s add NeAcMarkerMotion.tp.blocked

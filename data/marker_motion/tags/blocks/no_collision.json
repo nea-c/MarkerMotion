@@ -98,6 +98,8 @@
         "minecraft:amethyst_cluster",
         "minecraft:moss_carpet",
         "minecraft:hanging_roots",
-        "minecraft:spore_blossom"
+        "minecraft:spore_blossom",
+        "minecraft:tall_grass",
+        "minecraft:large_fern"
     ]
 }

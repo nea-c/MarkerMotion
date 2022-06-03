@@ -1,5 +1,5 @@
-#example/tick/2
-summon marker ~ ~ ~ {Tags:["NeAcMarkerMotionExample.Type2","this"],data:{NeAcMarkerMotion:{speed:{amount:100}}}}
+#example/tick/1
+summon marker ~ ~ ~ {Tags:["MarkerMotionExample.Type1","this"],data:{MarkerMotion:{speed:{amount:100},gravity:392.00}}}
 
 execute anchored eyes positioned ^ ^ ^0.3 positioned ~ ~ ~ run tp @e[type=marker,tag=this] ~ ~ ~ ~ ~
 

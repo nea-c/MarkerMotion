@@ -1,10 +1,10 @@
-# NeAcMarkerMotion
+# MarkerMotion
 
 Markerを移動速度や重力、バウンド回数などを指定して動かすことができるライブラリデータパック。 
 
 ## 最新
 
-v1.1
+v2.0
 
 ## 動作要件
 MinecraftJE 1.18.2
@@ -14,14 +14,14 @@ MinecraftJE 1.18.2
 ### 絶対事項
 
 * 実行者はMarkerであること。
-* `neac_marker_motion:`を実行すること。
+* `marker_motion:`を実行すること。
 
 ### 記述方法
 
 Markerの召喚時や召喚後に以下のようなNBTを設定する。
 ```mcfunction
 ## 例
-summon marker ~ ~ ~ {Tags:["A"],data:{NeAcMarkerMotion:{speed:{amount:150,loss:{amount:0.950,type:"multiply"}},gravity:392.00,bounce:{count:2,e:0.950,g:1b},stopwith:{hit:1b}}}}
+summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:150,loss:{amount:0.950,type:"multiply"}},gravity:392.00,bounce:{count:2,e:0.950,g:1b},stopwith:{hit:1b}}}}
 ```
 
 ### 設定項目
@@ -41,38 +41,38 @@ summon marker ~ ~ ~ {Tags:["A"],data:{NeAcMarkerMotion:{speed:{amount:150,loss:{
 ### 補足
 * `speed.amount`のみで動作します。
 * 小数値は`gravity以外は`第3位まで、`gravityは`第2位まで設定できます。
-* また、この説明は`neac_marker_motion:main`にも記述してあります。
+* また、この説明は`marker_motion:main`にも記述してあります。
 
 ### 返りタグ
-* NeAcMarkerMotion.on_block
+* MarkerMotion.on_block
 ```
 ブロックに接触した時 (跳ねた場合は付与されません)
 ```
-* NeAcMarkerMotion.on_block.wall , NeAcMarkerMotion.on_block.y , NeAcMarkerMotion.on_block.[方角]
+* MarkerMotion.on_block.wall , MarkerMotion.on_block.y , MarkerMotion.on_block.[方角]
 ```
-ブロックに接触した方角やカテゴリ (NeAcMarkerMotion.on_blockがない場合は付与されません)
+ブロックに接触した方角やカテゴリ (MarkerMotion.on_blockがない場合は付与されません)
 ```
-* NeAcMarkerMotion.speed.0
+* MarkerMotion.speed.0
 ```
 スピードが0以下になった時
 ```
-* NeAcMarkerMotion.stopwith.hit
+* MarkerMotion.stopwith.hit
 ```
 stopwith.hitがtrueかつ、hitタグを付与したエンティティがいた時
 ```
-* NeAcMarkerMotion.stop
+* MarkerMotion.stop
 ```
 移動処理(main.function)が実行されないようになるタグ。
-NeAcMarkerMotion.on_block, NeAcMarkerMotion.speed.0, NeAcMarkerMotion.stopwith.hitのタグがあれば必ず付与されています。
+MarkerMotion.on_block, MarkerMotion.speed.0, MarkerMotion.stopwith.hitのタグがあれば必ず付与されています。
 ```
 
 ### 返りNBT
-* data.NeAcMarkerMotion.Motion
+* data.MarkerMotion.Motion
 ```
 移動量。
 この値を使って綺麗な繋がったパーティクル出したりとかが可能。exampleを参照。
 ```
-* data.NeAcMarkerMotion.GravitySum
+* data.MarkerMotion.GravitySum
 ```
 重力の合計。
 1秒毎にリセットとかで変な挙動できるかもしれない。
@@ -80,11 +80,11 @@ NeAcMarkerMotion.on_block, NeAcMarkerMotion.speed.0, NeAcMarkerMotion.stopwith.h
 
 ### ダメージを与える飛び道具として扱う際の当たり判定に関して
 
-このライブラリを呼ぶ前に判定に入れたいエンティティに対し`NeAcMarkerMotion.target`タグを付与します。
+このライブラリを呼ぶ前に判定に入れたいエンティティに対し`MarkerMotion.target`タグを付与します。
 
 distanceとかで範囲指定してあげると軽量化になると思います。
 
-当たり判定はヒットボックスサイズで検知され、`NeAcMarkerMotion.hit`タグを返します。
+当たり判定はヒットボックスサイズで検知され、`MarkerMotion.hit`タグを返します。
 
 付与された、または付与したタグは必ず削除するようにしてください。
 
@@ -93,7 +93,7 @@ distanceとかで範囲指定してあげると軽量化になると思います
 
 このライブラリを実行したMarkerに自動的に付与されるタグを全て剥がすfunction。
 
-`neac_marker_motion:example/bounce_advanced`の挙動で利用しています。
+`marker_motion:example/bounce_advanced`の挙動で利用しています。
 
 
 ### exampleに関して
@@ -106,9 +106,9 @@ distanceとかで範囲指定してあげると軽量化になると思います
 
 `minecraft/tag/functions/tick.json`
 
-`neac_marker_motion/functions/example`
+`marker_motion/functions/example`
 
-`neac_marker_motion/tags/entity_types`
+`marker_motion/tags/entity_types`
 
 
 ## クレジット
@@ -118,9 +118,16 @@ distanceとかで範囲指定してあげると軽量化になると思います
 
 ## ライセンス
 
-[MIT Licence](https://github.com/nea-c/NeAcMarkerMotion/blob/master/LICENSE)に基づく
+[MIT Licence](https://github.com/nea-c/MarkerMotion/blob/master/LICENSE)に基づく
 
 ## 更新履歴
+
+* v2.0
+  * データパックの名称から`"NeAc"`を削除
+  * 動作要件に`MinecraftJE 1.18.2`と記載したにも関わらず`pack_format`が**9**でなかった問題を修正
+  * `data.MarkerMotion.speed.loss.type`が`"multiply"`でないときの動作が正常でなかった問題を修正
+  * 直接弄ったりしていたデータを一時ストレージに入れてから利用することでの微軽量化試み
+  * その他軽微な修正
 
 * v1.1
   * いくつかの問題を修正

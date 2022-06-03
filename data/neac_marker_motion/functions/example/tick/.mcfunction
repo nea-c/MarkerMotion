@@ -1,3 +1,0 @@
-execute if entity @e[tag=NeAcMarkerMotionExample.Type1,limit=1] as @e[tag=NeAcMarkerMotionExample.Type1] at @s run function neac_marker_motion:example/tick/1
-execute if entity @e[tag=NeAcMarkerMotionExample.Type2,limit=1] as @e[tag=NeAcMarkerMotionExample.Type2] at @s run function neac_marker_motion:example/tick/2
-execute if entity @e[tag=NeAcMarkerMotionExample.Type3,limit=1] as @e[tag=NeAcMarkerMotionExample.Type3] at @s run function neac_marker_motion:example/tick/3

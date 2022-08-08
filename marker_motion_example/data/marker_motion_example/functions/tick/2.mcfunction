@@ -1,8 +1,15 @@
 
+execute as @e[type=#marker_motion_example:test_entitys,distance=..5] run tag @s add MarkerMotion.target
+
 function marker_motion:
 
+execute as @e[type=#marker_motion_example:test_entitys,tag=MarkerMotion.target] run tag @s remove MarkerMotion.target
+
 #パーティクル出す
-execute at @s run function marker_motion:example/particle/main
+execute at @s run function marker_motion_example:particle/main
+
+execute if entity @e[tag=MarkerMotion.hit,limit=1] as @e[tag=MarkerMotion.hit] run effect give @s instant_damage 1 0 true
+execute if entity @e[tag=MarkerMotion.hit,limit=1] as @e[tag=MarkerMotion.hit] run tag @s remove MarkerMotion.hit
 
 scoreboard players add @s neac_value 1
 

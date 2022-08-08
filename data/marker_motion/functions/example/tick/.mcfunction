@@ -1,3 +1,0 @@
-execute if entity @e[tag=MarkerMotionExample.Type1,limit=1] as @e[tag=MarkerMotionExample.Type1] at @s run function marker_motion:example/tick/1
-execute if entity @e[tag=MarkerMotionExample.Type2,limit=1] as @e[tag=MarkerMotionExample.Type2] at @s run function marker_motion:example/tick/2
-execute if entity @e[tag=MarkerMotionExample.Type3,limit=1] as @e[tag=MarkerMotionExample.Type3] at @s run function marker_motion:example/tick/3

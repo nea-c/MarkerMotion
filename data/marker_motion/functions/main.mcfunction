@@ -179,9 +179,9 @@
 
 # スピード減少
     # constant
-        execute if score #MarkerMotion.SpeedLoss neac_value matches 1.. unless data storage neac: marker_motion.speed.loss{type:"multiply"} store result storage neac: marker_motion.speed.amount int 1 run scoreboard players operation #MarkerMotion.Speed neac_value -= #MarkerMotion.SpeedLoss neac_value
+        execute unless score #MarkerMotion.SpeedLoss neac_value matches 0 unless data storage neac: marker_motion.speed.loss{type:"multiply"} store result storage neac: marker_motion.speed.amount int 1 run scoreboard players operation #MarkerMotion.Speed neac_value -= #MarkerMotion.SpeedLoss neac_value
     # multiply
-        execute if score #MarkerMotion.SpeedLoss neac_value matches 0..999 if data storage neac: marker_motion.speed.loss{type:"multiply"} store result storage neac: marker_motion.speed.amount int 0.001 run scoreboard players operation #MarkerMotion.Speed neac_value *= #MarkerMotion.SpeedLoss neac_value
+        execute unless score #MarkerMotion.SpeedLoss neac_value matches 1000 if data storage neac: marker_motion.speed.loss{type:"multiply"} store result storage neac: marker_motion.speed.amount int 0.001 run scoreboard players operation #MarkerMotion.Speed neac_value *= #MarkerMotion.SpeedLoss neac_value
     
     execute if score #MarkerMotion.Speed neac_value matches ..0 unless data storage neac: marker_motion.bounce{g:1b} run tag @s add MarkerMotion.speed.0
 

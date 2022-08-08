@@ -4,10 +4,10 @@ Markerを移動速度や重力、バウンド回数などを指定して動か�
 
 ## 最新
 
-v2.0
+v2.1
 
 ## 動作要件
-MinecraftJE 1.18.2
+MinecraftJE 1.18.2 ~
 
 ## 使用方法
 
@@ -121,6 +121,9 @@ distanceとかで範囲指定してあげると軽量化になると思います
 [MIT Licence](https://github.com/nea-c/MarkerMotion/blob/master/LICENSE)に基づく
 
 ## 更新履歴
+
+* v2.1
+  * speed.lossの値で加速できるように変更
 
 * v2.0
   * データパックの名称から`"NeAc"`を削除

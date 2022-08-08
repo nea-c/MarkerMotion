@@ -99,23 +99,14 @@ distanceとかで範囲指定してあげると軽量化になると思います
 
 このライブラリを実行したMarkerに自動的に付与されるタグを全て剥がすfunction。
 
-`marker_motion:example/bounce_advanced`の挙動で利用しています。
+`marker_motion_example:bounce_advanced`の挙動で利用しています。
 
 
 ### exampleに関して
 
-上記で少し記述したように挙動の例をいくつか同梱しています。参考程度に。
+上記で少し記述したように挙動の例をいくつか作成しています。参考程度に。
 
-利用する際は必要ないため削除して構いませんが、
-
-削除する場合はこれらのファイル/フォルダを削除してください。
-
-`minecraft/tag/functions/tick.json`
-
-`marker_motion/functions/example`
-
-`marker_motion/tags/entity_types`
-
+MarkerMotion本体と一緒に導入することで実際に動かして確認できます。
 
 ## クレジット
 
@@ -131,6 +122,7 @@ distanceとかで範囲指定してあげると軽量化になると思います
 * v2.1
   * speed.lossの値で加速できるように変更
   * 対応バージョンを1.19.2に変更
+  * exampleとMarkerMotion本体を分離
 
 * v2.0
   * データパックの名称から`"NeAc"`を削除

@@ -18,7 +18,7 @@ execute as @e[tag=MarkerMotion.example.vector_amount] at @s if entity @e[distanc
 execute at @e[tag=MarkerMotion.example.vector_amount] if entity @e[distance=0.5..1,tag=MarkerMotion.example.vector,limit=1,sort=nearest] run scoreboard players add #MarkerMotionParticleMA neac_value 1
 execute as @e[tag=MarkerMotion.example.vector_amount] at @s if entity @e[distance=0.5..1,tag=MarkerMotion.example.vector,limit=1,sort=nearest] run tp @s ^ ^ ^0.5
 
-execute rotated as @e[tag=MarkerMotion.example.vector_amount,limit=1] run function marker_motion:example/particle/render
+execute rotated as @e[tag=MarkerMotion.example.vector_amount,limit=1] run function marker_motion_example:particle/render
 kill @e[tag=MarkerMotion.example.vector_amount]
 
 scoreboard players reset #MarkerMotionParticleMA

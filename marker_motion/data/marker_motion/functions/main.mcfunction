@@ -19,6 +19,7 @@
 #       g : 重力での加速を考慮して跳ねます。true,falseで入力も可。 [真偽値]
 #   stopwith : 途中で移動を停止する条件を指定する。 - (下に子パラメータ
 #       hit : ヒットしたエンティティがいた時。true,falseで入力も可。 [真偽値]
+#       block : ブロックに接触したとき。true,falseで入力も可。 [真偽値]
 #
 ## 設定項目に関して
 #   data.MarkerMotion.speed.amountのみで動作します。
@@ -118,7 +119,7 @@
     # function再起で到達目標位置までの間にブロックがあるかチェック
     # その際targetタグがいればヒット判定を返す　また、stopwith.hitがtrueであればMarkerMotion.stopwith.hitを返す
         tag @s add MarkerMotion.me
-        execute as @e[tag=MarkerMotion.this2,limit=1] run function marker_motion:tp
+        execute as @e[tag=MarkerMotion.this2,limit=1] run function marker_motion:tp/
         tag @s remove MarkerMotion.me
         # 現在位置と到達目標位置の距離が限りなく近い場合は間にブロックがなかったことにして、下のnearestTPの判定にならないように遠ざける
             execute as @e[tag=MarkerMotion.this2,limit=1] at @s if entity @e[tag=this,limit=1,distance=..0.003125] run tp @s ^ ^ ^4
@@ -133,21 +134,21 @@
     data modify entity @s Pos set from entity @e[tag=MarkerMotion.this,limit=1] Pos
 
 # Pos代入によるズレで自身がブロックに埋まっていたら後ろに少し下がる
-    execute at @s align xyz unless block ~ ~ ~ #marker_motion:no_collision at @s rotated as @e[tag=MarkerMotion.this2,limit=1] run tp @s ^ ^ ^-0.01
+    execute unless data storage neac: marker_motion.stopwith{block:0b} at @s align xyz unless block ~ ~ ~ #marker_motion:no_collision at @s rotated as @e[tag=MarkerMotion.this2,limit=1] run tp @s ^ ^ ^-0.01
 
 # ブロック接触チェック
     # east
-        execute unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~0.01 ~ ~ #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 1
+        execute unless data storage neac: marker_motion.stopwith{block:0b} unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~0.01 ~ ~ #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 1
     # west
-        execute unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~-0.01 ~ ~ #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 2
+        execute unless data storage neac: marker_motion.stopwith{block:0b} unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~-0.01 ~ ~ #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 2
     # up
-        execute unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~ ~0.01 ~ #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 3
+        execute unless data storage neac: marker_motion.stopwith{block:0b} unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~ ~0.01 ~ #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 3
     # down
-        execute unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~ ~-0.01 ~ #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 4
+        execute unless data storage neac: marker_motion.stopwith{block:0b} unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~ ~-0.01 ~ #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 4
     # south
-        execute unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~ ~ ~0.01 #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 5
+        execute unless data storage neac: marker_motion.stopwith{block:0b} unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~ ~ ~0.01 #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 5
     # north
-        execute unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~ ~ ~-0.01 #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 6
+        execute unless data storage neac: marker_motion.stopwith{block:0b} unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~ ~ ~-0.01 #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 6
     
     # 接触検知したらいろいろするやつ
         execute if score #MarkerMotion.BlockCheck neac_value matches 1 at @s align x run tp @s ~0.98 ~ ~

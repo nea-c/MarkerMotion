@@ -1,7 +1,6 @@
 #> marker_motion:tp/default
 #
-# 移動先目標までの間にブロックがあるか探す処理
-# その際にヒットボックスでのヒットを行ったりできる
+# ブロックに接触して止まるようにする処理
 #
 # @within function marker_motion:tp/
 

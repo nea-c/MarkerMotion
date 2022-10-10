@@ -1,14 +1,15 @@
 #> marker_motion:tp/
 #
-# 移動先目標までの間の検知分岐
+# 移動先目標までの間にブロックがあるか探す処理
+# その際にヒットボックスでのヒットを行ったりできる
 #
 # @within
 #   function marker_motion:main
 #   function marker_motion:tp/
 
-
-execute unless data storage neac: marker_motion.stopwith{block:0b} run function marker_motion:tp/default
-execute if data storage neac: marker_motion.stopwith{block:0b} run function marker_motion:tp/block_perforate
+# ブロックに接触したら止まるかで処理分岐
+    execute unless data storage neac: marker_motion.stopwith{block:0b} run function marker_motion:tp/default
+    execute if data storage neac: marker_motion.stopwith{block:0b} run function marker_motion:tp/block_perforate
 
 # targetタグがついたエンティティがいればヒットボックス判定でそのタグにhitタグをつける
     execute if entity @e[tag=MarkerMotion.target,limit=1] at @s positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=MarkerMotion.target] run tag @s add MarkerMotion.hit

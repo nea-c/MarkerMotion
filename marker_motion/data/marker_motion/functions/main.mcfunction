@@ -2,7 +2,7 @@
 #
 # メイン処理
 #
-# Markerのdata.MarkerMotion内に speed:{amount:150,loss:{amount:0.950,type:"multiply"}},gravity:392.00,bounce:{count:2,e:0.950,g:1b},stopwith:{hit:1b} のように記述
+# Markerのdata.MarkerMotion内に speed:{amount:150,loss:{amount:0.950,type:"multiply"}},gravity:392.00,bounce:{count:2,e:0.950,g:1b},stopwith:{hit:1b,block:1b} のように記述
 #
 ## 設定項目
 #   speed : 速度関連 - (下に子パラメータ

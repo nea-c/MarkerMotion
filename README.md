@@ -4,15 +4,13 @@ Markerを移動速度や重力、バウンド回数などを指定して動か�
 
 ## 最新
 
-v2.1
+v2.2
 
 ## 動作要件
 
 MinecraftJE 1.19.2
 
-過去のバージョンへはブロックタグを適宜書き換えることで対応できます。
-
-1.18より前のバージョンでの動作は保障しません。
+動作は保障しませんが、ブロックタグを書き換えることで過去のバージョンへ対応できます。
 
 
 ## 使用方法
@@ -27,21 +25,26 @@ MinecraftJE 1.19.2
 Markerの召喚時や召喚後に以下のようなNBTを設定する。
 ```mcfunction
 ## 例
-summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:150,loss:{amount:0.950,type:"multiply"}},gravity:392.00,bounce:{count:2,e:0.950,g:1b},stopwith:{hit:1b}}}}
+summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:150,loss:{amount:0.950,type:"multiply"}},gravity:392.00,bounce:{count:2,e:0.950,g:1b},stopwith:{hit:1b,block:1b}}}}
 ```
 
 ### 設定項目
 <table><thead>
 </thead><tbody>
 <tr><th rowspan="4" align="center">speed</th><th align="center">amount</th><td colspan="8">初期速度</td>
-<tr><th rowspan="3" align="center">loss</th><th rowspan="3">tick毎の減少量</th><td colspan="2" align="center">amount</td><td colspan="8">量。typeパラメータによって効果が異なる。</td></tr>
-<tr><td rowspan="2" align="center">type</td><td rowspan="2">amountの計算方法を変更する。</td><td align="center">"constant"</td><td>減算で計算します [整数値,Default]</td></tr>
+<tr><th rowspan="3" align="center">loss</th><th rowspan="3">tick毎の減少量</th>
+<td colspan="2" align="center">amount</td><td colspan="8">量。typeパラメータによって効果が異なる。</td></tr>
+<tr><td rowspan="2" align="center">type</td><td rowspan="2">amountの計算方法を変更する。</td>
+<td align="center">"constant"</td><td>減算で計算します [整数値,デフォルト]</td></tr>
 <tr><td align="center">"multiply"</td><td>倍率で計算します [小数値,1/1000] 0.9なら10%損失</td></tr>
 <tr><td align="center">gravity</td><td align="center">重力の強さ</td><td colspan="7">98の倍数が比較的決めやすくておすすめ [小数値,1/100]</td></tr>
-<tr><td rowspan="3" align="center">bounce</td><td align="center">count</td><td colspan="8">跳ねる回数。-1で無限。 [整数値]</td></tr>
+<tr><td rowspan="3" align="center">bounce</td>
+<td align="center">count</td><td colspan="8">跳ねる回数。-1で無限。 [整数値]</td></tr>
 <tr><td align="center">e</td><td colspan="8">跳ねたときに減少するスピードの量。倍率で計算します。 [小数値,1/1000] 0.9なら10%損失</td></tr>
 <tr><td align="center">g</td><td colspan="8">床や天井にぶつかって跳ねる際、重力での加速を考慮して跳ねます。true,falseで入力も可。 [真偽値]</td></tr>
-<tr><td rowspan="1" align="center">stopwith</td><td>途中で停止する条件</td><td align="center">hit</td><td colspan="8">ヒットしたエンティティがいた時。true,falseで入力も可。 [真偽値]</td></tr>
+<tr><td rowspan="2" align="center">stopwith</td><td rowspan="2">途中で停止する条件</td>
+<td align="center">hit</td><td colspan="8">ヒットしたエンティティがいた時。true,falseで入力も可。 [真偽値]</td></tr>
+<tr><td align="center">block</td><td colspan="8">ブロックに接触した時。true,falseで入力も可。 [真偽値,デフォルト:true]</td></tr>
 </tbody></table>
 
 ### 補足
@@ -118,6 +121,9 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
 [MIT Licence](https://github.com/nea-c/MarkerMotion/blob/master/LICENSE)に基づく
 
 ## 更新履歴
+
+* v2.2
+  * `stopwith.block`の設定項目を追加
 
 * v2.1
   * speed.lossの値で加速できるように変更

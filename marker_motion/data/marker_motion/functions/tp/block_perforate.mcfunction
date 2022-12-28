@@ -11,5 +11,4 @@
     execute at @s unless entity @e[tag=MarkerMotion.this,limit=1,distance=..0.025] run tp @s ^ ^ ^0.025
     execute at @s unless entity @e[tag=MarkerMotion.this,limit=1,distance=..0.0125] run tp @s ^ ^ ^0.0125
     execute at @s unless entity @e[tag=MarkerMotion.this,limit=1,distance=..0.00625] run tp @s ^ ^ ^0.00625
-    execute at @s unless entity @e[tag=MarkerMotion.this,limit=1,distance=..0.003125] run tp @s ^ ^ ^0.003125
-    execute at @s unless entity @e[tag=MarkerMotion.this,limit=1,distance=..0.003125] run tp @s ^ ^ ^0.003125
+    execute at @s unless entity @e[tag=MarkerMotion.this,limit=1,distance=..0.00625] run tp @s ^ ^ ^0.00625

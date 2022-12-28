@@ -4,7 +4,7 @@ Markerを移動速度や重力、バウンド回数などを指定して動か�
 
 ## 最新
 
-v2.2
+v2.3
 
 ## 動作要件
 
@@ -25,7 +25,7 @@ MinecraftJE 1.19.2
 Markerの召喚時や召喚後に以下のようなNBTを設定する。
 ```mcfunction
 ## 例
-summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:150,loss:{amount:0.950,type:"multiply"}},gravity:392.00,bounce:{count:2,e:0.950,g:1b},stopwith:{hit:1b,block:1b}}}}
+summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:150,loss:{amount:0.950,type:"multiply"}},gravity:392,bounce:{count:2,e:0.950,g:1b},stopwith:{hit:1b,block:1b}}}}
 ```
 
 ### 設定項目
@@ -60,6 +60,10 @@ summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:150,loss:{amou
 * MarkerMotion.on_block.wall , MarkerMotion.on_block.y , MarkerMotion.on_block.[方角]
 ```
 ブロックに接触した方角やカテゴリ (MarkerMotion.on_blockがない場合は付与されません)
+```
+* MarkerMotion.bounce
+```
+跳ねた瞬間だけ付与されるタグ
 ```
 * MarkerMotion.speed.0
 ```
@@ -121,6 +125,10 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
 [MIT Licence](https://github.com/nea-c/MarkerMotion/blob/master/LICENSE)に基づく
 
 ## 更新履歴
+
+* v2.3
+  * `data.MarkerMotion.speed.amount`が0になっても`data.MarkerMotion.gravity`が1以上であれば停止しないように変更
+  * exampleの召喚用functionを#marker_motion_example:...でそれぞれ呼び出せるように変更
 
 * v2.2
   * `stopwith.block`の設定項目を追加

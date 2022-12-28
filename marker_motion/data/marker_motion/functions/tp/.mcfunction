@@ -11,6 +11,9 @@
     execute unless data storage neac: marker_motion.stopwith{block:0b} run function marker_motion:tp/default
     execute if data storage neac: marker_motion.stopwith{block:0b} run function marker_motion:tp/block_perforate
 
+# ここで blockedタグがついていればブロックに接触したことになるので-1にする
+    execute if entity @s[tag=MarkerMotion.tp.blocked] unless data storage neac: marker_motion.stopwith{block:0b} run scoreboard players set #MarkerMotion.BlockCheck neac_value -1
+
 # targetタグがついたエンティティがいればヒットボックス判定でそのタグにhitタグをつける
     execute if entity @e[tag=MarkerMotion.target,limit=1] at @s positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=MarkerMotion.target] run tag @s add MarkerMotion.hit
     # スペクテイターは除外

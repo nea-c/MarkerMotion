@@ -127,7 +127,7 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
 ## 更新履歴
 
 * v2.3
-  * `data.MarkerMotion.speed.amount`が0になっても`data.MarkerMotion.gravity`が1以上であれば停止しないように変更
+  * `data.MarkerMotion.speed.amount`が0になっても`data.MarkerMotion.gravity`が0.01以上であれば停止しないように変更
   * exampleの召喚用functionを#marker_motion_example:...でそれぞれ呼び出せるように変更
 
 * v2.2

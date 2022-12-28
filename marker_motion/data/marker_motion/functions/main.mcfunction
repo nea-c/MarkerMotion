@@ -133,58 +133,20 @@
 # TP後のthisのPosを自身に代入する
     data modify entity @s Pos set from entity @e[tag=MarkerMotion.this,limit=1] Pos
 
-# Pos代入によるズレで自身がブロックに埋まっていたら後ろに少し下がる
-    execute unless data storage neac: marker_motion.stopwith{block:0b} at @s align xyz unless block ~ ~ ~ #marker_motion:no_collision at @s rotated as @e[tag=MarkerMotion.this2,limit=1] run tp @s ^ ^ ^-0.01
-
-# ブロック接触チェック
-    # east
-        execute unless data storage neac: marker_motion.stopwith{block:0b} unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~0.01 ~ ~ #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 1
-    # west
-        execute unless data storage neac: marker_motion.stopwith{block:0b} unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~-0.01 ~ ~ #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 2
-    # up
-        execute unless data storage neac: marker_motion.stopwith{block:0b} unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~ ~0.01 ~ #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 3
-    # down
-        execute unless data storage neac: marker_motion.stopwith{block:0b} unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~ ~-0.01 ~ #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 4
-    # south
-        execute unless data storage neac: marker_motion.stopwith{block:0b} unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~ ~ ~0.01 #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 5
-    # north
-        execute unless data storage neac: marker_motion.stopwith{block:0b} unless score #MarkerMotion.BlockCheck neac_value matches 1.. at @s unless block ~ ~ ~-0.01 #marker_motion:no_collision run scoreboard players set #MarkerMotion.BlockCheck neac_value 6
-    
-    # 接触検知したらいろいろするやつ
-        execute if score #MarkerMotion.BlockCheck neac_value matches 1 at @s align x run tp @s ~0.98 ~ ~
-        execute if score #MarkerMotion.BlockCheck neac_value matches 2 at @s align x run tp @s ~0.02 ~ ~
-        execute if score #MarkerMotion.BlockCheck neac_value matches 3 at @s align y run tp @s ~ ~0.98 ~
-        execute if score #MarkerMotion.BlockCheck neac_value matches 4 at @s align y run tp @s ~ ~0.02 ~
-        execute if score #MarkerMotion.BlockCheck neac_value matches 5 at @s align z run tp @s ~ ~ ~0.98
-        execute if score #MarkerMotion.BlockCheck neac_value matches 6 at @s align z run tp @s ~ ~ ~0.02
-
-        # ここが動いたら以降の処理(タグつけたりが動かなくなる仕様)
-            # 1瞬だけつくようにBounce検知用タグの削除。付与は marker_motion:bounce
-                execute if entity @s[tag=MarkerMotion.bounce] run tag @s remove MarkerMotion.bounce
-            execute store result score #MarkerMotion.Temporary1 neac_value run data get storage neac: marker_motion.bounce.count
-            execute if score #MarkerMotion.Temporary1 neac_value matches -1 run scoreboard players set #MarkerMotion.Temporary1 neac_value 1
-            execute if score #MarkerMotion.BlockCheck neac_value matches 1.. if score #MarkerMotion.Temporary1 neac_value matches 1.. run function marker_motion:bounce/
-
-        # 接触してたらon_blockタグ付与
-            execute if score #MarkerMotion.BlockCheck neac_value matches 1.. run tag @s add MarkerMotion.on_block
-            execute if score #MarkerMotion.BlockCheck neac_value matches 3..4 run tag @s add MarkerMotion.on_block.y
-            execute if score #MarkerMotion.BlockCheck neac_value matches 1.. unless score #MarkerMotion.BlockCheck neac_value matches 3..4 run tag @s add MarkerMotion.on_block.wall
-
-        # 接触方向に対して固定位置に移動
-            execute if score #MarkerMotion.BlockCheck neac_value matches 1 run tag @s add MarkerMotion.on_block.east
-            execute if score #MarkerMotion.BlockCheck neac_value matches 2 run tag @s add MarkerMotion.on_block.west
-            execute if score #MarkerMotion.BlockCheck neac_value matches 3 run tag @s add MarkerMotion.on_block.up
-            execute if score #MarkerMotion.BlockCheck neac_value matches 4 run tag @s add MarkerMotion.on_block.down
-            execute if score #MarkerMotion.BlockCheck neac_value matches 5 run tag @s add MarkerMotion.on_block.south
-            execute if score #MarkerMotion.BlockCheck neac_value matches 6 run tag @s add MarkerMotion.on_block.north
+# ブロック接触チェック等
+    execute unless data storage neac: marker_motion.stopwith{block:0b} if score #MarkerMotion.BlockCheck neac_value matches -1 run function marker_motion:block
 
 # スピード減少
     # constant
         execute unless score #MarkerMotion.SpeedLoss neac_value matches 0 unless data storage neac: marker_motion.speed.loss{type:"multiply"} store result storage neac: marker_motion.speed.amount int 1 run scoreboard players operation #MarkerMotion.Speed neac_value -= #MarkerMotion.SpeedLoss neac_value
     # multiply
         execute unless score #MarkerMotion.SpeedLoss neac_value matches 1000 if data storage neac: marker_motion.speed.loss{type:"multiply"} store result storage neac: marker_motion.speed.amount int 0.001 run scoreboard players operation #MarkerMotion.Speed neac_value *= #MarkerMotion.SpeedLoss neac_value
-    
-    execute if score #MarkerMotion.Speed neac_value matches ..0 unless data storage neac: marker_motion.bounce{g:1b} run tag @s add MarkerMotion.speed.0
+
+    # スピードが0未満になったら0に固定する
+        execute if score #MarkerMotion.Speed neac_value matches ..-1 store result storage neac: marker_motion.speed.amount int 1 run scoreboard players set #MarkerMotion.Speed neac_value 0
+
+# スピード0、かつ重力データが1以上なかったら停止
+    execute if score #MarkerMotion.Speed neac_value matches 0 unless score #MarkerMotion.Gravity neac_value matches 1.. run tag @s add MarkerMotion.speed.0
 
 # タグ付与
     execute if entity @s[tag=MarkerMotion.stopwith.hit] run tag @s add MarkerMotion.stop

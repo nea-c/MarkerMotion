@@ -52,11 +52,7 @@
     summon marker ~ ~ ~ {Tags:["MarkerMotion.this","MarkerMotion.thisP","MarkerMotion.this.All"]}
 
 # ベクトル取得
-    execute positioned 0.0 0.0 0.0 rotated as @s run tp @e[tag=MarkerMotion.this,limit=1] ^ ^ ^1
-    data modify storage neac: marker_motion_pos set from entity @e[tag=MarkerMotion.this,limit=1] Pos
-    execute store result score #MarkerMotion.Pos1 neac_value run data get storage neac: marker_motion_pos[0] 10000
-    execute store result score #MarkerMotion.Pos2 neac_value run data get storage neac: marker_motion_pos[1] 10000
-    execute store result score #MarkerMotion.Pos3 neac_value run data get storage neac: marker_motion_pos[2] 10000
+    execute as @e[tag=MarkerMotion.this,limit=1] run function marker_motion:get_vector
 
 # 自身のdataから重力,スピード,重力加速度の合計とかを取得
     # まずは自身のデータを一時ストレージに
@@ -100,10 +96,6 @@
         execute store result score #MarkerMotion.Motion1 neac_value run data get storage neac: marker_motion.Motion[0] 10000
         execute store result score #MarkerMotion.Motion2 neac_value run data get storage neac: marker_motion.Motion[1] 10000
         execute store result score #MarkerMotion.Motion3 neac_value run data get storage neac: marker_motion.Motion[2] 10000
-
-# 到達目標位置にベクトル取得時に使ったマーカーを使いまわして配置
-    # その際離れているとPosが代入できないっぽいので一度実行位置にTP
-        tp @e[tag=MarkerMotion.this,limit=1] ~ ~ ~
 
     # 計算&代入
         execute store result storage neac: marker_motion_pos[0] double 0.0001 run scoreboard players operation #MarkerMotion.Pos1 neac_value += #MarkerMotion.Motion1 neac_value

@@ -2,7 +2,7 @@
 #
 # このデータパックで付くことのあるタグを全消しするfunction
 #
-# @public
+# @within tag/function marker_motion:tag_remove
 
     tag @s remove MarkerMotion.on_block.east
     tag @s remove MarkerMotion.on_block.west

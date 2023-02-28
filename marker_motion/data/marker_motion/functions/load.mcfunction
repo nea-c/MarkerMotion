@@ -4,9 +4,6 @@
 #
 # @within tag/function minecraft:load
 
-# オーバーワールドの0,0をforceload
-    execute in minecraft:overworld run forceload add 0 0
-
 # スコアオブジェクト作成
     scoreboard objectives add neac_value dummy
 

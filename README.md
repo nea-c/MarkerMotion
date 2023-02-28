@@ -126,6 +126,9 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
 
 ## 更新履歴
 
+* v?
+  * 別ディメンションにおいて、0,0から離れると正常に動作しない問題の修正
+
 * v2.3
   * `data.MarkerMotion.speed.amount`が0になっても`data.MarkerMotion.gravity`が0.01以上であれば停止しないように変更
   * exampleの召喚用functionを#marker_motion_example:...でそれぞれ呼び出せるように変更

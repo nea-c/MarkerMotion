@@ -117,6 +117,7 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
 
 ## クレジット
 
+* ブロック接触、エンティティヒット判定引用[視線先探査](https://github.com/RuskEocssar/MC-Command-Note#2.23)
 * 移動ベクトル取得部分引用 ： [SmartMotion](https://github.com/Irohamaru/SmartMotion)
 * サポート ： [C.fuaim様](https://github.com/Cfuaim)　超感謝。
 

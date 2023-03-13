@@ -88,7 +88,7 @@
     execute if score #MarkerMotion.Speed neac_value matches 0 unless score #MarkerMotion.GravitySum neac_value matches 0 run tag @s add MarkerMotion.speed.0
 
 # タグ付与
-    execute if entity @s[predicate=marker_motion:stop] run tag @s add MarkerMotion.stop
+    execute if predicate marker_motion:stop run tag @s add MarkerMotion.stop
 
 # スコアリセット
     scoreboard players reset #MarkerMotion.Speed

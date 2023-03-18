@@ -6,6 +6,7 @@ execute at @s run function marker_motion_example:particle/main
 
 scoreboard players add @s neac_value 1
 
+execute if entity @s[tag=MarkerMotionExample.SPEEDUP,scores={neac_value=60..}] run tag @s add MarkerMotion.Example.end
 execute if entity @s[scores={neac_value=100..}] run tag @s add MarkerMotion.Example.end
 execute if entity @s[tag=MarkerMotion.stop] run tag @s add MarkerMotion.Example.end
 

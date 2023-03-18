@@ -1,0 +1,27 @@
+[
+  {
+    "condition": "minecraft:alternative",
+    "terms": [{
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "nbt": "{Tags:[\"MarkerMotion.stopwith.hit\"]}"
+      }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "nbt": "{Tags:[\"MarkerMotion.speed.0\"]}"
+      }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "nbt": "{Tags:[\"MarkerMotion.on_block\"]}"
+      }
+    }
+    ]
+  }
+]

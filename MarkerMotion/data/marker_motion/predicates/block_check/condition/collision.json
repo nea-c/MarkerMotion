@@ -1,0 +1,13 @@
+[
+    {
+        "condition": "inverted",
+        "term": {
+            "condition": "location_check",
+            "predicate": {
+                "block": {
+                    "tag": "marker_motion:no_collision"
+                }
+            }
+        }
+    }
+]

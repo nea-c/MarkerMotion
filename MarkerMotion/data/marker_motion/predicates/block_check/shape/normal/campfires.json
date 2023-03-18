@@ -1,0 +1,22 @@
+{
+    "condition": "alternative",
+    "terms": [
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "tag": "marker_motion:campfires"
+                    }
+                },
+                "distance": {
+                    "y": {
+                        "min": 0.43750,
+                        "max": 1.0
+                    }
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+[
+    {
+        "condition": "reference",
+        "name": "marker_motion:block_check/shape/erosion/piston_head/offset/south_not"
+    },
+    {
+        "condition": "reference",
+        "name": "marker_motion:block_check/shape/erosion/piston_head/offset/north_not"
+    },
+    {
+        "condition": "reference",
+        "name": "marker_motion:block_check/shape/erosion/piston_head/offset/east_not"
+    },
+    {
+        "condition": "reference",
+        "name": "marker_motion:block_check/shape/erosion/piston_head/offset/west_not"
+    },
+    {
+        "condition": "reference",
+        "name": "marker_motion:block_check/shape/erosion/piston_head/offset/up_not"
+    },
+    {
+        "condition": "reference",
+        "name": "marker_motion:block_check/shape/erosion/piston_head/offset/down_not"
+    }
+]

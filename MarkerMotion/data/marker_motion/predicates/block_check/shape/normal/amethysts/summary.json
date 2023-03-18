@@ -1,0 +1,21 @@
+{
+    "condition": "alternative",
+    "terms": [
+        {
+            "condition": "reference",
+            "name": "marker_motion:block_check/shape/normal/amethysts/small_amethyst_bud"
+        },
+        {
+            "condition": "reference",
+            "name": "marker_motion:block_check/shape/normal/amethysts/medium_amethyst_bud"
+        },
+        {
+            "condition": "reference",
+            "name": "marker_motion:block_check/shape/normal/amethysts/large_amethyst_bud"
+        },
+        {
+            "condition": "reference",
+            "name": "marker_motion:block_check/shape/normal/amethysts/amethyst_cluster"
+        }
+    ]
+}

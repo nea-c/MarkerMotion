@@ -7,14 +7,16 @@
 #   function marker_motion:main
 
 
-# 向き取得のために向きのみ変更
-    execute as @e[tag=MarkerMotion.this,limit=1] positioned as @s run tp @s ~ ~ ~ ~ ~
+# プレイヤーの視線をx軸で反転させた角度
+    execute as @e[type=#marker_motion:selector,tag=MarkerMotion.this,limit=1] positioned 0.0 0.0 0.0 positioned ^ ^ ^2 positioned 0.0 ~ ~ positioned ^ ^ ^-1 facing 0.0 0.0 0.0 positioned as @s run tp @s ~ ~ ~ ~ ~
+
+# 初期化
+    data modify storage neac: _.tp set value [[{success:0b}],[{success:0b}],[{success:0b}],[{success:0b}],[{success:0b}],[{success:0b}],[{success:0b}],[{success:0b}]]
 
 
 # 最大ループ回数指定
-    scoreboard players set #MarkerMotion.loop neac_value 25
+    scoreboard players set #MarkerMotion.loop neac_value 41
 # ループ開始
-    execute unless entity @e[tag=MarkerMotion.this,distance=..0.008,limit=1] positioned ^ ^ ^0.512 run function marker_motion:tp/1024
+    execute unless entity @e[type=#marker_motion:selector,tag=MarkerMotion.this,distance=..0.015625,limit=1] positioned ^ ^ ^0.5 run function marker_motion:tp/1
 # スコアリセット
     scoreboard players reset #MarkerMotion.loop
-

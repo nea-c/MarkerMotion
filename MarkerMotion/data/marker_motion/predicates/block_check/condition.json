@@ -1,0 +1,13 @@
+{
+    "condition": "alternative",
+    "terms": [
+        {
+            "condition": "reference",
+            "name": "marker_motion:block_check/condition/collision"
+        },
+        {
+            "condition": "reference",
+            "name": "marker_motion:block_check/condition/no_collision"
+        }
+    ]
+}

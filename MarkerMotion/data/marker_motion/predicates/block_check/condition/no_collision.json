@@ -1,0 +1,14 @@
+[
+    {
+        "condition": "reference",
+        "name": "marker_motion:block_check/shape/erosion/check"
+    },
+    {
+        "condition": "location_check",
+        "predicate": {
+            "block": {
+                "tag": "marker_motion:no_collision"
+            }
+        }
+    }
+]

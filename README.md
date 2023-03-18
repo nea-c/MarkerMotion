@@ -1,17 +1,20 @@
 # MarkerMotion
 
-Markerを移動速度や重力、バウンド回数などを指定して動かすことができるライブラリデータパック。 
+Markerを移動速度や重力、バウンド回数などを指定して動かすことができるライブラリデータパック。
 
 ## 最新
 
-v2.3
+v3.0
+
+## 過去バージョンについて
+
+過去バージョンのダウンロードは[Releases](https://github.com/nea-c/MarkerMotion/releases)からどうぞ。
+
+Readmeは[ここ](https://github.com/nea-c/MarkerMotion/tags)から対象のバージョンを選択してください。
 
 ## 動作要件
 
-MinecraftJE 1.19.2
-
-動作は保障しませんが、ブロックタグを書き換えることで過去のバージョンへ対応できます。
-
+MinecraftJE 1.19.4
 
 ## 使用方法
 
@@ -25,41 +28,34 @@ MinecraftJE 1.19.2
 Markerの召喚時や召喚後に以下のようなNBTを設定する。
 ```mcfunction
 ## 例
-summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:150,loss:{amount:0.950,type:"multiply"}},gravity:392,bounce:{count:2,e:0.950,g:1b},stopwith:{hit:1b,block:1b}}}}
+summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:1.50,loss:{amount:0.950,type:"*"}},gravity:39.200,bounce:{count:2,e:0.950,g:1b},stopwith:{hit:1b,block:1b}}}}
 ```
 
 ### 設定項目
-<table><thead>
-</thead><tbody>
-<tr><th rowspan="4" align="center">speed</th><th align="center">amount</th><td colspan="8">初期速度</td>
-<tr><th rowspan="3" align="center">loss</th><th rowspan="3">tick毎の減少量</th>
-<td colspan="2" align="center">amount</td><td colspan="8">量。typeパラメータによって効果が異なる。</td></tr>
-<tr><td rowspan="2" align="center">type</td><td rowspan="2">amountの計算方法を変更する。</td>
-<td align="center">"constant"</td><td>減算で計算します [整数値,デフォルト]</td></tr>
-<tr><td align="center">"multiply"</td><td>倍率で計算します [小数値,1/1000] 0.9なら10%損失</td></tr>
-<tr><td align="center">gravity</td><td align="center">重力の強さ</td><td colspan="7">98の倍数が比較的決めやすくておすすめ [小数値,1/100]</td></tr>
-<tr><td rowspan="3" align="center">bounce</td>
-<td align="center">count</td><td colspan="8">跳ねる回数。-1で無限。 [整数値]</td></tr>
-<tr><td align="center">e</td><td colspan="8">跳ねたときに減少するスピードの量。倍率で計算します。 [小数値,1/1000] 0.9なら10%損失</td></tr>
-<tr><td align="center">g</td><td colspan="8">床や天井にぶつかって跳ねる際、重力での加速を考慮して跳ねます。true,falseで入力も可。 [真偽値]</td></tr>
-<tr><td rowspan="2" align="center">stopwith</td><td rowspan="2">途中で停止する条件</td>
-<td align="center">hit</td><td colspan="8">ヒットしたエンティティがいた時。true,falseで入力も可。 [真偽値]</td></tr>
-<tr><td align="center">block</td><td colspan="8">ブロックに接触した時。true,falseで入力も可。 [真偽値,デフォルト:true]</td></tr>
-</tbody></table>
+
+| 引数名 | 必須 | 型 | 説明 | デフォルト |
+| -: | :-: | :-: | :- | :-: |
+| speed.amount | o | double | 初期速度<br>小数点2桁まで有効 | - |
+| speed.loss.amount | x | double | 毎tickの速度変更量<br>この値の有効数字は以下のspeed.loss.typeによって指定されます<br>"+"：小数点2桁まで有効<br>"\*"：小数点3桁まで有効 | 0 |
+| speed.loss.type | x | string | "+"か"\*"のどちらかを入力します<br>"+"：加算で計算します<br>"\*"：乗算で計算します | "+" |
+| gravity | x | double | 重力加速度<br>9.8の倍数がおすすめ<br>小数点3桁まで有効 | 0 |
+| bounce.count | x | int | 跳ねる回数<br>-1を指定すると無限 | 0 |
+| bounce.e | x | double | 跳ねた時の速度変更量<br>乗算で計算されます<br>小数点3桁まで有効 | 1.0 |
+| bounce.g | x | boolean | 床、天井に衝突して跳ねる時、重力加速を考慮して跳ねるようにします | false |
+| stopwith.hit | x | boolean | ヒットしたエンティティがいた時、ヒット位置で停止するようにします | true |
+| stopwith.block | x | boolean | ブロックに衝突した時、衝突位置で停止するようにします | true |
 
 ### 補足
-* `speed.amount`のみで動作します。
-* 小数値は`gravity以外は`第3位まで、`gravityは`第2位まで設定できます。
-* また、この説明は`marker_motion:main`にも記述してあります。
+* `speed.amount`は`speed.loss`や`bounce.e`での変動時にデータが変更されます
 
 ### 返りタグ
 * MarkerMotion.on_block
 ```
-ブロックに接触した時 (跳ねた場合は付与されません)
+ブロックに接触して停止した時 (跳ねた場合は付与されません)
 ```
 * MarkerMotion.on_block.wall , MarkerMotion.on_block.y , MarkerMotion.on_block.[方角]
 ```
-ブロックに接触した方角やカテゴリ (MarkerMotion.on_blockがない場合は付与されません)
+ブロックに接触した停止した方角やカテゴリ (MarkerMotion.on_blockがない場合は付与されません)
 ```
 * MarkerMotion.bounce
 ```
@@ -71,18 +67,18 @@ summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:150,loss:{amou
 ```
 * MarkerMotion.stopwith.hit
 ```
-stopwith.hitがtrueかつ、hitタグを付与したエンティティがいた時
+"stopwith.hitがfalseでない"かつ、hitタグを付与したエンティティがいた時
 ```
 * MarkerMotion.stop
 ```
-移動処理(main.function)が実行されないようになるタグ。
+メイン処理が実行されないようになるタグ。
 MarkerMotion.on_block, MarkerMotion.speed.0, MarkerMotion.stopwith.hitのタグがあれば必ず付与されています。
 ```
 
-### 返りNBT
-* data.MarkerMotion.Motion
+### markerのNBTに追加返却されるもの
+* data.MarkerMotion.Move
 ```
-移動量。
+移動距離と移動角度。
 この値を使って綺麗な繋がったパーティクル出したりとかが可能。exampleを参照。
 ```
 * data.MarkerMotion.GravitySum
@@ -102,7 +98,7 @@ distanceとかで範囲指定してあげると軽量化になると思います
 付与された、または付与したタグは必ず削除するようにしてください。
 
 
-### tag_remove.mcfunction
+### #marker_motion:tag_remove
 
 このライブラリを実行したMarkerに自動的に付与されるタグを全て剥がすfunction。
 
@@ -117,9 +113,7 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
 
 ## クレジット
 
-* ブロック接触、エンティティヒット判定引用[視線先探査](https://github.com/RuskEocssar/MC-Command-Note#2.23)
-* 移動ベクトル取得部分引用 ： [SmartMotion](https://github.com/Irohamaru/SmartMotion)
-* サポート ： [C.fuaim様](https://github.com/Cfuaim)　超感謝。
+* ブロック接触、エンティティヒット判定参考 ： [MC-Command-Note](https://github.com/RuskEocssar/MC-Command-Note)
 
 ## ライセンス
 
@@ -127,8 +121,18 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
 
 ## 更新履歴
 
-* v?
-  * 別ディメンションにおいて、0,0から離れると正常に動作しない問題の修正
+* v3.0
+  * 別ディメンションにおいて、x:0,z:0付近から離れると正常に動作しない問題の修正
+  * xかzが特定座標を超えたときに正常に動作しない問題の修正
+  * ブロックの当たり判定を追加
+    * 階段やハーフなど、フルブロックより小さいブロックの隙間など細かい当たり判定で移動させることが可能になりました
+  * `#marker_motion:`,`#marker_motion:tag_remove`で利用できるように変更
+  * speedの値を以前までの1/100で宣言するように変更
+  * gravityの値を以前までの1/10で宣言するように変更
+  * speed.loss.typeの指定を`"+"`,`"*"`で指定するように変更
+  * Motionを削除
+    * 代替としてMoveを追加
+  * stopwith.hitのデフォルト値をtrueに変更
 
 * v2.3
   * `data.MarkerMotion.speed.amount`が0になっても`data.MarkerMotion.gravity`が0.01以上であれば停止しないように変更

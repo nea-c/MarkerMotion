@@ -1,0 +1,24 @@
+{
+    "condition": "alternative",
+    "terms": [
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "enchanting_table"
+                        ]
+                    }
+                },
+                "distance": {
+                    "y": {
+                        "min": 0.750,
+                        "max": 1
+                    }
+                }
+            }
+        }
+    ]
+}

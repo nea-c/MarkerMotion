@@ -1,6 +1,6 @@
 {
    "pack": {
-      "pack_format": 9,
-      "description": "marker_motion"
+      "pack_format": 12,
+      "description": "MarkerMotion v3.0"
    }
 }

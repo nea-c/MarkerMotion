@@ -5,7 +5,7 @@
 # @within function marker_motion:bounce/
 
 # 次tickの飛行方向のYベクトル取得
-    execute rotated as @s as @e[tag=MarkerMotion.this,limit=1] run function marker_motion:bounce/conside_gravity/get_vector
+    execute rotated as @s as @e[type=#marker_motion:selector,tag=MarkerMotion.this,limit=1] run function marker_motion:bounce/conside_gravity/get_vector
 
 # 今のYベクトル(重力)を取得して次tickのベクトルを引く
     scoreboard players operation #MarkerMotion.Bounce.CG.Temporary2 neac_value = #MarkerMotion.Bounce.CG.YVec neac_value

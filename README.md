@@ -14,8 +14,6 @@ MinecraftJE 1.19.4
 
 過去バージョンのダウンロードは[Releases](https://github.com/nea-c/MarkerMotion/releases)からどうぞ。
 
-Readmeは[ここ](https://github.com/nea-c/MarkerMotion/tags)から対象のバージョンを選択してください。
-
 ## 使用方法
 
 ### 絶対事項

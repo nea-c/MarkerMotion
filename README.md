@@ -6,15 +6,15 @@ Markerを移動速度や重力、バウンド回数などを指定して動か�
 
 v3.0
 
+## 動作要件
+
+MinecraftJE 1.19.4
+
 ## 過去バージョンについて
 
 過去バージョンのダウンロードは[Releases](https://github.com/nea-c/MarkerMotion/releases)からどうぞ。
 
 Readmeは[ここ](https://github.com/nea-c/MarkerMotion/tags)から対象のバージョンを選択してください。
-
-## 動作要件
-
-MinecraftJE 1.19.4
 
 ## 使用方法
 

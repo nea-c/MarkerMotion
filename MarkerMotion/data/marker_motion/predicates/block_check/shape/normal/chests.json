@@ -19,72 +19,653 @@
             }
         },
         {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "block": {
-                        "tag": "marker_motion:chests"
+            "condition": "alternative",
+            "terms": [
+                {
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "tag": "marker_motion:chests",
+                                "state": {
+                                    "type": "single"
+                                }
+                            }
+                        },
+                        "distance": {
+                            "x": {
+                                "min": 0.0,
+                                "max": 0.06250
+                            }
+                        }
                     }
                 },
-                "distance": {
-                    "x": {
-                        "min": 0.0,
-                        "max": 0.06250
+                {
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "tag": "marker_motion:chests",
+                                "state": {
+                                    "type": "single"
+                                }
+                            }
+                        },
+                        "distance": {
+                            "x": {
+                                "min": 0.93750,
+                                "max": 1.0
+                            }
+                        }
+                    }
+                },
+                {
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "tag": "marker_motion:chests",
+                                "state": {
+                                    "type": "single"
+                                }
+                            }
+                        },
+                        "distance": {
+                            "z": {
+                                "min": 0.0,
+                                "max": 0.06250
+                            }
+                        }
+                    }
+                },
+                {
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "tag": "marker_motion:chests",
+                                "state": {
+                                    "type": "single"
+                                }
+                            }
+                        },
+                        "distance": {
+                            "z": {
+                                "min": 0.93750,
+                                "max": 1.0
+                            }
+                        }
                     }
                 }
-            }
+            ]
         },
         {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "block": {
-                        "tag": "marker_motion:chests"
-                    }
+            "condition": "alternative",
+            "terms": [
+                {
+                    "condition": "alternative",
+                    "terms": [
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "left",
+                                            "facing": "south"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "x": {
+                                        "min": 0.93750,
+                                        "max": 1.0
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "left",
+                                            "facing": "south"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "z": {
+                                        "min": 0.0,
+                                        "max": 0.06250
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "left",
+                                            "facing": "south"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "z": {
+                                        "min": 0.93750,
+                                        "max": 1.0
+                                    }
+                                }
+                            }
+                        }
+                    ]
                 },
-                "distance": {
-                    "x": {
-                        "min": 0.93750,
-                        "max": 1.0
-                    }
+                {
+                    "condition": "alternative",
+                    "terms": [
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "right",
+                                            "facing": "south"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "x": {
+                                        "min": 0.0,
+                                        "max": 0.06250
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "right",
+                                            "facing": "south"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "z": {
+                                        "min": 0.0,
+                                        "max": 0.06250
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "right",
+                                            "facing": "south"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "z": {
+                                        "min": 0.93750,
+                                        "max": 1.0
+                                    }
+                                }
+                            }
+                        }
+                    ]
                 }
-            }
+            ]
         },
         {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "block": {
-                        "tag": "marker_motion:chests"
-                    }
+            "condition": "alternative",
+            "terms": [
+                {
+                    "condition": "alternative",
+                    "terms": [
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "left",
+                                            "facing": "north"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "x": {
+                                        "min": 0.0,
+                                        "max": 0.06250
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "left",
+                                            "facing": "north"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "z": {
+                                        "min": 0.0,
+                                        "max": 0.06250
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "left",
+                                            "facing": "north"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "z": {
+                                        "min": 0.93750,
+                                        "max": 1.0
+                                    }
+                                }
+                            }
+                        }
+                    ]
                 },
-                "distance": {
-                    "z": {
-                        "min": 0.0,
-                        "max": 0.06250
-                    }
+                {
+                    "condition": "alternative",
+                    "terms": [
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "right",
+                                            "facing": "north"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "x": {
+                                        "min": 0.93750,
+                                        "max": 1.0
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "right",
+                                            "facing": "north"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "z": {
+                                        "min": 0.0,
+                                        "max": 0.06250
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "right",
+                                            "facing": "north"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "z": {
+                                        "min": 0.93750,
+                                        "max": 1.0
+                                    }
+                                }
+                            }
+                        }
+                    ]
                 }
-            }
+            ]
         },
         {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "block": {
-                        "tag": "marker_motion:chests"
-                    }
+            "condition": "alternative",
+            "terms": [
+                {
+                    "condition": "alternative",
+                    "terms": [
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "left",
+                                            "facing": "east"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "z": {
+                                        "min": 0.0,
+                                        "max": 0.06250
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "left",
+                                            "facing": "east"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "x": {
+                                        "min": 0.0,
+                                        "max": 0.06250
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "left",
+                                            "facing": "east"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "x": {
+                                        "min": 0.93750,
+                                        "max": 1.0
+                                    }
+                                }
+                            }
+                        }
+                    ]
                 },
-                "distance": {
-                    "z": {
-                        "min": 0.93750,
-                        "max": 1.0
-                    }
+                {
+                    "condition": "alternative",
+                    "terms": [
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "right",
+                                            "facing": "east"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "z": {
+                                        "min": 0.93750,
+                                        "max": 1.0
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "right",
+                                            "facing": "east"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "x": {
+                                        "min": 0.0,
+                                        "max": 0.06250
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "right",
+                                            "facing": "east"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "x": {
+                                        "min": 0.93750,
+                                        "max": 1.0
+                                    }
+                                }
+                            }
+                        }
+                    ]
                 }
-            }
+            ]
+        },
+        {
+            "condition": "alternative",
+            "terms": [
+                {
+                    "condition": "alternative",
+                    "terms": [
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "left",
+                                            "facing": "west"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "z": {
+                                        "min": 0.93750,
+                                        "max": 1.0
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "left",
+                                            "facing": "west"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "x": {
+                                        "min": 0.0,
+                                        "max": 0.06250
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "left",
+                                            "facing": "west"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "x": {
+                                        "min": 0.93750,
+                                        "max": 1.0
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "condition": "alternative",
+                    "terms": [
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "right",
+                                            "facing": "west"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "z": {
+                                        "min": 0.0,
+                                        "max": 0.06250
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "right",
+                                            "facing": "west"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "x": {
+                                        "min": 0.0,
+                                        "max": 0.06250
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "block": {
+                                        "tag": "marker_motion:chests",
+                                        "state": {
+                                            "type": "right",
+                                            "facing": "west"
+                                        }
+                                    }
+                                },
+                                "distance": {
+                                    "x": {
+                                        "min": 0.93750,
+                                        "max": 1.0
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

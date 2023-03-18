@@ -21,6 +21,138 @@
             }
         },
         {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "cake"
+                        ],
+                        "state": {
+                            "bites": 1
+                        }
+                    }
+                },
+                "distance": {
+                    "x": {
+                        "min": 0.0,
+                        "max": 0.18750
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "cake"
+                        ],
+                        "state": {
+                            "bites": 2
+                        }
+                    }
+                },
+                "distance": {
+                    "x": {
+                        "min": 0.0,
+                        "max": 0.31250
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "cake"
+                        ],
+                        "state": {
+                            "bites": 3
+                        }
+                    }
+                },
+                "distance": {
+                    "x": {
+                        "min": 0.0,
+                        "max": 0.43750
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "cake"
+                        ],
+                        "state": {
+                            "bites": 4
+                        }
+                    }
+                },
+                "distance": {
+                    "x": {
+                        "min": 0.0,
+                        "max": 0.56250
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "cake"
+                        ],
+                        "state": {
+                            "bites": 5
+                        }
+                    }
+                },
+                "distance": {
+                    "x": {
+                        "min": 0.0,
+                        "max": 0.68750
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "cake"
+                        ],
+                        "state": {
+                            "bites": 6
+                        }
+                    }
+                },
+                "distance": {
+                    "x": {
+                        "min": 0.0,
+                        "max": 0.81250
+                    }
+                }
+            }
+        },
+        {
             "condition": "alternative",
             "terms": [
                 {

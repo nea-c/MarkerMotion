@@ -241,6 +241,22 @@
             {
                 "condition": "reference",
                 "name": "marker_motion:block_check/shape/normal/pointed_dripstone"
+            },
+            {
+                "condition": "reference",
+                "name": "marker_motion:block_check/shape/normal/ender_chest"
+            },
+            {
+                "condition": "reference",
+                "name": "marker_motion:block_check/shape/normal/soul_sand"
+            },
+            {
+                "condition": "reference",
+                "name": "marker_motion:block_check/shape/normal/mud"
+            },
+            {
+                "condition": "reference",
+                "name": "marker_motion:block_check/shape/normal/glass_panes"
             }
         ]
     }

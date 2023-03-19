@@ -19,7 +19,7 @@ MinecraftJE 1.19.4
 ### 絶対事項
 
 * 実行者はMarkerであること。
-* `marker_motion:`を実行すること。
+* `#marker_motion:`を実行すること。
 
 ### 記述方法
 

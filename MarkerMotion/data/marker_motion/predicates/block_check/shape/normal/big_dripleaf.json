@@ -95,6 +95,28 @@
                             }
                         }
                     }
+                },
+                {
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "blocks": [
+                                    "big_dripleaf"
+                                ],
+                                "state": {
+                                    "tilt": "unstable"
+                                }
+                            }
+                        },
+                        "distance": {
+                            "y": {
+                                "min": 0.93750,
+                                "max": 1.0
+                            }
+                        }
+                    }
                 }
             ]
         },
@@ -119,6 +141,28 @@
                             "y": {
                                 "min": 0.0,
                                 "max": 0.68750
+                            }
+                        }
+                    }
+                },
+                {
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "blocks": [
+                                    "big_dripleaf"
+                                ],
+                                "state": {
+                                    "tilt": "none"
+                                }
+                            }
+                        },
+                        "distance": {
+                            "y": {
+                                "min": 0.93750,
+                                "max": 1.0
                             }
                         }
                     }

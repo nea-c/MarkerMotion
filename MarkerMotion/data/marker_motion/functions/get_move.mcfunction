@@ -37,7 +37,7 @@
     execute store result storage neac: _.MarkerMotion.Move.Amount double 0.01 run scoreboard players get #MarkerMotion.TMP neac_value
 
 # 向きをこのfunctionの実行角度にしてストレージへ
-    tp @s ~ ~ ~ ~ ~
+    execute facing ^ ^ ^-1 run tp @s ~ ~ ~ ~ ~
     data modify storage neac: _.MarkerMotion.Move.Rotation set from entity @s Rotation
 
 # スコアリセット

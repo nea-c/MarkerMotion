@@ -1,5 +1,5 @@
 
-function marker_motion:
+function #marker_motion:
 
 #パーティクル出す
 execute at @s run function marker_motion_example:particle/main

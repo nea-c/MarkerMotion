@@ -21,6 +21,8 @@
         execute if data storage neac: _.MarkerMotion.speed.loss{type:"*"} if data storage neac: _.MarkerMotion.speed.loss.amount store result score #MarkerMotion.SpeedLoss neac_value run data get storage neac: _.MarkerMotion.speed.loss.amount 1000
 
 # 到達目標位置用の取得に使うエンティティセットアップ
+    # なんか残ってたらkill
+        execute if entity @e[type=#marker_motion:selector,tag=MarkerMotion.this,limit=1] run kill @e[type=#marker_motion:selector,tag=MarkerMotion.this]
     execute summon marker run function marker_motion:set_arrival_pos
 
 # 1瞬だけつくようにBounce検知用タグの削除。付与は marker_motion:bounce
@@ -57,7 +59,7 @@
     scoreboard players reset #MarkerMotion.Temporary1
 
 # 最初の実行位置から移動位置までの距離からMoveを算出 + kill
-    execute facing entity @s feet facing ^ ^ ^-1 as @e[type=#marker_motion:selector,tag=MarkerMotion.this,limit=1] run function marker_motion:get_move
+    execute facing entity @s feet as @e[type=#marker_motion:selector,tag=MarkerMotion.this,limit=1] run function marker_motion:get_move
 
 # ストレージデータを自身に返して初期化
     data modify entity @s data.MarkerMotion set from storage neac: _.MarkerMotion

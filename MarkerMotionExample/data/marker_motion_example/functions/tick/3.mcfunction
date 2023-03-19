@@ -1,6 +1,6 @@
 
 execute as @e[type=#marker_motion_example:test_entitys,distance=..5] run tag @s add MarkerMotion.target
-function marker_motion:
+function #marker_motion:
 
 #パーティクル出す
 execute at @s run function marker_motion_example:particle/main

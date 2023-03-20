@@ -44,8 +44,8 @@
     # スピードが0未満になったら0に固定する
         execute if score #MarkerMotion.Speed neac_value matches ..-1 store result storage neac: _.MarkerMotion.speed.amount double 0.01 run scoreboard players set #MarkerMotion.Speed neac_value 0
 
-# スピード0、かつ重力合計が0でなかったら停止
-    execute if score #MarkerMotion.Speed neac_value matches 0 unless score #MarkerMotion.GravitySum neac_value matches 0 run tag @s add MarkerMotion.speed.0
+# スピード0、かつ重力合計が0だったら停止
+    execute if score #MarkerMotion.Speed neac_value matches 0 if data storage neac: _.MarkerMotion{GravitySum:0} run tag @s add MarkerMotion.speed.0
 
 # タグ付与
     execute if predicate marker_motion:stop run tag @s add MarkerMotion.stop

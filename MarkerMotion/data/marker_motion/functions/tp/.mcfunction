@@ -15,11 +15,11 @@
 
 
 # 到達目標位置が近くてspeedが0以下であれば停止
-    execute if entity @e[type=#marker_motion:selector,tag=MarkerMotion.this,distance=..0.015625,limit=1] if score #MarkerMotion.Speed neac_value matches ..0 run tag @s add MarkerMotion.speed.0
+    execute if entity @e[type=#marker_motion:selector,tag=MarkerMotion.this,distance=..0.0078125,limit=1] if score #MarkerMotion.Speed neac_value matches ..0 run tag @s add MarkerMotion.speed.0
 
 # 最大ループ回数指定
     scoreboard players set #MarkerMotion.loop neac_value 41
 # 到達目標位置が近くになければそこまでの間のブロックをループでチェック
-        execute unless entity @e[type=#marker_motion:selector,tag=MarkerMotion.this,distance=..0.015625,limit=1] positioned ^ ^ ^0.5 run function marker_motion:tp/1
+        execute unless entity @e[type=#marker_motion:selector,tag=MarkerMotion.this,distance=..0.0078125,limit=1] positioned ^ ^ ^0.5 run function marker_motion:tp/1
 # スコアリセット
     scoreboard players reset #MarkerMotion.loop

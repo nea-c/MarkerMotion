@@ -7,8 +7,8 @@
 # 必要なタグ付与
     tag @s add MarkerMotion.this
 
-# 移動前のY座標取得
-    execute store result score #MarkerMotion.Bounce.CG.TMP1 neac_value run data get entity @s Pos[1] 1000000
+# bounce.gオン時、移動前Y座標取得
+    execute if data storage neac: _.MarkerMotion.bounce{g:1b} store result score #MarkerMotion.Bounce.CG.TMP1 neac_value run data get entity @s Pos[1] 1000000
 
 # 相対で移動
     scoreboard players operation #MarkerMotion.TMP neac_value = #MarkerMotion.Speed neac_value
@@ -45,8 +45,8 @@
     execute store result score #MarkerMotion.TMP neac_value run data get entity @s Pos[1] 1000000
     # GravitySumが0でなければ移動後のY座標から重力分を引いた座標に移動する
         execute unless score #MarkerMotion.GravitySum neac_value matches 0 store result entity @s Pos[1] double 0.000001 run scoreboard players operation #MarkerMotion.TMP neac_value -= #MarkerMotion.GravitySum neac_value
-    # 確定した到達目標Y位置と移動前Y位置を減算してMotion値にしておく
-        execute store result score #MarkerMotion.Bounce.CG.TMP1 neac_value run scoreboard players operation #MarkerMotion.TMP neac_value -= #MarkerMotion.Bounce.CG.TMP1 neac_value
+    # bounce.gオン時、到達目標Y座標と移動前Y座標を減算してMotion値にしておく
+        execute if data storage neac: _.MarkerMotion.bounce{g:1b} store result score #MarkerMotion.Bounce.CG.TMP1 neac_value run scoreboard players operation #MarkerMotion.TMP neac_value -= #MarkerMotion.Bounce.CG.TMP1 neac_value
 
 # スコアリセット
     scoreboard players reset #MarkerMotion.TMP

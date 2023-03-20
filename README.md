@@ -37,7 +37,7 @@ summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:1.50,loss:{amo
 | speed.loss.amount | x | double | 毎tickの速度変更量<br>この値の有効数字は以下のspeed.loss.typeによって指定されます<br>"+"：小数点2桁まで有効<br>"\*"：小数点3桁まで有効 | 0 |
 | speed.loss.type | x | string | "+"か"\*"のどちらかを入力します<br>"+"：加算で計算します<br>"\*"：乗算で計算します | "+" |
 | gravity | x | double | 重力加速度<br>9.8の倍数がおすすめ<br>小数点3桁まで有効 | 0 |
-| bounce.count | x | int | 跳ねる回数<br>-1を指定すると無限 | 0 |
+| bounce.count | x | int | 跳ねる回数<br>以下の2種の負数を指定すると特殊挙動に変更されます<br>-1：無限に跳ねます<br>-2：データ処理を行った後、通常の接触停止判定を行います | 0 |
 | bounce.e | x | double | 跳ねた時の速度変更量<br>乗算で計算されます<br>小数点3桁まで有効 | 1.0 |
 | bounce.g | x | boolean | 重力加速を考慮して跳ねるようにします | false |
 | stopwith.hit | x | boolean | ヒットしたエンティティがいた時、ヒット位置で停止するようにします | true |
@@ -45,6 +45,7 @@ summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:1.50,loss:{amo
 
 ### 補足
 * `speed.amount`は`speed.loss`や`bounce.e`での変動時にデータが変更されます
+* `bounce.count`を-2にしたときの挙動は`#marker_motion_example:bounce/advanced`にて確認できます
 
 ### 返りタグ
 * MarkerMotion.on_block
@@ -100,12 +101,12 @@ distanceとかで範囲指定してあげると軽量化になると思います
 
 このライブラリを実行したMarkerに自動的に付与されるタグを全て剥がすfunction。
 
-`marker_motion_example:bounce_advanced`の挙動で利用しています。
+`#marker_motion_example:bounce/advanced`にて確認できます
 
 
 ### exampleに関して
 
-上記で少し記述したように挙動の例をいくつか作成しています。参考程度に。
+挙動の例をいくつか作成しています。参考程度に。
 
 MarkerMotion本体と一緒に導入することで実際に動かして確認できます。
 
@@ -122,6 +123,9 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
 * v3.2
   * bounce.gがオンの時の挙動が正常でない問題の修正、及びbounce.gがオンの時の挙動修正
   * `#marker_motion_example:bounce/gravity`を追加
+  * 特定条件下でMove.Rotationの値が正常でない問題の修正
+  * bounce.countを-2にしたときの挙動を追加
+  * speedが0になった時に停止しない問題の修正
 
 * v3.1
   * 大きなドリップリーフの当たり判定が少し大きい問題の修正

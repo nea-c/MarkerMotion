@@ -88,7 +88,7 @@
         tp @e[type=#marker_motion:selector,tag=MarkerMotion.this,limit=1] ~ ~ ~ ~ ~
         # ここが動いたら以降の処理(タグつけたりが動かなくなる仕様)
             execute store result score #MarkerMotion.Bounce.Count neac_value run data get storage neac: _.MarkerMotion.bounce.count 1
-            execute if score #MarkerMotion.Bounce.Count neac_value matches -1 run scoreboard players set #MarkerMotion.Bounce.Count neac_value 1
+            execute if score #MarkerMotion.Bounce.Count neac_value matches -2..-1 run scoreboard players set #MarkerMotion.Bounce.Count neac_value 1
             execute if score #MarkerMotion.BlockCheck neac_value matches 1.. if score #MarkerMotion.Bounce.Count neac_value matches 1.. run function marker_motion:bounce/
 
         # bounce処理を通ってなかったらon_blockタグ付与

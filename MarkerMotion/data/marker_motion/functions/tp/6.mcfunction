@@ -13,10 +13,10 @@ data modify storage neac: _.tp[6][].success set value 0b
 
 # エンティティ探査
 execute if entity @e[tag=MarkerMotion.target,limit=1] positioned ~-0.015625 ~-0.015625 ~-0.015625 as @e[tag=MarkerMotion.target,dx=0,dy=0,dz=0] positioned ~-0.96875 ~-0.96875 ~-0.96875 if entity @s[dx=0,dy=0,dz=0] run tag @s add targets
-execute if entity @e[tag=targets,limit=1] positioned ~-0.015625 ~-0.015625 ~-0.015625 run function marker_motion:tp/targets
+execute if entity @e[tag=targets,limit=1] run function marker_motion:tp/targets
 
 # 到達点探査
-execute if data storage neac: _.tp[5][{success:0b}] if entity @e[type=#marker_motion:selector,tag=MarkerMotion.this,distance=..0.015625,limit=1] positioned ^ ^ ^0.0000152587890625 store success storage neac: _.tp[6][].success byte 1 run tp @s ~ ~ ~
+execute if data storage neac: _.tp[5][{success:0b}] if entity @e[type=#marker_motion:selector,tag=MarkerMotion.this,distance=..0.015625,limit=1] positioned as @e[type=#marker_motion:selector,tag=MarkerMotion.this,limit=1] positioned ^ ^ ^0.0000152587890625 store success storage neac: _.tp[6][].success byte 1 run tp @s ~ ~ ~
 
 # ブロック探査
 execute if data storage neac: _.tp[6][{success:0b}] if data storage neac: _.MarkerMotion.stopwith{block:0b} run data modify storage neac: _.tp[6][].success set value 2b

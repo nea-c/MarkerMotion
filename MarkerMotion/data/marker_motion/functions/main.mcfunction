@@ -8,9 +8,9 @@
 # 自身のdataから重力,スピード,重力加速度の合計とかを取得
     # まずは自身のデータを一時ストレージに
         data modify storage neac: _.MarkerMotion set from entity @s data.MarkerMotion
-    # 重力
-        execute store result score #MarkerMotion.Gravity neac_value run data get storage neac: _.MarkerMotion.gravity 1000
     # 重力加速度
+        execute store result score #MarkerMotion.Gravity neac_value run data get storage neac: _.MarkerMotion.gravity 1000
+    # 重力合計
         execute store result score #MarkerMotion.GravitySum neac_value run data get storage neac: _.MarkerMotion.GravitySum 1
         # 重力パラメータとはここで加算して格納しちゃう
             execute store result storage neac: _.MarkerMotion.GravitySum int 1 run scoreboard players operation #MarkerMotion.GravitySum neac_value += #MarkerMotion.Gravity neac_value
@@ -55,9 +55,6 @@
     scoreboard players reset #MarkerMotion.SpeedLoss
     scoreboard players reset #MarkerMotion.Gravity
     scoreboard players reset #MarkerMotion.GravitySum
-    scoreboard players reset #MarkerMotion.BlockCheck
-    scoreboard players reset #MarkerMotion.TMP1
-    scoreboard players reset #MarkerMotion.Bounce.CG.TMP1
 
 # 最初の実行位置から移動位置までの距離からMoveを算出 + kill
     execute facing entity @s feet as @e[type=#marker_motion:selector,tag=MarkerMotion.this,limit=1] run function marker_motion:get_move

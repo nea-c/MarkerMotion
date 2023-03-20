@@ -87,9 +87,9 @@
     # 向きを変更
         tp @e[type=#marker_motion:selector,tag=MarkerMotion.this,limit=1] ~ ~ ~ ~ ~
         # ここが動いたら以降の処理(タグつけたりが動かなくなる仕様)
-            execute store result score #MarkerMotion.TMP1 neac_value run data get storage neac: _.MarkerMotion.bounce.count 1
-            execute if score #MarkerMotion.TMP1 neac_value matches -1 run scoreboard players set #MarkerMotion.TMP1 neac_value 1
-            execute if score #MarkerMotion.BlockCheck neac_value matches 1.. if score #MarkerMotion.TMP1 neac_value matches 1.. run function marker_motion:bounce/
+            execute store result score #MarkerMotion.Bounce.Count neac_value run data get storage neac: _.MarkerMotion.bounce.count 1
+            execute if score #MarkerMotion.Bounce.Count neac_value matches -1 run scoreboard players set #MarkerMotion.Bounce.Count neac_value 1
+            execute if score #MarkerMotion.BlockCheck neac_value matches 1.. if score #MarkerMotion.Bounce.Count neac_value matches 1.. run function marker_motion:bounce/
 
         # bounce処理を通ってなかったらon_blockタグ付与
             execute if score #MarkerMotion.BlockCheck neac_value matches 1.. run tag @s add MarkerMotion.on_block
@@ -103,3 +103,8 @@
             execute if score #MarkerMotion.BlockCheck neac_value matches 4 run tag @s add MarkerMotion.on_block.down
             execute if score #MarkerMotion.BlockCheck neac_value matches 5 run tag @s add MarkerMotion.on_block.south
             execute if score #MarkerMotion.BlockCheck neac_value matches 6 run tag @s add MarkerMotion.on_block.north
+
+
+    # スコアリセット
+        scoreboard players reset #MarkerMotion.Bounce.Count
+        scoreboard players reset #MarkerMotion.BlockCheck

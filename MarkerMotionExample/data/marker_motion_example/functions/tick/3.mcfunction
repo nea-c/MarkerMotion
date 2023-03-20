@@ -5,7 +5,7 @@ function #marker_motion:
 #パーティクル出す
 execute at @s run function marker_motion_example:particle/main
 
-execute if entity @s[tag=MarkerMotion.on_block,tag=!MarkerMotion.on_block.wall] run function marker_motion_example:tick/3_bounce
+execute if entity @s[tag=MarkerMotion.on_block,tag=!MarkerMotion.on_block.wall] at @s run function marker_motion_example:tick/3_bounce
 
 execute as @e[type=#marker_motion_example:test_entitys,tag=MarkerMotion.target] run tag @s remove MarkerMotion.target
 

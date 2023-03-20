@@ -39,7 +39,7 @@ summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:1.50,loss:{amo
 | gravity | x | double | 重力加速度<br>9.8の倍数がおすすめ<br>小数点3桁まで有効 | 0 |
 | bounce.count | x | int | 跳ねる回数<br>-1を指定すると無限 | 0 |
 | bounce.e | x | double | 跳ねた時の速度変更量<br>乗算で計算されます<br>小数点3桁まで有効 | 1.0 |
-| bounce.g | x | boolean | 床、天井に衝突して跳ねる時、重力加速を考慮して跳ねるようにします | false |
+| bounce.g | x | boolean | 重力加速を考慮して跳ねるようにします | false |
 | stopwith.hit | x | boolean | ヒットしたエンティティがいた時、ヒット位置で停止するようにします | true |
 | stopwith.block | x | boolean | ブロックに衝突した時、衝突位置で停止するようにします | true |
 
@@ -120,7 +120,8 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
 ## 更新履歴
 
 * v3.2
-  * bounce.gがオンの時の挙動が正常でない問題の修正
+  * bounce.gがオンの時の挙動が正常でない問題の修正、及びbounce.gがオンの時の挙動修正
+  * `#marker_motion_example:bounce/gravity`を追加
 
 * v3.1
   * 大きなドリップリーフの当たり判定が少し大きい問題の修正

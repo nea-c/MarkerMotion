@@ -4,7 +4,7 @@ Markerを移動速度や重力、バウンド回数などを指定して動か�
 
 ## 最新
 
-v3.1
+v3.2
 
 ## 動作要件
 
@@ -118,6 +118,9 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
 [MIT Licence](https://github.com/nea-c/MarkerMotion/blob/master/LICENSE)に基づく
 
 ## 更新履歴
+
+* v3.2
+  * bounce.gがオンの時の挙動が正常でない問題の修正
 
 * v3.1
   * 大きなドリップリーフの当たり判定が少し大きい問題の修正

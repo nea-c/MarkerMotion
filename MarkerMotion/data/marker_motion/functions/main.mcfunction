@@ -56,7 +56,8 @@
     scoreboard players reset #MarkerMotion.Gravity
     scoreboard players reset #MarkerMotion.GravitySum
     scoreboard players reset #MarkerMotion.BlockCheck
-    scoreboard players reset #MarkerMotion.Temporary1
+    scoreboard players reset #MarkerMotion.TMP1
+    scoreboard players reset #MarkerMotion.Bounce.CG.TMP1
 
 # 最初の実行位置から移動位置までの距離からMoveを算出 + kill
     execute facing entity @s feet as @e[type=#marker_motion:selector,tag=MarkerMotion.this,limit=1] run function marker_motion:get_move

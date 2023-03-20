@@ -13,22 +13,22 @@
     execute if score #MarkerMotion.Bounce.Rotation0 neac_value matches 18000.. run scoreboard players remove #MarkerMotion.Bounce.Rotation0 neac_value 36000
     execute if score #MarkerMotion.Bounce.Rotation0 neac_value matches ..-18000 run scoreboard players add #MarkerMotion.Bounce.Rotation0 neac_value 36000
 
-    execute if score #MarkerMotion.BlockCheck neac_value matches 1..4 run scoreboard players set #MarkerMotion.Bounce.Temporary1 neac_value -1
-    execute if score #MarkerMotion.BlockCheck neac_value matches 5..6 run scoreboard players set #MarkerMotion.Bounce.Temporary1 neac_value 18000
+    execute if score #MarkerMotion.BlockCheck neac_value matches 1..4 run scoreboard players set #MarkerMotion.Bounce.TMP1 neac_value -1
+    execute if score #MarkerMotion.BlockCheck neac_value matches 5..6 run scoreboard players set #MarkerMotion.Bounce.TMP1 neac_value 18000
 
     # 反発係数があれば受け取る
         execute if data storage neac: _.MarkerMotion.bounce.e store result score #MarkerMotion.Bounce.e neac_value run data get storage neac: _.MarkerMotion.bounce.e 1000
 
-    execute if score #MarkerMotion.BlockCheck neac_value matches 1..2 store result entity @s Rotation[0] float 0.01 run scoreboard players operation #MarkerMotion.Bounce.Rotation0 neac_value *= #MarkerMotion.Bounce.Temporary1 neac_value
-    execute if score #MarkerMotion.BlockCheck neac_value matches 5..6 store result entity @s Rotation[0] float 0.01 run scoreboard players operation #MarkerMotion.Bounce.Temporary1 neac_value -= #MarkerMotion.Bounce.Rotation0 neac_value
+    execute if score #MarkerMotion.BlockCheck neac_value matches 1..2 store result entity @s Rotation[0] float 0.01 run scoreboard players operation #MarkerMotion.Bounce.Rotation0 neac_value *= #MarkerMotion.Bounce.TMP1 neac_value
+    execute if score #MarkerMotion.BlockCheck neac_value matches 5..6 store result entity @s Rotation[0] float 0.01 run scoreboard players operation #MarkerMotion.Bounce.TMP1 neac_value -= #MarkerMotion.Bounce.Rotation0 neac_value
     #execute unless score #MarkerMotion.BlockCheck neac_value matches 3..4 store result entity @s Rotation[1] float 0.01 run scoreboard players get #MarkerMotion.Bounce.Rotation1 neac_value
-    execute if score #MarkerMotion.BlockCheck neac_value matches 3..4 store result entity @s Rotation[1] float 0.01 run scoreboard players operation #MarkerMotion.Bounce.Rotation1 neac_value *= #MarkerMotion.Bounce.Temporary1 neac_value
+    execute if score #MarkerMotion.BlockCheck neac_value matches 3..4 store result entity @s Rotation[1] float 0.01 run scoreboard players operation #MarkerMotion.Bounce.Rotation1 neac_value *= #MarkerMotion.Bounce.TMP1 neac_value
 
 # 重力合計をリセット
     data modify storage neac: _.MarkerMotion.GravitySum set value 0
 
 # バウンス回数が無限(-1)、0でない時にバウンス回数を1減らす
-    execute unless data storage neac: _.MarkerMotion.bounce{count:-1} unless data storage neac: _.MarkerMotion.bounce{count:0} store result storage neac: _.MarkerMotion.bounce.count int 1 run scoreboard players remove #MarkerMotion.Temporary1 neac_value 1
+    execute unless data storage neac: _.MarkerMotion.bounce{count:-1} unless data storage neac: _.MarkerMotion.bounce{count:0} store result storage neac: _.MarkerMotion.bounce.count int 1 run scoreboard players remove #MarkerMotion.TMP1 neac_value 1
 
 # 反発係数があったらそれを計算して代入する
     execute if data storage neac: _.MarkerMotion.bounce.e unless score #MarkerMotion.Bounce.e neac_value matches 1000 store result storage neac: _.MarkerMotion.speed.amount double 0.00001 run scoreboard players operation #MarkerMotion.Speed neac_value *= #MarkerMotion.Bounce.e neac_value
@@ -47,7 +47,7 @@ tag @s add MarkerMotion.bounce
     scoreboard players reset #MarkerMotion.Bounce.e
     scoreboard players reset #MarkerMotion.Bounce.Rotation0
     scoreboard players reset #MarkerMotion.Bounce.Rotation1
-    scoreboard players reset #MarkerMotion.Bounce.Temporary1
+    scoreboard players reset #MarkerMotion.Bounce.TMP1
 
 # 一時処理用タグ削除
     execute if entity @s[tag=MarkerMotion.speed.0.bounce] run tag @s remove MarkerMotion.speed.0.bounce

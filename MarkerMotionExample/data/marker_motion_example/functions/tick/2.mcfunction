@@ -6,7 +6,7 @@ function #marker_motion:
 execute as @e[type=#marker_motion_example:test_entitys,tag=MarkerMotion.target] run tag @s remove MarkerMotion.target
 
 #パーティクル出す
-execute at @s run function marker_motion_example:particle/main
+function marker_motion_example:particle/main
 
 execute if entity @e[tag=MarkerMotion.hit,limit=1] as @e[tag=MarkerMotion.hit] run damage @s 0.000000000000000000000000000000000000000000001 out_of_world
 execute if entity @e[tag=MarkerMotion.hit,limit=1] as @e[tag=MarkerMotion.hit] run tag @s remove MarkerMotion.hit

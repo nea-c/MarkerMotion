@@ -4,7 +4,7 @@ Markerを移動速度や重力、バウンド回数などを指定して動か�
 
 ## 最新
 
-v3.2
+v3.3
 
 ## 動作要件
 
@@ -74,23 +74,11 @@ summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:1.50,loss:{amo
 MarkerMotion.on_block, MarkerMotion.speed.0, MarkerMotion.stopwith.hitのタグがあれば必ず付与されています。
 ```
 
-### markerのNBTに追加返却されるもの
-* data.MarkerMotion.Move
-```
-移動距離と移動角度。
-この値を使って綺麗な繋がったパーティクル出したりとかが可能。exampleを参照。
-```
-* data.MarkerMotion.GravitySum
-```
-重力の合計。
-1秒毎にリセットとかで変な挙動できるかもしれない。
-```
-
 ### ダメージを与える飛び道具として扱う際の当たり判定に関して
 
 このライブラリを呼ぶ前に判定に入れたいエンティティに対し`MarkerMotion.target`タグを付与します。
 
-distanceとかで範囲指定してあげると軽量化になると思います。
+distanceとかで範囲指定してあげた方が軽量になると思います。
 
 当たり判定はヒットボックスサイズで検知され、`MarkerMotion.hit`タグを返します。
 
@@ -119,6 +107,11 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
 [MIT Licence](https://github.com/nea-c/MarkerMotion/blob/master/LICENSE)に基づく
 
 ## 更新履歴
+
+* v3.3
+  * コマンド数減少及び最適化
+  * Moveを削除
+    * exampleのパーティクル表示方法を変更
 
 * v3.2
   * bounce.gがオンの時の挙動が正常でない問題の修正、及びbounce.gがオンの時の挙動修正

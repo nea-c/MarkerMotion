@@ -20,20 +20,16 @@
         execute unless data storage neac: _.MarkerMotion.speed.loss{type:"*"} store result score #MarkerMotion.SpeedLoss neac_value run data get storage neac: _.MarkerMotion.speed.loss.amount 100
         execute if data storage neac: _.MarkerMotion.speed.loss{type:"*"} if data storage neac: _.MarkerMotion.speed.loss.amount store result score #MarkerMotion.SpeedLoss neac_value run data get storage neac: _.MarkerMotion.speed.loss.amount 1000
 
-# 到達目標位置用の取得に使うエンティティセットアップ
-    # なんか残ってたらkill
-        execute if entity @e[type=#marker_motion:selector,tag=MarkerMotion.this,limit=1] run kill @e[type=#marker_motion:selector,tag=MarkerMotion.this]
-    execute summon marker run function marker_motion:set_arrival_pos
-
 # 1瞬だけつくようにBounce検知用タグの削除。付与は marker_motion:bounce
     execute if entity @s[tag=MarkerMotion.bounce] run tag @s remove MarkerMotion.bounce
 # 接触したブロックが1tickの間前回と同じのにならないようにする
-    data modify storage neac: _.BounceDirectionDisable set from storage neac: _.MarkerMotion.BounceDirection
-    data remove storage neac: _.MarkerMotion.BounceDirection
-# 現在位置と到達目標位置の間にブロックがあるかチェック
-    # function再起で到達目標位置までの間にブロックがあるかチェック
-    # その際targetタグがいればヒット判定を返す　また、stopwith.hitがtrueであればMarkerMotion.stopwith.hitを返す
-        execute facing entity @e[type=#marker_motion:selector,tag=MarkerMotion.this,limit=1] feet run function marker_motion:tp/
+    execute if data storage neac: _.MarkerMotion.BounceDirection run data modify storage neac: _.BounceDirectionDisable set from storage neac: _.MarkerMotion.BounceDirection
+    execute if data storage neac: _.MarkerMotion.BounceDirection run data remove storage neac: _.MarkerMotion.BounceDirection
+# 到達目標位置を取得してそこまでの間にブロックがあるかチェック
+    # その際targetタグがいればヒット判定も返す
+        tag @s add MarkerMotion.me
+        execute summon marker run function marker_motion:tp/
+        tag @s remove MarkerMotion.me
 
 # スピード減少
     # +
@@ -55,9 +51,6 @@
     scoreboard players reset #MarkerMotion.SpeedLoss
     scoreboard players reset #MarkerMotion.Gravity
     scoreboard players reset #MarkerMotion.GravitySum
-
-# 最初の実行位置から移動位置までの距離からMoveを算出 + kill
-    execute facing entity @s feet as @e[type=#marker_motion:selector,tag=MarkerMotion.this,limit=1] run function marker_motion:get_move
 
 # ストレージデータを自身に返して初期化
     data modify entity @s data.MarkerMotion set from storage neac: _.MarkerMotion

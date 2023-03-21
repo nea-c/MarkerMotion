@@ -3,9 +3,8 @@ execute as @e[type=#marker_motion_example:test_entitys,distance=..5] run tag @s 
 function #marker_motion:
 
 #パーティクル出す
-execute at @s run function marker_motion_example:particle/main
+function marker_motion_example:particle/main
 
-#execute if entity @s[tag=MarkerMotion.on_block,tag=!MarkerMotion.on_block.wall] run data modify entity @s data.MarkerMotion.bounce.count set value 1
 execute if entity @s[tag=MarkerMotion.on_block,tag=!MarkerMotion.on_block.wall] run function #marker_motion:tag_remove
 
 execute as @e[type=#marker_motion_example:test_entitys,tag=MarkerMotion.target] run tag @s remove MarkerMotion.target

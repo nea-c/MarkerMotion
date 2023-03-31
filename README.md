@@ -4,7 +4,7 @@ Markerを移動速度や重力、バウンド回数などを指定して動か�
 
 ## 最新
 
-v3.3
+v3.4
 
 ## 動作要件
 
@@ -107,6 +107,9 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
 [MIT Licence](https://github.com/nea-c/MarkerMotion/blob/master/LICENSE)に基づく
 
 ## 更新履歴
+
+* v3.4
+  * ピストンヘッドの他ブロックへの浸食当たり判定が一部正しく動作しない問題の修正
 
 * v3.3
   * コマンド数減少及び最適化

@@ -1,7 +1,10 @@
 [
     {
-        "condition": "reference",
-        "name": "marker_motion:block_check/shape/erosion/check"
+        "condition": "inverted",
+        "term": {
+            "condition": "reference",
+            "name": "marker_motion:block_check/shape/erosion/check"
+        }
     },
     {
         "condition": "location_check",

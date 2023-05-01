@@ -98,9 +98,10 @@ distanceとかで範囲指定してあげた方が軽量になると思います
 
 MarkerMotion本体と一緒に導入することで実際に動かして確認できます。
 
-## クレジット
+## ライセンス
 
-* ブロック接触、エンティティヒット判定参考 ： [MC-Command-Note](https://github.com/RuskEocssar/MC-Command-Note)
+* [Minecraft-JE-Technical-Note](https://github.com/MCJE-Tech-Shares/Minecraft-JE-Technical-Note) ([MIT Lisence](https://github.com/MCJE-Tech-Shares/Minecraft-JE-Technical-Note/blob/main/LICENSE) Copyright (c) 2023 Rusk_Eocssar)
+  * ブロック接触、エンティティヒット判定参考
 
 ## ライセンス
 

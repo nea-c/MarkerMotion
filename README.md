@@ -100,12 +100,12 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
 
 ## ライセンス
 
+[MIT Licence](https://github.com/nea-c/MarkerMotion/blob/master/LICENSE)に基づく。
+
+### 参考
 * [Minecraft-JE-Technical-Note](https://github.com/MCJE-Tech-Shares/Minecraft-JE-Technical-Note) ([MIT Lisence](https://github.com/MCJE-Tech-Shares/Minecraft-JE-Technical-Note/blob/main/LICENSE) Copyright (c) 2023 Rusk_Eocssar)
   * ブロック接触、エンティティヒット判定参考
 
-## ライセンス
-
-[MIT Licence](https://github.com/nea-c/MarkerMotion/blob/master/LICENSE)に基づく
 
 ## 更新履歴
 

@@ -1,0 +1,159 @@
+[
+    {
+        "condition": "location_check",
+        "offsetY": 1,
+        "predicate": {
+            "block": {
+                "blocks": [
+                    "pitcher_crop"
+                ],
+                "state": {
+                    "half": "lower"
+                }
+            }
+        }
+    },
+    {
+        "condition": "any_of",
+        "terms": [
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "distance": {
+                        "y": {
+                            "min": 0.0,
+                            "max": 0.93750
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "any_of",
+                "terms": [
+                    {
+                        "condition": "entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "distance": {
+                                "x": {
+                                    "min": 0.0,
+                                    "max": 0.18750
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "condition": "entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "distance": {
+                                "x": {
+                                    "min": 0.81250,
+                                    "max": 1.0
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "condition": "entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "distance": {
+                                "z": {
+                                    "min": 0.0,
+                                    "max": 0.18750
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "condition": "entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "distance": {
+                                "z": {
+                                    "min": 0.81250,
+                                    "max": 1.0
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "condition": "all_of",
+                "terms": [
+                    {
+                        "condition": "location_check",
+                        "offsetY": 1,
+                        "predicate": {
+                            "block": {
+                                "blocks": [
+                                    "pitcher_crop"
+                                ],
+                                "state": {
+                                    "half": "lower",
+                                    "age": 0
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "condition": "any_of",
+                        "terms": [
+                            {
+                                "condition": "entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "distance": {
+                                        "x": {
+                                            "min": 0.0,
+                                            "max": 0.31250
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "condition": "entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "distance": {
+                                        "x": {
+                                            "min": 0.68750,
+                                            "max": 1.0
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "condition": "entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "distance": {
+                                        "z": {
+                                            "min": 0.0,
+                                            "max": 0.31250
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "condition": "entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "distance": {
+                                        "z": {
+                                            "min": 0.68750,
+                                            "max": 1.0
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

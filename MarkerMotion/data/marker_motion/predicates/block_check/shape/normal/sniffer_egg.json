@@ -11,14 +11,14 @@
                         "location": {
                             "block": {
                                 "blocks": [
-                                    "bamboo"
+                                    "sniffer_egg"
                                 ]
                             }
                         },
                         "distance": {
                             "x": {
                                 "min": 0.0,
-                                "max": 0.343750
+                                "max": 0.06250
                             }
                         }
                     }
@@ -30,13 +30,13 @@
                         "location": {
                             "block": {
                                 "blocks": [
-                                    "bamboo"
+                                    "sniffer_egg"
                                 ]
                             }
                         },
                         "distance": {
                             "x": {
-                                "min": 0.656250,
+                                "min": 0.93750,
                                 "max": 1.0
                             }
                         }
@@ -49,14 +49,14 @@
                         "location": {
                             "block": {
                                 "blocks": [
-                                    "bamboo"
+                                    "sniffer_egg"
                                 ]
                             }
                         },
                         "distance": {
                             "z": {
                                 "min": 0.0,
-                                "max": 0.343750
+                                "max": 0.1250
                             }
                         }
                     }
@@ -68,13 +68,13 @@
                         "location": {
                             "block": {
                                 "blocks": [
-                                    "bamboo"
+                                    "sniffer_egg"
                                 ]
                             }
                         },
                         "distance": {
                             "z": {
-                                "min": 0.656250,
+                                "min": 0.8750,
                                 "max": 1.0
                             }
                         }

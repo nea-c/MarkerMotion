@@ -1,0 +1,20 @@
+[
+    {
+        "condition": "inverted",
+        "entity": "this",
+        "term": {
+            "condition": "location_check",
+            "offsetY": 1,
+            "predicate": {
+                "block": {
+                    "blocks": [
+                        "pitcher_crop"
+                    ],
+                    "state": {
+                        "half": "lower"
+                    }
+                }
+            }
+        }
+    }
+]

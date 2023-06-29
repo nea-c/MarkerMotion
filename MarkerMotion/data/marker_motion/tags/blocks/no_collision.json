@@ -200,7 +200,6 @@
         "sweet_berry_bush",
         "cave_vines",
         "cave_vines_plant",
-
         "cherry_sapling",
         "torchflower_crop",
         "torchflower",
@@ -223,6 +222,7 @@
         "cherry_pressure_plate",
         "bamboo_button",
         "cherry_button",
-        "pink_petals"
+        "pink_petals",
+        "pitcher_plant"
     ]
 }

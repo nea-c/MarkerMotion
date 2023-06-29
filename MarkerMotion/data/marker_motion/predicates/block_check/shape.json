@@ -4,7 +4,7 @@
         "name" : "marker_motion:block_check/shape/erosion/summary"
     },
     {
-        "condition": "alternative",
+        "condition": "any_of",
         "terms": [
             {
                 "condition": "location_check",
@@ -257,6 +257,14 @@
             {
                 "condition": "reference",
                 "name": "marker_motion:block_check/shape/normal/glass_panes"
+            },
+            {
+                "condition": "reference",
+                "name": "marker_motion:block_check/shape/normal/pitcher_crop"
+            },
+            {
+                "condition": "reference",
+                "name": "marker_motion:block_check/shape/normal/sniffer_egg"
             }
         ]
     }

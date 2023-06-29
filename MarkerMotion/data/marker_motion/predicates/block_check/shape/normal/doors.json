@@ -1,8 +1,8 @@
 {
-    "condition": "alternative",
+    "condition": "any_of",
     "terms": [
         {
-            "condition": "alternative",
+            "condition": "any_of",
             "terms": [
                 {
                     "condition": "entity_properties",
@@ -72,7 +72,7 @@
             ]
         },
         {
-            "condition": "alternative",
+            "condition": "any_of",
             "terms": [
                 {
                     "condition": "entity_properties",
@@ -142,7 +142,7 @@
             ]
         },
         {
-            "condition": "alternative",
+            "condition": "any_of",
             "terms": [
                 {
                     "condition": "entity_properties",
@@ -212,7 +212,7 @@
             ]
         },
         {
-            "condition": "alternative",
+            "condition": "any_of",
             "terms": [
                 {
                     "condition": "entity_properties",

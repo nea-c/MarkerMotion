@@ -1,6 +1,6 @@
 [
     {
-        "condition": "alternative",
+        "condition": "any_of",
         "terms": [
             {
                 "condition": "reference",
@@ -13,7 +13,7 @@
         ]
     },
     {
-        "condition": "alternative",
+        "condition": "any_of",
         "terms": [
             {
                 "condition": "reference",
@@ -26,7 +26,7 @@
         ]
     },
     {
-        "condition": "alternative",
+        "condition": "any_of",
         "terms": [
             {
                 "condition": "reference",
@@ -39,7 +39,7 @@
         ]
     },
     {
-        "condition": "alternative",
+        "condition": "any_of",
         "terms": [
             {
                 "condition": "reference",
@@ -52,7 +52,7 @@
         ]
     },
     {
-        "condition": "alternative",
+        "condition": "any_of",
         "terms": [
             {
                 "condition": "reference",
@@ -65,7 +65,7 @@
         ]
     },
     {
-        "condition": "alternative",
+        "condition": "any_of",
         "terms": [
             {
                 "condition": "reference",

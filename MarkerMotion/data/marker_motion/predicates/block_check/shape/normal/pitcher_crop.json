@@ -2,6 +2,22 @@
     "condition": "any_of",
     "terms": [
         {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "pitcher_crop"
+                        ],
+                        "state": {
+                            "half": "upper"
+                        }
+                    }
+                }
+            }
+        },
+        {
             "condition": "any_of",
             "terms": [
                 {
@@ -11,13 +27,13 @@
                         "location": {
                             "block": {
                                 "blocks": [
-                                    "brewing_stand"
+                                    "pitcher_crop"
                                 ]
                             }
                         },
                         "distance": {
                             "y": {
-                                "min": 0.8750,
+                                "min": 0.31250,
                                 "max": 1.0
                             }
                         }
@@ -30,18 +46,14 @@
                         "location": {
                             "block": {
                                 "blocks": [
-                                    "brewing_stand"
+                                    "pitcher_crop"
                                 ]
                             }
                         },
                         "distance": {
                             "x": {
                                 "min": 0.0,
-                                "max": 0.43750
-                            },
-                            "y": {
-                                "min": 0.1250,
-                                "max": 1.0
+                                "max": 0.18750
                             }
                         }
                     }
@@ -53,17 +65,13 @@
                         "location": {
                             "block": {
                                 "blocks": [
-                                    "brewing_stand"
+                                    "pitcher_crop"
                                 ]
                             }
                         },
                         "distance": {
                             "x": {
-                                "min": 0.56250,
-                                "max": 1.0
-                            },
-                            "y": {
-                                "min": 0.1250,
+                                "min": 0.81250,
                                 "max": 1.0
                             }
                         }
@@ -76,18 +84,14 @@
                         "location": {
                             "block": {
                                 "blocks": [
-                                    "brewing_stand"
+                                    "pitcher_crop"
                                 ]
                             }
                         },
                         "distance": {
-                            "y": {
-                                "min": 0.1250,
-                                "max": 1.0
-                            },
                             "z": {
                                 "min": 0.0,
-                                "max": 0.43750
+                                "max": 0.18750
                             }
                         }
                     }
@@ -99,17 +103,13 @@
                         "location": {
                             "block": {
                                 "blocks": [
-                                    "brewing_stand"
+                                    "pitcher_crop"
                                 ]
                             }
                         },
                         "distance": {
-                            "y": {
-                                "min": 0.1250,
-                                "max": 1.0
-                            },
                             "z": {
-                                "min": 0.56250,
+                                "min": 0.81250,
                                 "max": 1.0
                             }
                         }
@@ -127,32 +127,16 @@
                         "location": {
                             "block": {
                                 "blocks": [
-                                    "brewing_stand"
-                                ]
+                                    "pitcher_crop"
+                                ],
+                                "state": {
+                                    "age": 0
+                                }
                             }
                         },
                         "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.06250
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "brewing_stand"
-                                ]
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.93750,
+                            "y": {
+                                "min": 0.18750,
                                 "max": 1.0
                             }
                         }
@@ -165,14 +149,17 @@
                         "location": {
                             "block": {
                                 "blocks": [
-                                    "brewing_stand"
-                                ]
+                                    "pitcher_crop"
+                                ],
+                                "state": {
+                                    "age": 0
+                                }
                             }
                         },
                         "distance": {
-                            "z": {
+                            "x": {
                                 "min": 0.0,
-                                "max": 0.06250
+                                "max": 0.31250
                             }
                         }
                     }
@@ -184,13 +171,60 @@
                         "location": {
                             "block": {
                                 "blocks": [
-                                    "brewing_stand"
-                                ]
+                                    "pitcher_crop"
+                                ],
+                                "state": {
+                                    "age": 0
+                                }
+                            }
+                        },
+                        "distance": {
+                            "x": {
+                                "min": 0.68750,
+                                "max": 1.0
+                            }
+                        }
+                    }
+                },
+                {
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "blocks": [
+                                    "pitcher_crop"
+                                ],
+                                "state": {
+                                    "age": 0
+                                }
                             }
                         },
                         "distance": {
                             "z": {
-                                "min": 0.93750,
+                                "min": 0.0,
+                                "max": 0.31250
+                            }
+                        }
+                    }
+                },
+                {
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "blocks": [
+                                    "pitcher_crop"
+                                ],
+                                "state": {
+                                    "age": 0
+                                }
+                            }
+                        },
+                        "distance": {
+                            "z": {
+                                "min": 0.68750,
                                 "max": 1.0
                             }
                         }

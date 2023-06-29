@@ -1,6 +1,6 @@
 [
   {
-    "condition": "minecraft:alternative",
+    "condition": "any_of",
     "terms": [{
       "condition": "entity_properties",
       "entity": "this",

@@ -11,11 +11,15 @@
 data modify storage neac: _.tp[5][].success set value 2b
 
 # エンティティ探査
-execute if entity @e[tag=MarkerMotion.target,limit=1] positioned ~-0.015625 ~-0.015625 ~-0.015625 as @e[tag=MarkerMotion.target,dx=0,dy=0,dz=0] positioned ~-0.96875 ~-0.96875 ~-0.96875 if entity @s[dx=0,dy=0,dz=0] run tag @s add MarkerMotion.hit
+execute if entity @e[tag=MarkerMotion.target,distance=..5,limit=1] positioned ~-0.015625 ~-0.015625 ~-0.015625 as @e[tag=MarkerMotion.target,dx=0,dy=0,dz=0] positioned ~-0.96875 ~-0.96875 ~-0.96875 if entity @s[dx=0,dy=0,dz=0] run tag @s add MarkerMotion.hit
 execute unless data storage neac: _.MarkerMotion.stopwith{hit:0b} if entity @e[tag=MarkerMotion.hit,limit=1] run function marker_motion:tp/targets
 
+# シュルカー探索
+execute if data storage neac: _.tp[5][{success:2b}] unless data storage neac: _.MarkerMotion.stopwith{block:0b} if entity @e[type=shulker,tag=MarkerMotion.shulker,distance=..5,limit=1] positioned ~-0.000030517578125 ~-0.000030517578125 ~-0.000030517578125 as @e[type=shulker,tag=MarkerMotion.shulker,dx=0,dy=0,dz=0] positioned ~-0.999969482421875 ~-0.999969482421875 ~-0.999969482421875 if entity @s[dx=0,dy=0,dz=0] run tag @s add MarkerMotion.hitShulker
+execute if data storage neac: _.tp[5][{success:2b}] unless data storage neac: _.MarkerMotion.stopwith{block:0b} if entity @e[type=shulker,tag=MarkerMotion.hitShulker,distance=..5,limit=1] run function marker_motion:tp/shulker/
+
 # 到達点探査
-execute if data storage neac: _.tp[5][{success:2b}] if entity @s[distance=..0.015625] positioned as @s positioned ^ ^ ^0.0000152587890625 store success storage neac: _.tp[5][].success byte 1 run tp @e[type=marker,tag=MarkerMotion.me,limit=1] ~ ~ ~
+execute if data storage neac: _.tp[5][{success:2b}] if entity @s[distance=..0.015625] positioned as @s positioned ^ ^ ^0.0000152587890625 store success storage neac: _.tp[5][].success byte 1 run tp @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] ~ ~ ~
 
 # ブロック探査
 execute if data storage neac: _.tp[5][{success:2b}] if data storage neac: _.MarkerMotion.stopwith{block:0b} run data modify storage neac: _.tp[5][].success set value 0b

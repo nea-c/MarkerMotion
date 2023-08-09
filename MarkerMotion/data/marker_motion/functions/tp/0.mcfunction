@@ -13,12 +13,12 @@
 # 初期化
     data modify storage neac: _.tp set value [[{success:0b}],[{success:0b}],[{success:0b}],[{success:0b}],[{success:0b}],[{success:0b}],[{success:0b}],[{success:0b}]]
 
-# 到達目標位置が近くてspeedが0以下であれば停止
-    execute if entity @s[distance=..0.0078125] if score #MarkerMotion.Speed neac_value matches ..0 run tag @e[type=marker,tag=MarkerMotion.me,limit=1] add MarkerMotion.speed.0
-
 # 最大ループ回数指定
     scoreboard players set #MarkerMotion.loop neac_value 41
 # 到達目標位置が近くになければそこまでの間のブロックをループでチェック
         execute unless entity @s[distance=..0.0078125] positioned ^ ^ ^0.5 run function marker_motion:tp/1
 # スコアリセット
     scoreboard players reset #MarkerMotion.loop
+
+# 最終到達位置が近くてspeedが0以下であれば停止
+    execute if entity @e[type=marker,tag=MarkerMotion.me,distance=..0.0078125,limit=1] if score #MarkerMotion.Speed neac_value matches ..0 run tag @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] add MarkerMotion.speed.0

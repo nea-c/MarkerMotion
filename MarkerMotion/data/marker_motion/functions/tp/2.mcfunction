@@ -14,8 +14,11 @@ data modify storage neac: _.tp[1][].success set value 1b
 execute if data storage neac: _.MarkerMotion.stopwith{block:0b} run data modify storage neac: _.tp[1][].success set value 0b
 execute unless data storage neac: _.MarkerMotion.stopwith{block:0b} if block ^ ^ ^0.25 #marker_motion:no_collision if block ^ ^ ^-0.25 #marker_motion:no_collision rotated ~180 ~ if block ^ ^ ^0.25 #marker_motion:no_collision if block ^ ^ ^-0.25 #marker_motion:no_collision rotated as @s if block ^ ^ ^0.25 #marker_motion:no_collision if block ^ ^ ^-0.25 #marker_motion:no_collision rotated ~180 ~ if block ^ ^ ^0.25 #marker_motion:no_collision if block ^ ^ ^-0.25 #marker_motion:no_collision if predicate marker_motion:block_check/shape/erosion/check run data modify storage neac: _.tp[1][].success set value 0b
 
+# シュルカー探索
+execute unless data storage neac: _.MarkerMotion.stopwith{block:0b} if entity @e[type=shulker,tag=MarkerMotion.shulker,distance=..5,limit=1] positioned ~-0.25 ~-0.25 ~-0.25 as @e[type=shulker,tag=MarkerMotion.shulker,dx=0,dy=0,dz=0] positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=0,dy=0,dz=0] run data modify storage neac: _.tp[1][].success set value 1b
+
 # エンティティ探査
-execute if entity @e[tag=MarkerMotion.target,limit=1] positioned ~-0.25 ~-0.25 ~-0.25 as @e[tag=MarkerMotion.target,dx=0,dy=0,dz=0] positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=0,dy=0,dz=0] run data modify storage neac: _.tp[1][].success set value 1b
+execute if entity @e[tag=MarkerMotion.target,distance=..5,limit=1] positioned ~-0.25 ~-0.25 ~-0.25 as @e[tag=MarkerMotion.target,dx=0,dy=0,dz=0] positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=0,dy=0,dz=0] run data modify storage neac: _.tp[1][].success set value 1b
 
 # 到達点探査
 execute if entity @s[distance=..0.25] run data modify storage neac: _.tp[1][].success set value 1b

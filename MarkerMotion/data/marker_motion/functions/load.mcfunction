@@ -7,5 +7,8 @@
 # スコアオブジェクト作成
     scoreboard objectives add neac_value dummy
 
-# 固定値スコア設定
-    scoreboard players set #1000 neac_value 1000
+
+    scoreboard objectives add 1000 dummy
+
+
+    scoreboard players set #global 1000 1000

@@ -1,6 +1,6 @@
-#> marker_motion:tp/shulker/
+#> marker_motion:tp/as_block/
 #
-# シュルカー探索
+# ブロック扱いエンティティ探索
 #
 # @within
 #   function marker_motion:tp/6
@@ -13,7 +13,7 @@
 
 # シュルカーに埋まってたら位置を修復しようとする
     scoreboard players set #MarkerMotion.PosRepair neac_value 10
-    execute as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned as @e[type=shulker,tag=MarkerMotion.hitShulker,distance=..5,limit=1] if predicate marker_motion:shulker positioned as @s run function marker_motion:tp/shulker/pos_repair
+    execute positioned ~-0.000030517578125 ~-0.000030517578125 ~-0.000030517578125 as @e[type=!marker,tag=MarkerMotion.as_block,dx=0,dy=0,dz=0] positioned ~-0.999969482421875 ~-0.999969482421875 ~-0.999969482421875 if entity @s[dx=0,dy=0,dz=0] positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] run function marker_motion:tp/as_block/pos_repair
     scoreboard players reset #MarkerMotion.PosRepair
 
 ## シュルカー接触チェック
@@ -21,14 +21,14 @@
         data modify storage neac: _.block set value {ok:0b,down:[{success:0b},{success:0b},{success:0b},{success:0b},{success:0b}],up:[{success:0b},{success:0b},{success:0b},{success:0b},{success:0b}],south:[{success:0b},{success:0b},{success:0b},{success:0b},{success:0b}],north:[{success:0b},{success:0b},{success:0b},{success:0b},{success:0b}],east:[{success:0b},{success:0b},{success:0b},{success:0b},{success:0b}],west:[{success:0b},{success:0b},{success:0b},{success:0b},{success:0b}]}
 
     # 8点をチェックしてストレージにデータを入れる
-        execute positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned ~-0.0078125 ~-0.0078125 ~-0.0078125 store success storage neac: _.block.down[4].success byte 1 store success storage neac: _.block.north[2].success byte 1 store success storage neac: _.block.west[2].success byte 1 run function marker_motion:tp/shulker/check
-        execute positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned ~-0.0078125 ~-0.0078125 ~0.0078125 store success storage neac: _.block.down[3].success byte 1 store success storage neac: _.block.south[2].success byte 1 store success storage neac: _.block.west[1].success byte 1 run function marker_motion:tp/shulker/check
-        execute positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned ~0.0078125 ~-0.0078125 ~-0.0078125 store success storage neac: _.block.down[2].success byte 1 store success storage neac: _.block.north[1].success byte 1 store success storage neac: _.block.east[2].success byte 1 run function marker_motion:tp/shulker/check
-        execute positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned ~0.0078125 ~-0.0078125 ~0.0078125 store success storage neac: _.block.down[1].success byte 1 store success storage neac: _.block.south[1].success byte 1 store success storage neac: _.block.east[1].success byte 1 run function marker_motion:tp/shulker/check
-        execute positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned ~-0.0078125 ~0.0078125 ~-0.0078125 store success storage neac: _.block.up[4].success byte 1 store success storage neac: _.block.north[4].success byte 1 store success storage neac: _.block.west[4].success byte 1 run function marker_motion:tp/shulker/check
-        execute positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned ~-0.0078125 ~0.0078125 ~0.0078125 store success storage neac: _.block.up[3].success byte 1 store success storage neac: _.block.south[4].success byte 1 store success storage neac: _.block.west[3].success byte 1 run function marker_motion:tp/shulker/check
-        execute positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned ~0.0078125 ~0.0078125 ~-0.0078125 store success storage neac: _.block.up[2].success byte 1 store success storage neac: _.block.north[3].success byte 1 store success storage neac: _.block.east[4].success byte 1 run function marker_motion:tp/shulker/check
-        execute positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned ~0.0078125 ~0.0078125 ~0.0078125 store success storage neac: _.block.up[1].success byte 1 store success storage neac: _.block.south[3].success byte 1 store success storage neac: _.block.east[3].success byte 1 run function marker_motion:tp/shulker/check
+        execute positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned ~-0.0078125 ~-0.0078125 ~-0.0078125 store success storage neac: _.block.down[4].success byte 1 store success storage neac: _.block.north[2].success byte 1 store success storage neac: _.block.west[2].success byte 1 positioned ~-0.000030517578125 ~-0.000030517578125 ~-0.000030517578125 as @e[type=!marker,tag=MarkerMotion.as_block,dx=0,dy=0,dz=0] positioned ~-0.999969482421875 ~-0.999969482421875 ~-0.999969482421875 if entity @s[dx=0,dy=0,dz=0]
+        execute positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned ~-0.0078125 ~-0.0078125 ~0.0078125 store success storage neac: _.block.down[3].success byte 1 store success storage neac: _.block.south[2].success byte 1 store success storage neac: _.block.west[1].success byte 1 positioned ~-0.000030517578125 ~-0.000030517578125 ~-0.000030517578125 as @e[type=!marker,tag=MarkerMotion.as_block,dx=0,dy=0,dz=0] positioned ~-0.999969482421875 ~-0.999969482421875 ~-0.999969482421875 if entity @s[dx=0,dy=0,dz=0]
+        execute positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned ~0.0078125 ~-0.0078125 ~-0.0078125 store success storage neac: _.block.down[2].success byte 1 store success storage neac: _.block.north[1].success byte 1 store success storage neac: _.block.east[2].success byte 1 positioned ~-0.000030517578125 ~-0.000030517578125 ~-0.000030517578125 as @e[type=!marker,tag=MarkerMotion.as_block,dx=0,dy=0,dz=0] positioned ~-0.999969482421875 ~-0.999969482421875 ~-0.999969482421875 if entity @s[dx=0,dy=0,dz=0]
+        execute positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned ~0.0078125 ~-0.0078125 ~0.0078125 store success storage neac: _.block.down[1].success byte 1 store success storage neac: _.block.south[1].success byte 1 store success storage neac: _.block.east[1].success byte 1 positioned ~-0.000030517578125 ~-0.000030517578125 ~-0.000030517578125 as @e[type=!marker,tag=MarkerMotion.as_block,dx=0,dy=0,dz=0] positioned ~-0.999969482421875 ~-0.999969482421875 ~-0.999969482421875 if entity @s[dx=0,dy=0,dz=0]
+        execute positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned ~-0.0078125 ~0.0078125 ~-0.0078125 store success storage neac: _.block.up[4].success byte 1 store success storage neac: _.block.north[4].success byte 1 store success storage neac: _.block.west[4].success byte 1 positioned ~-0.000030517578125 ~-0.000030517578125 ~-0.000030517578125 as @e[type=!marker,tag=MarkerMotion.as_block,dx=0,dy=0,dz=0] positioned ~-0.999969482421875 ~-0.999969482421875 ~-0.999969482421875 if entity @s[dx=0,dy=0,dz=0]
+        execute positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned ~-0.0078125 ~0.0078125 ~0.0078125 store success storage neac: _.block.up[3].success byte 1 store success storage neac: _.block.south[4].success byte 1 store success storage neac: _.block.west[3].success byte 1 positioned ~-0.000030517578125 ~-0.000030517578125 ~-0.000030517578125 as @e[type=!marker,tag=MarkerMotion.as_block,dx=0,dy=0,dz=0] positioned ~-0.999969482421875 ~-0.999969482421875 ~-0.999969482421875 if entity @s[dx=0,dy=0,dz=0]
+        execute positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned ~0.0078125 ~0.0078125 ~-0.0078125 store success storage neac: _.block.up[2].success byte 1 store success storage neac: _.block.north[3].success byte 1 store success storage neac: _.block.east[4].success byte 1 positioned ~-0.000030517578125 ~-0.000030517578125 ~-0.000030517578125 as @e[type=!marker,tag=MarkerMotion.as_block,dx=0,dy=0,dz=0] positioned ~-0.999969482421875 ~-0.999969482421875 ~-0.999969482421875 if entity @s[dx=0,dy=0,dz=0]
+        execute positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] positioned ~0.0078125 ~0.0078125 ~0.0078125 store success storage neac: _.block.up[1].success byte 1 store success storage neac: _.block.south[3].success byte 1 store success storage neac: _.block.east[3].success byte 1 positioned ~-0.000030517578125 ~-0.000030517578125 ~-0.000030517578125 as @e[type=!marker,tag=MarkerMotion.as_block,dx=0,dy=0,dz=0] positioned ~-0.999969482421875 ~-0.999969482421875 ~-0.999969482421875 if entity @s[dx=0,dy=0,dz=0]
 
     # 接触判定が行われた最大値を取得
         scoreboard players set #MarkerMotion.BlockCheck neac_value 0
@@ -112,5 +112,5 @@
         scoreboard players reset #MarkerMotion.BlockCheck
 
 
-tag @e[type=shulker,tag=MarkerMotion.hitShulker,distance=..5] remove MarkerMotion.hitShulker
+tag @e[type=!marker,tag=MarkerMotion.hitAsBlock,x=0] remove MarkerMotion.hitAsBlock
 

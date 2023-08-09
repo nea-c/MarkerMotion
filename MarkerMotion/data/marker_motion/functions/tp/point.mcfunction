@@ -3,7 +3,7 @@
 # ブロック接触位置
 #
 # @within
-#   function marker_motion:tp/0016
+#   function marker_motion:tp/6
 
 # successリセット
     data modify storage neac: _.success set value 0b

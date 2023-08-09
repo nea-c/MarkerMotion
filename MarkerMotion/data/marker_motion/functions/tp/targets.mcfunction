@@ -3,7 +3,7 @@
 # ヒットしたエンティティ
 #
 # @within
-#   function marker_motion:tp/0016
+#   function marker_motion:tp/6
 
 
 # hit時停止がOFFでなければその場で停止する処理を起動

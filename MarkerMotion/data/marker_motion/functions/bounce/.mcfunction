@@ -18,7 +18,7 @@ tag @s add MarkerMotion.bounce
 # 反発係数があればそれを計算して返却
     execute if data storage neac: _.MarkerMotion.bounce.e store result score #MarkerMotion.Bounce.e neac_value run data get storage neac: _.MarkerMotion.bounce.e 1000
     execute if data storage neac: _.MarkerMotion.bounce.e unless score #MarkerMotion.Bounce.e neac_value matches 1000 store result storage neac: _.MarkerMotion.speed.amount double 0.00001 run scoreboard players operation #MarkerMotion.Speed neac_value *= #MarkerMotion.Bounce.e neac_value
-    execute if data storage neac: _.MarkerMotion.bounce.e unless score #MarkerMotion.Bounce.e neac_value matches 1000 run scoreboard players operation #MarkerMotion.Speed neac_value /= #1000 neac_value
+    execute if data storage neac: _.MarkerMotion.bounce.e unless score #MarkerMotion.Bounce.e neac_value matches 1000 run scoreboard players operation #MarkerMotion.Speed neac_value /= #global 1000
 
 # 重力を考慮しない場合
     # 重力合計をリセット

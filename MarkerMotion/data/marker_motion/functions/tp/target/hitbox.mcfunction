@@ -5,6 +5,12 @@
 # @within
 #   function marker_motion:tp/target/
 
+
+# エンティティに埋まってたら位置を修復しようとする
+    scoreboard players set #MarkerMotion.PosRepair neac_value 10
+    execute positioned ~-0.000030517578125 ~-0.000030517578125 ~-0.000030517578125 as @e[type=!#marker_motion:hasnt_hitbox,tag=MarkerMotion.hit,dx=0,dy=0,dz=0] positioned ~-0.999969482421875 ~-0.999969482421875 ~-0.999969482421875 if entity @s[dx=0,dy=0,dz=0] positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] run function marker_motion:tp/target/pos_repair
+    scoreboard players reset #MarkerMotion.PosRepair
+
 ## エンティティ接触チェック
     # ストレージ初期化
         data modify storage neac: _.block set value {ok:0b,down:[{success:0b},{success:0b},{success:0b},{success:0b},{success:0b}],up:[{success:0b},{success:0b},{success:0b},{success:0b},{success:0b}],south:[{success:0b},{success:0b},{success:0b},{success:0b},{success:0b}],north:[{success:0b},{success:0b},{success:0b},{success:0b},{success:0b}],east:[{success:0b},{success:0b},{success:0b},{success:0b},{success:0b}],west:[{success:0b},{success:0b},{success:0b},{success:0b},{success:0b}]}

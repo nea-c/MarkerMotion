@@ -4,11 +4,11 @@ Markerを移動速度や重力、バウンド回数などを指定して動か�
 
 ## 最新
 
-v3.5
+v3.6
 
 ## 動作要件
 
-MinecraftJE 1.20.1
+MinecraftJE 1.20.1 ~
 
 ## 過去バージョンについて
 
@@ -119,6 +119,7 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
 * v3.6
   * `bounce.with`のパラメータを追加
   * `MarkerMotion.as_block`のタグがついたエンティティに対して、ブロックの接触判定が行われる挙動を追加
+  * `#marker_motion_example:bounce/hit`を追加
 
 * v3.5
   * 対応バージョンを1.20.1に変更

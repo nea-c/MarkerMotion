@@ -53,7 +53,7 @@
             "predicate": {
                 "block": {
                     "state": {
-                        "up": true
+                        "up": "true"
                     }
                 }
             }

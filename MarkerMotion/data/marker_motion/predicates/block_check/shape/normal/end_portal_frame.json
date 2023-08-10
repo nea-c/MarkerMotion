@@ -11,7 +11,7 @@
                             "end_portal_frame"
                         ],
                         "state": {
-                            "eye": false
+                            "eye": "false"
                         }
                     }
                 },

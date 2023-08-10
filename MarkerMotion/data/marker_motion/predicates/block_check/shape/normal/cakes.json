@@ -30,7 +30,7 @@
                             "cake"
                         ],
                         "state": {
-                            "bites": 1
+                            "bites": "1"
                         }
                     }
                 },
@@ -52,7 +52,7 @@
                             "cake"
                         ],
                         "state": {
-                            "bites": 2
+                            "bites": "2"
                         }
                     }
                 },
@@ -74,7 +74,7 @@
                             "cake"
                         ],
                         "state": {
-                            "bites": 3
+                            "bites": "3"
                         }
                     }
                 },
@@ -96,7 +96,7 @@
                             "cake"
                         ],
                         "state": {
-                            "bites": 4
+                            "bites": "4"
                         }
                     }
                 },
@@ -118,7 +118,7 @@
                             "cake"
                         ],
                         "state": {
-                            "bites": 5
+                            "bites": "5"
                         }
                     }
                 },
@@ -140,7 +140,7 @@
                             "cake"
                         ],
                         "state": {
-                            "bites": 6
+                            "bites": "6"
                         }
                     }
                 },

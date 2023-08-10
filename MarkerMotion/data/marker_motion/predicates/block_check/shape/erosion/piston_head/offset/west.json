@@ -9,7 +9,7 @@
                 ],
                 "state": {
                     "facing": "west",
-                    "short": false
+                    "short": "false"
                 }
             }
         }

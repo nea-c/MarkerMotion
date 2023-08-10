@@ -295,7 +295,7 @@
                                     "chorus_plant"
                                 ],
                                 "state": {
-                                    "down": false
+                                    "down": "false"
                                 }
                             }
                         },
@@ -325,7 +325,7 @@
                                     "chorus_plant"
                                 ],
                                 "state": {
-                                    "up": false
+                                    "up": "false"
                                 }
                             }
                         },
@@ -355,7 +355,7 @@
                                     "chorus_plant"
                                 ],
                                 "state": {
-                                    "east": false
+                                    "east": "false"
                                 }
                             }
                         },
@@ -385,7 +385,7 @@
                                     "chorus_plant"
                                 ],
                                 "state": {
-                                    "west": false
+                                    "west": "false"
                                 }
                             }
                         },
@@ -415,7 +415,7 @@
                                     "chorus_plant"
                                 ],
                                 "state": {
-                                    "south": false
+                                    "south": "false"
                                 }
                             }
                         },
@@ -445,7 +445,7 @@
                                     "chorus_plant"
                                 ],
                                 "state": {
-                                    "north": false
+                                    "north": "false"
                                 }
                             }
                         },

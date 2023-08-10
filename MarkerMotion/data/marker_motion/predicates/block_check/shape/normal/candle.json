@@ -29,7 +29,7 @@
                             "block": {
                                 "tag": "candles",
                                 "state": {
-                                    "candles": 1
+                                    "candles": "1"
                                 }
                             }
                         },
@@ -49,7 +49,7 @@
                             "block": {
                                 "tag": "candles",
                                 "state": {
-                                    "candles": 1
+                                    "candles": "1"
                                 }
                             }
                         },
@@ -69,7 +69,7 @@
                             "block": {
                                 "tag": "candles",
                                 "state": {
-                                    "candles": 1
+                                    "candles": "1"
                                 }
                             }
                         },
@@ -89,7 +89,7 @@
                             "block": {
                                 "tag": "candles",
                                 "state": {
-                                    "candles": 1
+                                    "candles": "1"
                                 }
                             }
                         },
@@ -114,7 +114,7 @@
                             "block": {
                                 "tag": "candles",
                                 "state": {
-                                    "candles": 2
+                                    "candles": "2"
                                 }
                             }
                         },
@@ -134,7 +134,7 @@
                             "block": {
                                 "tag": "candles",
                                 "state": {
-                                    "candles": 2
+                                    "candles": "2"
                                 }
                             }
                         },
@@ -154,7 +154,7 @@
                             "block": {
                                 "tag": "candles",
                                 "state": {
-                                    "candles": 2
+                                    "candles": "2"
                                 }
                             }
                         },
@@ -174,7 +174,7 @@
                             "block": {
                                 "tag": "candles",
                                 "state": {
-                                    "candles": 2
+                                    "candles": "2"
                                 }
                             }
                         },
@@ -199,7 +199,7 @@
                             "block": {
                                 "tag": "candles",
                                 "state": {
-                                    "candles": 3
+                                    "candles": "3"
                                 }
                             }
                         },
@@ -219,7 +219,7 @@
                             "block": {
                                 "tag": "candles",
                                 "state": {
-                                    "candles": 3
+                                    "candles": "3"
                                 }
                             }
                         },
@@ -239,7 +239,7 @@
                             "block": {
                                 "tag": "candles",
                                 "state": {
-                                    "candles": 3
+                                    "candles": "3"
                                 }
                             }
                         },
@@ -259,7 +259,7 @@
                             "block": {
                                 "tag": "candles",
                                 "state": {
-                                    "candles": 3
+                                    "candles": "3"
                                 }
                             }
                         },
@@ -284,7 +284,7 @@
                             "block": {
                                 "tag": "candles",
                                 "state": {
-                                    "candles": 4
+                                    "candles": "4"
                                 }
                             }
                         },
@@ -304,7 +304,7 @@
                             "block": {
                                 "tag": "candles",
                                 "state": {
-                                    "candles": 4
+                                    "candles": "4"
                                 }
                             }
                         },
@@ -324,7 +324,7 @@
                             "block": {
                                 "tag": "candles",
                                 "state": {
-                                    "candles": 4
+                                    "candles": "4"
                                 }
                             }
                         },
@@ -344,7 +344,7 @@
                             "block": {
                                 "tag": "candles",
                                 "state": {
-                                    "candles": 4
+                                    "candles": "4"
                                 }
                             }
                         },

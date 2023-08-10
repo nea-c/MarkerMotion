@@ -185,7 +185,7 @@
                             "block": {
                                 "tag": "marker_motion:walls",
                                 "state": {
-                                    "up": false
+                                    "up": "false"
                                 }
                             }
                         },
@@ -209,7 +209,7 @@
                             "block": {
                                 "tag": "marker_motion:walls",
                                 "state": {
-                                    "up": false
+                                    "up": "false"
                                 }
                             }
                         },
@@ -233,7 +233,7 @@
                             "block": {
                                 "tag": "marker_motion:walls",
                                 "state": {
-                                    "up": false
+                                    "up": "false"
                                 }
                             }
                         },
@@ -257,7 +257,7 @@
                             "block": {
                                 "tag": "marker_motion:walls",
                                 "state": {
-                                    "up": false
+                                    "up": "false"
                                 }
                             }
                         },
@@ -339,7 +339,7 @@
                                 "tag": "marker_motion:walls",
                                 "state": {
                                     "east": "none",
-                                    "up": false
+                                    "up": "false"
                                 }
                             }
                         },
@@ -364,7 +364,7 @@
                                 "tag": "marker_motion:walls",
                                 "state": {
                                     "east": "low",
-                                    "up": false
+                                    "up": "false"
                                 }
                             }
                         },
@@ -450,7 +450,7 @@
                                 "tag": "marker_motion:walls",
                                 "state": {
                                     "west": "none",
-                                    "up": false
+                                    "up": "false"
                                 }
                             }
                         },
@@ -475,7 +475,7 @@
                                 "tag": "marker_motion:walls",
                                 "state": {
                                     "west": "low",
-                                    "up": false
+                                    "up": "false"
                                 }
                             }
                         },
@@ -561,7 +561,7 @@
                                 "tag": "marker_motion:walls",
                                 "state": {
                                     "south": "none",
-                                    "up": false
+                                    "up": "false"
                                 }
                             }
                         },
@@ -586,7 +586,7 @@
                                 "tag": "marker_motion:walls",
                                 "state": {
                                     "south": "low",
-                                    "up": false
+                                    "up": "false"
                                 }
                             }
                         },
@@ -672,7 +672,7 @@
                                 "tag": "marker_motion:walls",
                                 "state": {
                                     "north": "none",
-                                    "up": false
+                                    "up": "false"
                                 }
                             }
                         },
@@ -697,7 +697,7 @@
                                 "tag": "marker_motion:walls",
                                 "state": {
                                     "north": "low",
-                                    "up": false
+                                    "up": "false"
                                 }
                             }
                         },

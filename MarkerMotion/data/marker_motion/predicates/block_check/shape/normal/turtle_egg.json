@@ -33,7 +33,7 @@
                                     "turtle_egg"
                                 ],
                                 "state": {
-                                    "eggs": 1
+                                    "eggs": "1"
                                 }
                             }
                         },
@@ -55,7 +55,7 @@
                                     "turtle_egg"
                                 ],
                                 "state": {
-                                    "eggs": 1
+                                    "eggs": "1"
                                 }
                             }
                         },
@@ -77,7 +77,7 @@
                                     "turtle_egg"
                                 ],
                                 "state": {
-                                    "eggs": 1
+                                    "eggs": "1"
                                 }
                             }
                         },
@@ -99,7 +99,7 @@
                                     "turtle_egg"
                                 ],
                                 "state": {
-                                    "eggs": 1
+                                    "eggs": "1"
                                 }
                             }
                         },
@@ -126,7 +126,7 @@
                                     "turtle_egg"
                                 ],
                                 "state": {
-                                    "eggs": 2
+                                    "eggs": "2"
                                 }
                             }
                         },
@@ -148,100 +148,7 @@
                                     "turtle_egg"
                                 ],
                                 "state": {
-                                    "eggs": 2
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.93750,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "turtle_egg"
-                                ],
-                                "state": {
-                                    "eggs": 2
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.06250
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "turtle_egg"
-                                ],
-                                "state": {
-                                    "eggs": 2
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.93750,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "turtle_egg"
-                                ],
-                                "state": {
-                                    "eggs": 3
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.06250
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "turtle_egg"
-                                ],
-                                "state": {
-                                    "eggs": 3
+                                    "eggs": "2"
                                 }
                             }
                         },
@@ -263,7 +170,7 @@
                                     "turtle_egg"
                                 ],
                                 "state": {
-                                    "eggs": 3
+                                    "eggs": "2"
                                 }
                             }
                         },
@@ -285,7 +192,7 @@
                                     "turtle_egg"
                                 ],
                                 "state": {
-                                    "eggs": 3
+                                    "eggs": "2"
                                 }
                             }
                         },
@@ -312,7 +219,7 @@
                                     "turtle_egg"
                                 ],
                                 "state": {
-                                    "eggs": 4
+                                    "eggs": "3"
                                 }
                             }
                         },
@@ -334,7 +241,7 @@
                                     "turtle_egg"
                                 ],
                                 "state": {
-                                    "eggs": 4
+                                    "eggs": "3"
                                 }
                             }
                         },
@@ -356,7 +263,7 @@
                                     "turtle_egg"
                                 ],
                                 "state": {
-                                    "eggs": 4
+                                    "eggs": "3"
                                 }
                             }
                         },
@@ -378,7 +285,100 @@
                                     "turtle_egg"
                                 ],
                                 "state": {
-                                    "eggs": 4
+                                    "eggs": "3"
+                                }
+                            }
+                        },
+                        "distance": {
+                            "z": {
+                                "min": 0.93750,
+                                "max": 1.0
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "condition": "any_of",
+            "terms": [
+                {
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "blocks": [
+                                    "turtle_egg"
+                                ],
+                                "state": {
+                                    "eggs": "4"
+                                }
+                            }
+                        },
+                        "distance": {
+                            "x": {
+                                "min": 0.0,
+                                "max": 0.06250
+                            }
+                        }
+                    }
+                },
+                {
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "blocks": [
+                                    "turtle_egg"
+                                ],
+                                "state": {
+                                    "eggs": "4"
+                                }
+                            }
+                        },
+                        "distance": {
+                            "x": {
+                                "min": 0.93750,
+                                "max": 1.0
+                            }
+                        }
+                    }
+                },
+                {
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "blocks": [
+                                    "turtle_egg"
+                                ],
+                                "state": {
+                                    "eggs": "4"
+                                }
+                            }
+                        },
+                        "distance": {
+                            "z": {
+                                "min": 0.0,
+                                "max": 0.06250
+                            }
+                        }
+                    }
+                },
+                {
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "blocks": [
+                                    "turtle_egg"
+                                ],
+                                "state": {
+                                    "eggs": "4"
                                 }
                             }
                         },

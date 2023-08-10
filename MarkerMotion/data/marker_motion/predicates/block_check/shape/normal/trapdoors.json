@@ -10,7 +10,7 @@
                         "tag": "marker_motion:trapdoors",
                         "state": {
                             "half": "bottom",
-                            "open": false
+                            "open": "false"
                         }
                     }
                 },
@@ -31,7 +31,7 @@
                         "tag": "marker_motion:trapdoors",
                         "state": {
                             "half": "top",
-                            "open": false
+                            "open": "false"
                         }
                     }
                 },
@@ -52,7 +52,7 @@
                         "tag": "marker_motion:trapdoors",
                         "state": {
                             "facing": "south",
-                            "open": true
+                            "open": "true"
                         }
                     }
                 },
@@ -73,7 +73,7 @@
                         "tag": "marker_motion:trapdoors",
                         "state": {
                             "facing": "north",
-                            "open": true
+                            "open": "true"
                         }
                     }
                 },
@@ -94,7 +94,7 @@
                         "tag": "marker_motion:trapdoors",
                         "state": {
                             "facing": "east",
-                            "open": true
+                            "open": "true"
                         }
                     }
                 },
@@ -115,7 +115,7 @@
                         "tag": "marker_motion:trapdoors",
                         "state": {
                             "facing": "west",
-                            "open": true
+                            "open": "true"
                         }
                     }
                 },

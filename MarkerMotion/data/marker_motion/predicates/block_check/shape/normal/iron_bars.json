@@ -108,7 +108,7 @@
                             "iron_bars"
                         ],
                         "state": {
-                            "south": false
+                            "south": "false"
                         }
                     }
                 },
@@ -134,7 +134,7 @@
                             "iron_bars"
                         ],
                         "state": {
-                            "north": false
+                            "north": "false"
                         }
                     }
                 },
@@ -160,7 +160,7 @@
                             "iron_bars"
                         ],
                         "state": {
-                            "east": false
+                            "east": "false"
                         }
                     }
                 },
@@ -186,7 +186,7 @@
                             "iron_bars"
                         ],
                         "state": {
-                            "west": false
+                            "west": "false"
                         }
                     }
                 },

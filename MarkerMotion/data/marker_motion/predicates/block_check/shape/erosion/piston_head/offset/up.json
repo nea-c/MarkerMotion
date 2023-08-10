@@ -9,7 +9,7 @@
                 ],
                 "state": {
                     "facing": "up",
-                    "short": false
+                    "short": "false"
                 }
             }
         }

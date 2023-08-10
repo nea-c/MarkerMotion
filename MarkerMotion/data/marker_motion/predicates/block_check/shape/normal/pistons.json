@@ -13,7 +13,7 @@
                         ],
                         "state": {
                             "facing": "up",
-                            "extended": true
+                            "extended": "true"
                         }
                     }
                 },
@@ -37,7 +37,7 @@
                         ],
                         "state": {
                             "facing": "down",
-                            "extended": true
+                            "extended": "true"
                         }
                     }
                 },
@@ -61,7 +61,7 @@
                         ],
                         "state": {
                             "facing": "south",
-                            "extended": true
+                            "extended": "true"
                         }
                     }
                 },
@@ -85,7 +85,7 @@
                         ],
                         "state": {
                             "facing": "north",
-                            "extended": true
+                            "extended": "true"
                         }
                     }
                 },
@@ -109,7 +109,7 @@
                         ],
                         "state": {
                             "facing": "east",
-                            "extended": true
+                            "extended": "true"
                         }
                     }
                 },
@@ -133,7 +133,7 @@
                         ],
                         "state": {
                             "facing": "west",
-                            "extended": true
+                            "extended": "true"
                         }
                     }
                 },

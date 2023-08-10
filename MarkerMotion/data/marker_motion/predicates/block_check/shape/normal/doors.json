@@ -35,7 +35,7 @@
                                 "state": {
                                     "facing": "south",
                                     "hinge": "right",
-                                    "open": true
+                                    "open": "true"
                                 }
                             }
                         },
@@ -57,7 +57,7 @@
                                 "state": {
                                     "facing": "south",
                                     "hinge": "left",
-                                    "open": true
+                                    "open": "true"
                                 }
                             }
                         },
@@ -83,7 +83,7 @@
                                 "tag": "marker_motion:doors",
                                 "state": {
                                     "facing": "north",
-                                    "open": false
+                                    "open": "false"
                                 }
                             }
                         },
@@ -105,7 +105,7 @@
                                 "state": {
                                     "facing": "north",
                                     "hinge": "right",
-                                    "open": true
+                                    "open": "true"
                                 }
                             }
                         },
@@ -127,7 +127,7 @@
                                 "state": {
                                     "facing": "north",
                                     "hinge": "left",
-                                    "open": true
+                                    "open": "true"
                                 }
                             }
                         },
@@ -153,7 +153,7 @@
                                 "tag": "marker_motion:doors",
                                 "state": {
                                     "facing": "east",
-                                    "open": false
+                                    "open": "false"
                                 }
                             }
                         },
@@ -175,7 +175,7 @@
                                 "state": {
                                     "facing": "east",
                                     "hinge": "right",
-                                    "open": true
+                                    "open": "true"
                                 }
                             }
                         },
@@ -197,7 +197,7 @@
                                 "state": {
                                     "facing": "east",
                                     "hinge": "left",
-                                    "open": true
+                                    "open": "true"
                                 }
                             }
                         },
@@ -223,7 +223,7 @@
                                 "tag": "marker_motion:doors",
                                 "state": {
                                     "facing": "west",
-                                    "open": false
+                                    "open": "false"
                                 }
                             }
                         },
@@ -245,7 +245,7 @@
                                 "state": {
                                     "facing": "west",
                                     "hinge": "right",
-                                    "open": true
+                                    "open": "true"
                                 }
                             }
                         },
@@ -267,7 +267,7 @@
                                 "state": {
                                     "facing": "west",
                                     "hinge": "left",
-                                    "open": true
+                                    "open": "true"
                                 }
                             }
                         },

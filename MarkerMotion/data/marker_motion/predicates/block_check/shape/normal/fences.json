@@ -93,7 +93,7 @@
                     "block": {
                         "tag": "marker_motion:fences",
                         "state": {
-                            "south": false
+                            "south": "false"
                         }
                     }
                 },
@@ -117,7 +117,7 @@
                     "block": {
                         "tag": "marker_motion:fences",
                         "state": {
-                            "north": false
+                            "north": "false"
                         }
                     }
                 },
@@ -141,7 +141,7 @@
                     "block": {
                         "tag": "marker_motion:fences",
                         "state": {
-                            "west": false
+                            "west": "false"
                         }
                     }
                 },
@@ -165,7 +165,7 @@
                     "block": {
                         "tag": "marker_motion:fences",
                         "state": {
-                            "east": false
+                            "east": "false"
                         }
                     }
                 },

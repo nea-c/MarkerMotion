@@ -40,8 +40,8 @@ summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:1.50,loss:{amo
 | bounce.count | x | int | 跳ねる回数<br>以下の2種の負数を指定すると特殊挙動に変更されます<br>-1：無限に跳ねます<br>-2：データ処理を行った後、通常の接触停止判定を行います | 0 |
 | bounce.e | x | double | 跳ねた時の速度変更量<br>乗算で計算されます<br>小数点3桁まで有効 | 1.0 |
 | bounce.g | x | boolean | 重力加速を考慮して跳ねるようにします | false |
-| bounce.with.hit | x | boolean | ヒットしたエンティティがいた時、エンティティのヒットボックスを元に跳ねるか | false |
-| bounce.with.block | x | boolean | ブロックへの接触を元に跳ねるか | true |
+| bounce.with.hit | x | boolean | stopwith.hitがtrueでヒットしたエンティティがいた時、エンティティのヒットボックスを元に跳ねるか | false |
+| bounce.with.block | x | boolean | stopwith.blockがtrueの時、ブロックへの接触を元に跳ねるか | true |
 | stopwith.hit | x | boolean | ヒットしたエンティティがいた時、ヒット位置で停止するようにします | true |
 | stopwith.block | x | boolean | ブロックに衝突した時、衝突位置で停止するようにします | true |
 

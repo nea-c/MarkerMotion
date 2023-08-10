@@ -26,7 +26,7 @@ MinecraftJE 1.20.1
 Markerの召喚時や召喚後に以下のようなNBTを設定する。
 ```mcfunction
 ## 例
-summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:1.50,loss:{amount:0.950,type:"*"}},gravity:39.200,bounce:{count:2,e:0.950,g:1b},stopwith:{hit:1b,block:1b}}}}
+summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:1.50,loss:{amount:0.950,type:"*"}},gravity:39.200,bounce:{count:2,e:0.950,g:1b,with:{hit:0b,block:1b}},stopwith:{hit:1b,block:1b}}}}
 ```
 
 ### 設定項目
@@ -40,6 +40,8 @@ summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:1.50,loss:{amo
 | bounce.count | x | int | 跳ねる回数<br>以下の2種の負数を指定すると特殊挙動に変更されます<br>-1：無限に跳ねます<br>-2：データ処理を行った後、通常の接触停止判定を行います | 0 |
 | bounce.e | x | double | 跳ねた時の速度変更量<br>乗算で計算されます<br>小数点3桁まで有効 | 1.0 |
 | bounce.g | x | boolean | 重力加速を考慮して跳ねるようにします | false |
+| bounce.with.hit | x | boolean | ヒットしたエンティティがいた時、エンティティのヒットボックスを元に跳ねるか | false |
+| bounce.with.block | x | boolean | ブロックへの接触を元に跳ねるか | true |
 | stopwith.hit | x | boolean | ヒットしたエンティティがいた時、ヒット位置で停止するようにします | true |
 | stopwith.block | x | boolean | ブロックに衝突した時、衝突位置で停止するようにします | true |
 
@@ -74,7 +76,7 @@ summon marker ~ ~ ~ {Tags:["A"],data:{MarkerMotion:{speed:{amount:1.50,loss:{amo
 MarkerMotion.on_block, MarkerMotion.speed.0, MarkerMotion.stopwith.hitのタグがあれば必ず付与されています。
 ```
 
-### ダメージを与える飛び道具として扱う際の当たり判定に関して
+### ダメージを与える飛び道具として扱う際のヒットボックス判定に関して
 
 このライブラリを呼ぶ前に判定に入れたいエンティティに対し`MarkerMotion.target`タグを付与します。
 
@@ -83,6 +85,11 @@ distanceとかで範囲指定してあげた方が軽量になると思います
 当たり判定はヒットボックスサイズで検知され、`MarkerMotion.hit`タグを返します。
 
 付与された、または付与したタグは必ず削除するようにしてください。
+
+
+### ヒットボックスをブロックとして扱う
+
+`MarkerMotion.as_block`タグを付与されたエンティティは、ヒットボックスがブロック判定として処理されるようになります。
 
 
 ### #marker_motion:tag_remove
@@ -109,6 +116,10 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
 
 ## 更新履歴
 
+* v3.6
+  * `bounce.with`のパラメータを追加
+  * `MarkerMotion.as_block`のタグがついたエンティティに対して、ブロックの接触判定が行われる挙動を追加
+
 * v3.5
   * 対応バージョンを1.20.1に変更
 
@@ -117,19 +128,19 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
 
 * v3.3
   * コマンド数減少及び最適化
-  * Moveを削除
+  * `Move`を削除
     * exampleのパーティクル表示方法を変更
 
 * v3.2
-  * bounce.gがオンの時の挙動が正常でない問題の修正、及びbounce.gがオンの時の挙動修正
+  * `bounce.g`がオンの時の挙動が正常でない問題の修正、及びbounce.gがオンの時の挙動修正
   * `#marker_motion_example:bounce/gravity`を追加
-  * 特定条件下でMove.Rotationの値が正常でない問題の修正
-  * bounce.countを-2にしたときの挙動を追加
-  * speedが0になった時に停止しない問題の修正
+  * 特定条件下で`Move.Rotation`の値が正常でない問題の修正
+  * `bounce.count`を-2にしたときの挙動を追加
+  * `speed.amount`が0になった時に停止しない問題の修正
 
 * v3.1
   * 大きなドリップリーフの当たり判定が少し大きい問題の修正
-  * Move.Rotationに返却される値が後ろ向きな問題の修正
+  * `Move.Rotation`に返却される値が後ろ向きな問題の修正
 
 * v3.0
   * 別ディメンションにおいて、x:0,z:0付近から離れると正常に動作しない問題の修正
@@ -137,12 +148,12 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
   * ブロックの当たり判定を追加
     * 階段やハーフなど、フルブロックより小さいブロックの隙間など細かい当たり判定で移動させることが可能になりました
   * `#marker_motion:`,`#marker_motion:tag_remove`で利用できるように変更
-  * speedの値を以前までの1/100で宣言するように変更
-  * gravityの値を以前までの1/10で宣言するように変更
-  * speed.loss.typeの指定を`"+"`,`"*"`で指定するように変更
-  * Motionを削除
-    * 代替としてMoveを追加
-  * stopwith.hitのデフォルト値をtrueに変更
+  * `speed.amount`の値を以前までの1/100で宣言するように変更
+  * `gravity`の値を以前までの1/10で宣言するように変更
+  * `speed.loss.type`の指定を`"+"`,`"*"`で指定するように変更
+  * `Motion`を削除
+    * 代替として`Move`を追加
+  * `stopwith.hit`のデフォルト値をtrueに変更
 
 * v2.3
   * `data.MarkerMotion.speed.amount`が0になっても`data.MarkerMotion.gravity`が0.01以上であれば停止しないように変更
@@ -152,7 +163,7 @@ MarkerMotion本体と一緒に導入することで実際に動かして確認�
   * `stopwith.block`の設定項目を追加
 
 * v2.1
-  * speed.lossの値で加速できるように変更
+  * `speed.loss`の値で加速できるように変更
   * 対応バージョンを1.19.2に変更
   * exampleとMarkerMotion本体を分離
 

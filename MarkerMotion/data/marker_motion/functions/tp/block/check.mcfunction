@@ -1,10 +1,10 @@
-#> marker_motion:tp/check
+#> marker_motion:tp/block/check
 #
 # ブロック接触位置
 #
 # @within
-#   function marker_motion:tp/block
-#   function marker_motion:tp/pos_repair
+#   function marker_motion:tp/block/block
+#   function marker_motion:tp/block/pos_repair
 
 # ブロックチェック
     # TP

@@ -9,8 +9,8 @@ execute if entity @s[tag=MarkerMotion.on_block,tag=!MarkerMotion.on_block.wall] 
 
 execute as @e[type=#marker_motion_example:test_entitys,tag=MarkerMotion.target] run tag @s remove MarkerMotion.target
 
-execute if entity @e[tag=MarkerMotion.hit,limit=1] as @e[tag=MarkerMotion.hit] run damage @s 0.000000000000000000000000000000000000000000001 out_of_world
-execute if entity @e[tag=MarkerMotion.hit,limit=1] as @e[tag=MarkerMotion.hit] run tag @s remove MarkerMotion.hit
+execute if entity @e[type=!#marker_motion:hasnt_hitbox,tag=MarkerMotion.hit,limit=1] as @e[type=!#marker_motion:hasnt_hitbox,tag=MarkerMotion.hit] run damage @s 0.000000000000000000000000000000000000000000001 out_of_world
+execute if entity @e[type=!#marker_motion:hasnt_hitbox,tag=MarkerMotion.hit,limit=1] as @e[type=!#marker_motion:hasnt_hitbox,tag=MarkerMotion.hit] run tag @s remove MarkerMotion.hit
 
 scoreboard players add @s neac_value 1
 

@@ -1,4 +1,4 @@
-#> marker_motion:tp/point
+#> marker_motion:tp/block/point
 #
 # ブロック接触位置
 #
@@ -16,4 +16,4 @@
         execute as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] align xyz store success storage neac: _.success byte 1 unless predicate marker_motion:block_check/shape
 
     # ブロック接触チェック等
-    execute if data storage neac: _{success:1b} unless data storage neac: _.MarkerMotion.stopwith{block:0b} positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] run function marker_motion:tp/block
+    execute if data storage neac: _{success:1b} unless data storage neac: _.MarkerMotion.stopwith{block:0b} positioned as @e[type=marker,tag=MarkerMotion.me,x=0,limit=1] run function marker_motion:tp/block/

@@ -13,7 +13,7 @@
                                 "tag": "marker_motion:doors",
                                 "state": {
                                     "facing": "south",
-                                    "open": false
+                                    "open": "false"
                                 }
                             }
                         },

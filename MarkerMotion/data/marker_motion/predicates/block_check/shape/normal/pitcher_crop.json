@@ -130,7 +130,7 @@
                                     "pitcher_crop"
                                 ],
                                 "state": {
-                                    "age": 0
+                                    "age": "0"
                                 }
                             }
                         },
@@ -152,7 +152,7 @@
                                     "pitcher_crop"
                                 ],
                                 "state": {
-                                    "age": 0
+                                    "age": "0"
                                 }
                             }
                         },
@@ -174,7 +174,7 @@
                                     "pitcher_crop"
                                 ],
                                 "state": {
-                                    "age": 0
+                                    "age": "0"
                                 }
                             }
                         },
@@ -196,7 +196,7 @@
                                     "pitcher_crop"
                                 ],
                                 "state": {
-                                    "age": 0
+                                    "age": "0"
                                 }
                             }
                         },
@@ -218,7 +218,7 @@
                                     "pitcher_crop"
                                 ],
                                 "state": {
-                                    "age": 0
+                                    "age": "0"
                                 }
                             }
                         },

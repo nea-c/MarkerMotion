@@ -9,7 +9,7 @@
                     "block": {
                         "tag": "marker_motion:fence_gates",
                         "state": {
-                            "open": true
+                            "open": "true"
                         }
                     }
                 }

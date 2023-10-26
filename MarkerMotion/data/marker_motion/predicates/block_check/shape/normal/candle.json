@@ -1,5 +1,5 @@
 {
-    "condition": "any_of",
+    "condition": "all_of",
     "terms": [
         {
             "condition": "entity_properties",
@@ -7,13 +7,7 @@
             "predicate": {
                 "location": {
                     "block": {
-                        "tag": "candles"
-                    }
-                },
-                "distance": {
-                    "y": {
-                        "min": 0.3750,
-                        "max": 1.0
+                        "tag": "marker_motion:candles"
                     }
                 }
             }
@@ -27,7 +21,7 @@
                     "predicate": {
                         "location": {
                             "block": {
-                                "tag": "candles",
+                                "tag": "marker_motion:candles",
                                 "state": {
                                     "candles": "1"
                                 }
@@ -35,48 +29,16 @@
                         },
                         "distance": {
                             "x": {
+                                "min": 0.43750,
+                                "max": 0.56250
+                            },
+                            "y": {
                                 "min": 0.0,
-                                "max": 0.43750
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "candles",
-                                "state": {
-                                    "candles": "1"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.56250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "candles",
-                                "state": {
-                                    "candles": "1"
-                                }
-                            }
-                        },
-                        "distance": {
+                                "max": 0.37499999990
+                            },
                             "z": {
-                                "min": 0.0,
-                                "max": 0.43750
+                                "min": 0.43750,
+                                "max": 0.56250
                             }
                         }
                     }
@@ -87,32 +49,7 @@
                     "predicate": {
                         "location": {
                             "block": {
-                                "tag": "candles",
-                                "state": {
-                                    "candles": "1"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.56250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "candles",
+                                "tag": "marker_motion:candles",
                                 "state": {
                                     "candles": "2"
                                 }
@@ -120,48 +57,16 @@
                         },
                         "distance": {
                             "x": {
+                                "min": 0.31250,
+                                "max": 0.68750
+                            },
+                            "y": {
                                 "min": 0.0,
-                                "max": 0.31250
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "candles",
-                                "state": {
-                                    "candles": "2"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.68750,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "candles",
-                                "state": {
-                                    "candles": "2"
-                                }
-                            }
-                        },
-                        "distance": {
+                                "max": 0.37499999990
+                            },
                             "z": {
-                                "min": 0.0,
-                                "max": 0.3750
+                                "min": 0.3750,
+                                "max": 0.56250
                             }
                         }
                     }
@@ -172,32 +77,7 @@
                     "predicate": {
                         "location": {
                             "block": {
-                                "tag": "candles",
-                                "state": {
-                                    "candles": "2"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.56250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "candles",
+                                "tag": "marker_motion:candles",
                                 "state": {
                                     "candles": "3"
                                 }
@@ -205,48 +85,16 @@
                         },
                         "distance": {
                             "x": {
+                                "min": 0.31250,
+                                "max": 0.6250
+                            },
+                            "y": {
                                 "min": 0.0,
-                                "max": 0.31250
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "candles",
-                                "state": {
-                                    "candles": "3"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.6250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "candles",
-                                "state": {
-                                    "candles": "3"
-                                }
-                            }
-                        },
-                        "distance": {
+                                "max": 0.37499999990
+                            },
                             "z": {
-                                "min": 0.0,
-                                "max": 0.3750
+                                "min": 0.3750,
+                                "max": 0.68750
                             }
                         }
                     }
@@ -257,32 +105,7 @@
                     "predicate": {
                         "location": {
                             "block": {
-                                "tag": "candles",
-                                "state": {
-                                    "candles": "3"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.68750,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "candles",
+                                "tag": "marker_motion:candles",
                                 "state": {
                                     "candles": "4"
                                 }
@@ -290,68 +113,16 @@
                         },
                         "distance": {
                             "x": {
+                                "min": 0.31250,
+                                "max": 0.68750
+                            },
+                            "y": {
                                 "min": 0.0,
-                                "max": 0.31250
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "candles",
-                                "state": {
-                                    "candles": "4"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.68750,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "candles",
-                                "state": {
-                                    "candles": "4"
-                                }
-                            }
-                        },
-                        "distance": {
+                                "max": 0.37499999990
+                            },
                             "z": {
-                                "min": 0.0,
-                                "max": 0.31250
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "candles",
-                                "state": {
-                                    "candles": "4"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.6250,
-                                "max": 1.0
+                                "min": 0.31250,
+                                "max": 0.6250
                             }
                         }
                     }

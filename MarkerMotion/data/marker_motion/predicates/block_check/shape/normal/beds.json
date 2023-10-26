@@ -1,69 +1,14 @@
 {
-    "condition": "any_of",
+    "condition": "all_of",
     "terms": [
         {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "beds"
-                            }
-                        },
-                        "distance": {
-                            "y": {
-                                "min": 0.56250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "beds"
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.18750,
-                                "max": 0.81250
-                            },
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.18750
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "beds"
-                            }
-                        },
-                        "distance": {
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.18750
-                            },
-                            "z": {
-                                "min": 0.18750,
-                                "max": 0.81250
-                            }
-                        }
-                    }
+            "condition": "location_check",
+            "entity": "this",
+            "predicate": {
+                "block": {
+                    "tag": "marker_motion:beds"
                 }
-            ]
+            }
         },
         {
             "condition": "any_of",
@@ -72,206 +17,345 @@
                     "condition": "entity_properties",
                     "entity": "this",
                     "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "beds",
-                                "state": {
-                                    "facing": "south",
-                                    "part": "foot"
-                                }
-                            }
-                        },
                         "distance": {
                             "y": {
-                                "min": 0.0,
-                                "max": 0.18750
-                            },
-                            "z": {
                                 "min": 0.18750,
-                                "max": 1.0
+                                "max": 0.562499999990
                             }
                         }
                     }
                 },
                 {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "beds",
-                                "state": {
-                                    "facing": "north",
-                                    "part": "foot"
+                    "condition": "all_of",
+                    "terms": [
+                        {
+                            "condition": "any_of",
+                            "terms": [
+                                {
+                                    "condition": "location_check",
+                                    "predicate": {
+                                        "block": {
+                                            "tag": "marker_motion:beds",
+                                            "state": {
+                                                "facing": "south",
+                                                "part": "head"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "condition": "location_check",
+                                    "predicate": {
+                                        "block": {
+                                            "tag": "marker_motion:beds",
+                                            "state": {
+                                                "facing": "north",
+                                                "part": "foot"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "condition": "location_check",
+                                    "predicate": {
+                                        "block": {
+                                            "tag": "marker_motion:beds",
+                                            "state": {
+                                                "facing": "east",
+                                                "part": "head"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "condition": "location_check",
+                                    "predicate": {
+                                        "block": {
+                                            "tag": "marker_motion:beds",
+                                            "state": {
+                                                "facing": "west",
+                                                "part": "foot"
+                                            }
+                                        }
+                                    }
                                 }
-                            }
+                            ]
                         },
-                        "distance": {
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.18750
-                            },
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.81250
-                            }
+                        {
+                            "condition": "any_of",
+                            "terms": [
+                                {
+                                    "condition": "entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "distance": {
+                                            "x": {
+                                                "min": 0.81250,
+                                                "max": 1.0
+                                            },
+                                            "y": {
+                                                "min": 0.0,
+                                                "max": 0.18750
+                                            },
+                                            "z": {
+                                                "min": 0.81250,
+                                                "max": 1.0
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
                         }
-                    }
+                    ]
                 },
                 {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "beds",
-                                "state": {
-                                    "facing": "east",
-                                    "part": "foot"
+                    "condition": "all_of",
+                    "terms": [
+                        {
+                            "condition": "any_of",
+                            "terms": [
+                                {
+                                    "condition": "location_check",
+                                    "predicate": {
+                                        "block": {
+                                            "tag": "marker_motion:beds",
+                                            "state": {
+                                                "facing": "south",
+                                                "part": "head"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "condition": "location_check",
+                                    "predicate": {
+                                        "block": {
+                                            "tag": "marker_motion:beds",
+                                            "state": {
+                                                "facing": "north",
+                                                "part": "foot"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "condition": "location_check",
+                                    "predicate": {
+                                        "block": {
+                                            "tag": "marker_motion:beds",
+                                            "state": {
+                                                "facing": "east",
+                                                "part": "foot"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "condition": "location_check",
+                                    "predicate": {
+                                        "block": {
+                                            "tag": "marker_motion:beds",
+                                            "state": {
+                                                "facing": "west",
+                                                "part": "head"
+                                            }
+                                        }
+                                    }
                                 }
-                            }
+                            ]
                         },
-                        "distance": {
-                            "x": {
-                                "min": 0.18750,
-                                "max": 1.0
-                            },
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.18750
-                            }
+                        {
+                            "condition": "any_of",
+                            "terms": [
+                                {
+                                    "condition": "entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "distance": {
+                                            "x": {
+                                                "min": 0.0,
+                                                "max": 0.18750
+                                            },
+                                            "y": {
+                                                "min": 0.0,
+                                                "max": 0.18750
+                                            },
+                                            "z": {
+                                                "min": 0.81250,
+                                                "max": 1.0
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
                         }
-                    }
+                    ]
                 },
                 {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "beds",
-                                "state": {
-                                    "facing": "west",
-                                    "part": "foot"
+                    "condition": "all_of",
+                    "terms": [
+                        {
+                            "condition": "any_of",
+                            "terms": [
+                                {
+                                    "condition": "location_check",
+                                    "predicate": {
+                                        "block": {
+                                            "tag": "marker_motion:beds",
+                                            "state": {
+                                                "facing": "south",
+                                                "part": "foot"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "condition": "location_check",
+                                    "predicate": {
+                                        "block": {
+                                            "tag": "marker_motion:beds",
+                                            "state": {
+                                                "facing": "north",
+                                                "part": "head"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "condition": "location_check",
+                                    "predicate": {
+                                        "block": {
+                                            "tag": "marker_motion:beds",
+                                            "state": {
+                                                "facing": "east",
+                                                "part": "head"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "condition": "location_check",
+                                    "predicate": {
+                                        "block": {
+                                            "tag": "marker_motion:beds",
+                                            "state": {
+                                                "facing": "west",
+                                                "part": "foot"
+                                            }
+                                        }
+                                    }
                                 }
-                            }
+                            ]
                         },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.81250
-                            },
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.18750
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "beds",
-                                "state": {
-                                    "facing": "south",
-                                    "part": "head"
+                        {
+                            "condition": "any_of",
+                            "terms": [
+                                {
+                                    "condition": "entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "distance": {
+                                            "x": {
+                                                "min": 0.81250,
+                                                "max": 1.0
+                                            },
+                                            "y": {
+                                                "min": 0.0,
+                                                "max": 0.18750
+                                            },
+                                            "z": {
+                                                "min": 0.0,
+                                                "max": 0.18750
+                                            }
+                                        }
+                                    }
                                 }
-                            }
-                        },
-                        "distance": {
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.18750
-                            },
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.81250
-                            }
+                            ]
                         }
-                    }
+                    ]
                 },
                 {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "beds",
-                                "state": {
-                                    "facing": "north",
-                                    "part": "head"
+                    "condition": "all_of",
+                    "terms": [
+                        {
+                            "condition": "any_of",
+                            "terms": [
+                                {
+                                    "condition": "location_check",
+                                    "predicate": {
+                                        "block": {
+                                            "tag": "marker_motion:beds",
+                                            "state": {
+                                                "facing": "south",
+                                                "part": "foot"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "condition": "location_check",
+                                    "predicate": {
+                                        "block": {
+                                            "tag": "marker_motion:beds",
+                                            "state": {
+                                                "facing": "north",
+                                                "part": "head"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "condition": "location_check",
+                                    "predicate": {
+                                        "block": {
+                                            "tag": "marker_motion:beds",
+                                            "state": {
+                                                "facing": "east",
+                                                "part": "foot"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "condition": "location_check",
+                                    "predicate": {
+                                        "block": {
+                                            "tag": "marker_motion:beds",
+                                            "state": {
+                                                "facing": "west",
+                                                "part": "head"
+                                            }
+                                        }
+                                    }
                                 }
-                            }
+                            ]
                         },
-                        "distance": {
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.18750
-                            },
-                            "z": {
-                                "min": 0.18750,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "beds",
-                                "state": {
-                                    "facing": "east",
-                                    "part": "head"
+                        {
+                            "condition": "any_of",
+                            "terms": [
+                                {
+                                    "condition": "entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "distance": {
+                                            "x": {
+                                                "min": 0.0,
+                                                "max": 0.18750
+                                            },
+                                            "y": {
+                                                "min": 0.0,
+                                                "max": 0.18750
+                                            },
+                                            "z": {
+                                                "min": 0.0,
+                                                "max": 0.18750
+                                            }
+                                        }
+                                    }
                                 }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.81250
-                            },
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.18750
-                            }
+                            ]
                         }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "beds",
-                                "state": {
-                                    "facing": "west",
-                                    "part": "head"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.18750,
-                                "max": 1.0
-                            },
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.18750
-                            }
-                        }
-                    }
+                    ]
                 }
             ]
         }

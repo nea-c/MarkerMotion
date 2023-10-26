@@ -52,6 +52,8 @@
     "waxed_exposed_cut_copper_stairs",
     "waxed_cut_copper_stairs",
     "waxed_oxidized_cut_copper_stairs",
-    "mud_brick_stairs"
+    "mud_brick_stairs",
+    "polished_tuff_stairs",
+    "tuff_brick_stairs"
   ]
 }

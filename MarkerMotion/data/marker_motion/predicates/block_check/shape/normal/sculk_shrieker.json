@@ -1,24 +1,19 @@
 {
-    "condition": "any_of",
-    "terms": [
-        {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "block": {
-                        "blocks": [
-                            "sculk_shrieker"
-                        ]
-                    }
-                },
-                "distance": {
-                    "y": {
-                        "min": 0.50,
-                        "max": 1
-                    }
-                }
+    "condition": "entity_properties",
+    "entity": "this",
+    "predicate": {
+        "location": {
+            "block": {
+                "blocks": [
+                    "sculk_shrieker"
+                ]
+            }
+        },
+        "distance": {
+            "y": {
+                "min": 0.0,
+                "max": 0.49999999990
             }
         }
-    ]
+    }
 }

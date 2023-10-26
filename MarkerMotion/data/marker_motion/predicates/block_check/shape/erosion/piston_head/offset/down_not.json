@@ -1,21 +1,19 @@
-[
-    {
-        "condition": "inverted",
-        "entity": "this",
-        "term": {
-            "condition": "location_check",
-            "offsetY": -1,
-            "predicate": {
-                "block": {
-                    "blocks": [
-                        "piston_head"
-                    ],
-                    "state": {
-                        "facing": "down",
-                        "short": "false"
-                    }
+{
+    "condition": "inverted",
+    "entity": "this",
+    "term": {
+        "condition": "location_check",
+        "offsetY": -1,
+        "predicate": {
+            "block": {
+                "blocks": [
+                    "piston_head"
+                ],
+                "state": {
+                    "facing": "down",
+                    "short": "false"
                 }
             }
         }
     }
-]
+}

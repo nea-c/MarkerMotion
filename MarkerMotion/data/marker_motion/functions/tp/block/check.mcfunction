@@ -11,4 +11,4 @@
         tp @s ~ ~ ~
     # TP位置がブロックのどの部分にあたるか見る
     #   空気判定になる場所でtrueを返すのでunless
-        execute align xyz unless predicate marker_motion:block_check/shape
+        return run execute align xyz if predicate marker_motion:block_check/shape

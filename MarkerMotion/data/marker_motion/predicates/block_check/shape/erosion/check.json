@@ -1,10 +1,13 @@
-[
-    {
-        "condition": "reference",
-        "name": "marker_motion:block_check/shape/erosion/piston_head/check"
-    },
-    {
-        "condition": "reference",
-        "name": "marker_motion:block_check/shape/erosion/pitcher_crop/check"
-    }
-]
+{
+    "condition": "all_of",
+    "terms": [
+        {
+            "condition": "reference",
+            "name": "marker_motion:block_check/shape/erosion/piston_head/check"
+        },
+        {
+            "condition": "reference",
+            "name": "marker_motion:block_check/shape/erosion/pitcher_crop/check"
+        }
+    ]
+}

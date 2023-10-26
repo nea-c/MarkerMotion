@@ -11,7 +11,7 @@
                             "end_portal_frame"
                         ],
                         "state": {
-                            "eye": "false"
+                            "eye": "true"
                         }
                     }
                 },
@@ -43,82 +43,9 @@
                     }
                 },
                 "distance": {
-                    "x": {
+                    "y": {
                         "min": 0.0,
-                        "max": 0.250
-                    },
-                    "y": {
-                        "min": 0.81250,
-                        "max": 1.0
-                    }
-                }
-            }
-        },
-        {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "block": {
-                        "blocks": [
-                            "end_portal_frame"
-                        ]
-                    }
-                },
-                "distance": {
-                    "x": {
-                        "min": 0.750,
-                        "max": 1.0
-                    },
-                    "y": {
-                        "min": 0.81250,
-                        "max": 1.0
-                    }
-                }
-            }
-        },
-        {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "block": {
-                        "blocks": [
-                            "end_portal_frame"
-                        ]
-                    }
-                },
-                "distance": {
-                    "y": {
-                        "min": 0.81250,
-                        "max": 1.0
-                    },
-                    "z": {
-                        "min": 0.0,
-                        "max": 0.250
-                    }
-                }
-            }
-        },
-        {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "block": {
-                        "blocks": [
-                            "end_portal_frame"
-                        ]
-                    }
-                },
-                "distance": {
-                    "y": {
-                        "min": 0.81250,
-                        "max": 1.0
-                    },
-                    "z": {
-                        "min": 0.750,
-                        "max": 1.0
+                        "max": 0.81249999999990
                     }
                 }
             }

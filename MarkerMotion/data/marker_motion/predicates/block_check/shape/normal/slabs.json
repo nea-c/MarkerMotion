@@ -9,13 +9,13 @@
                     "block": {
                         "tag": "marker_motion:slabs",
                         "state": {
-                            "type": "bottom"
+                            "type": "top"
                         }
                     }
                 },
                 "distance": {
                     "y": {
-                        "min": 0.50,
+                        "min": 0.4999990,
                         "max": 1
                     }
                 }
@@ -29,14 +29,14 @@
                     "block": {
                         "tag": "marker_motion:slabs",
                         "state": {
-                            "type": "top"
+                            "type": "bottom"
                         }
                     }
                 },
                 "distance": {
                     "y": {
                         "min": 0.0,
-                        "max": 0.50
+                        "max": 0.4999990
                     }
                 }
             }

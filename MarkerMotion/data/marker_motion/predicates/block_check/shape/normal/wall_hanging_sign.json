@@ -7,196 +7,95 @@
             "predicate": {
                 "location": {
                     "block": {
-                        "tag": "marker_motion:wall_hanging_signs"
+                        "tag": "marker_motion:wall_hanging_signs",
+                        "state": {
+                            "facing": "east"
+                        }
                     }
                 },
                 "distance": {
+                    "x": {
+                        "min": 0.3750,
+                        "max": 0.6250
+                    },
                     "y": {
-                        "min": 0.0,
-                        "max": 0.8750
+                        "min": 0.8750,
+                        "max": 1.0
                     }
                 }
             }
         },
         {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "marker_motion:wall_hanging_signs",
-                                "state": {
-                                    "facing": "east"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.3750
-                            }
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "tag": "marker_motion:wall_hanging_signs",
+                        "state": {
+                            "facing": "west"
                         }
                     }
                 },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "marker_motion:wall_hanging_signs",
-                                "state": {
-                                    "facing": "east"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.6250,
-                                "max": 1.0
-                            }
-                        }
+                "distance": {
+                    "x": {
+                        "min": 0.3750,
+                        "max": 0.6250
+                    },
+                    "y": {
+                        "min": 0.8750,
+                        "max": 1.0
                     }
                 }
-            ]
+            }
         },
         {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "marker_motion:wall_hanging_signs",
-                                "state": {
-                                    "facing": "west"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.3750
-                            }
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "tag": "marker_motion:wall_hanging_signs",
+                        "state": {
+                            "facing": "south"
                         }
                     }
                 },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "marker_motion:wall_hanging_signs",
-                                "state": {
-                                    "facing": "west"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.6250,
-                                "max": 1.0
-                            }
-                        }
+                "distance": {
+                    "y": {
+                        "min": 0.8750,
+                        "max": 1.0
+                    },
+                    "z": {
+                        "min": 0.3750,
+                        "max": 0.6250
                     }
                 }
-            ]
+            }
         },
         {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "marker_motion:wall_hanging_signs",
-                                "state": {
-                                    "facing": "south"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.3750
-                            }
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "tag": "marker_motion:wall_hanging_signs",
+                        "state": {
+                            "facing": "north"
                         }
                     }
                 },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "marker_motion:wall_hanging_signs",
-                                "state": {
-                                    "facing": "south"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.6250,
-                                "max": 1.0
-                            }
-                        }
+                "distance": {
+                    "y": {
+                        "min": 0.8750,
+                        "max": 1.0
+                    },
+                    "z": {
+                        "min": 0.3750,
+                        "max": 0.6250
                     }
                 }
-            ]
-        },
-        {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "marker_motion:wall_hanging_signs",
-                                "state": {
-                                    "facing": "north"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.3750
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "tag": "marker_motion:wall_hanging_signs",
-                                "state": {
-                                    "facing": "north"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.6250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                }
-            ]
+            }
         }
     ]
 }

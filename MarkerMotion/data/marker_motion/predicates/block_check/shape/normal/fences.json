@@ -12,75 +12,12 @@
                 },
                 "distance": {
                     "x": {
-                        "min": 0.0,
-                        "max": 0.3750
+                        "min": 0.3750,
+                        "max": 0.6250
                     },
                     "z": {
-                        "min": 0.0,
-                        "max": 0.3750
-                    }
-                }
-            }
-        },
-        {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "block": {
-                        "tag": "marker_motion:fences"
-                    }
-                },
-                "distance": {
-                    "x": {
-                        "min": 0.6250,
-                        "max": 1.0
-                    },
-                    "z": {
-                        "min": 0.0,
-                        "max": 0.3750
-                    }
-                }
-            }
-        },
-        {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "block": {
-                        "tag": "marker_motion:fences"
-                    }
-                },
-                "distance": {
-                    "x": {
-                        "min": 0.0,
-                        "max": 0.3750
-                    },
-                    "z": {
-                        "min": 0.6250,
-                        "max": 1.0
-                    }
-                }
-            }
-        },
-        {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "block": {
-                        "tag": "marker_motion:fences"
-                    }
-                },
-                "distance": {
-                    "x": {
-                        "min": 0.6250,
-                        "max": 1.0
-                    },
-                    "z": {
-                        "min": 0.6250,
-                        "max": 1.0
+                        "min": 0.3750,
+                        "max": 0.6250
                     }
                 }
             }
@@ -93,7 +30,7 @@
                     "block": {
                         "tag": "marker_motion:fences",
                         "state": {
-                            "south": "false"
+                            "south": "true"
                         }
                     }
                 },
@@ -117,7 +54,7 @@
                     "block": {
                         "tag": "marker_motion:fences",
                         "state": {
-                            "north": "false"
+                            "north": "true"
                         }
                     }
                 },
@@ -141,7 +78,7 @@
                     "block": {
                         "tag": "marker_motion:fences",
                         "state": {
-                            "west": "false"
+                            "west": "true"
                         }
                     }
                 },
@@ -165,7 +102,7 @@
                     "block": {
                         "tag": "marker_motion:fences",
                         "state": {
-                            "east": "false"
+                            "east": "true"
                         }
                     }
                 },

@@ -56,6 +56,8 @@
     "exposed_cut_copper_slab",
     "cut_copper_slab",
     "waxed_oxidized_cut_copper_slab",
-    "mud_brick_slab"
+    "mud_brick_slab",
+    "polished_tuff_slab",
+    "tuff_brick_slab"
   ]
 }

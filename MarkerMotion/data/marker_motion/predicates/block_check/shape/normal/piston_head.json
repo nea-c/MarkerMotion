@@ -2,108 +2,183 @@
     "condition": "any_of",
     "terms": [
         {
-            "condition": "any_of",
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "piston_head"
+                        ],
+                        "state": {
+                            "facing": "up"
+                        }
+                    }
+                },
+                "distance": {
+                    "y": {
+                        "min": 0.750,
+                        "max": 1.0
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "piston_head"
+                        ],
+                        "state": {
+                            "facing": "down"
+                        }
+                    }
+                },
+                "distance": {
+                    "y": {
+                        "min": 0.0,
+                        "max": 0.250
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "piston_head"
+                        ],
+                        "state": {
+                            "facing": "south"
+                        }
+                    }
+                },
+                "distance": {
+                    "z": {
+                        "min": 0.750,
+                        "max": 1.0
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "piston_head"
+                        ],
+                        "state": {
+                            "facing": "north"
+                        }
+                    }
+                },
+                "distance": {
+                    "z": {
+                        "min": 0.0,
+                        "max": 0.250
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "piston_head"
+                        ],
+                        "state": {
+                            "facing": "east"
+                        }
+                    }
+                },
+                "distance": {
+                    "x": {
+                        "min": 0.750,
+                        "max": 1.0
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "piston_head"
+                        ],
+                        "state": {
+                            "facing": "west"
+                        }
+                    }
+                },
+                "distance": {
+                    "x": {
+                        "min": 0.0,
+                        "max": 0.250
+                    }
+                }
+            }
+        },
+        {
+            "condition": "all_of",
             "terms": [
                 {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "south"
+                    "condition": "any_of",
+                    "terms": [
+                        {
+                            "condition": "location_check",
+                            "predicate": {
+                                "block": {
+                                    "blocks": [
+                                        "piston_head"
+                                    ],
+                                    "state": {
+                                        "facing": "up"
+                                    }
                                 }
                             }
                         },
-                        "distance": {
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.375
-                            },
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.750
+                        {
+                            "condition": "location_check",
+                            "predicate": {
+                                "block": {
+                                    "blocks": [
+                                        "piston_head"
+                                    ],
+                                    "state": {
+                                        "facing": "down"
+                                    }
+                                }
                             }
                         }
-                    }
+                    ]
                 },
                 {
                     "condition": "entity_properties",
                     "entity": "this",
                     "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "south"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "y": {
-                                "min": 0.6250,
-                                "max": 1.0
-                            },
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.750
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "south"
-                                }
-                            }
-                        },
                         "distance": {
                             "x": {
-                                "min": 0.0,
-                                "max": 0.375
+                                "min": 0.3750,
+                                "max": 0.6250
                             },
                             "z": {
-                                "min": 0.0,
-                                "max": 0.750
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "south"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.6250,
-                                "max": 1.0
-                            },
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.750
+                                "min": 0.3750,
+                                "max": 0.6250
                             }
                         }
                     }
@@ -111,108 +186,51 @@
             ]
         },
         {
-            "condition": "any_of",
+            "condition": "all_of",
             "terms": [
                 {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "north"
+                    "condition": "any_of",
+                    "terms": [
+                        {
+                            "condition": "location_check",
+                            "predicate": {
+                                "block": {
+                                    "blocks": [
+                                        "piston_head"
+                                    ],
+                                    "state": {
+                                        "facing": "south"
+                                    }
                                 }
                             }
                         },
-                        "distance": {
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.375
-                            },
-                            "z": {
-                                "min": 0.250,
-                                "max": 1.0
+                        {
+                            "condition": "location_check",
+                            "predicate": {
+                                "block": {
+                                    "blocks": [
+                                        "piston_head"
+                                    ],
+                                    "state": {
+                                        "facing": "north"
+                                    }
+                                }
                             }
                         }
-                    }
+                    ]
                 },
                 {
                     "condition": "entity_properties",
                     "entity": "this",
                     "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "north"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "y": {
-                                "min": 0.6250,
-                                "max": 1.0
-                            },
-                            "z": {
-                                "min": 0.250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "north"
-                                }
-                            }
-                        },
                         "distance": {
                             "x": {
-                                "min": 0.0,
-                                "max": 0.375
+                                "min": 0.3750,
+                                "max": 0.6250
                             },
-                            "z": {
-                                "min": 0.250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "north"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.6250,
-                                "max": 1.0
-                            },
-                            "z": {
-                                "min": 0.250,
-                                "max": 1.0
+                            "y": {
+                                "min": 0.3750,
+                                "max": 0.62499999990
                             }
                         }
                     }
@@ -220,435 +238,51 @@
             ]
         },
         {
-            "condition": "any_of",
+            "condition": "all_of",
             "terms": [
                 {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "east"
+                    "condition": "any_of",
+                    "terms": [
+                        {
+                            "condition": "location_check",
+                            "predicate": {
+                                "block": {
+                                    "blocks": [
+                                        "piston_head"
+                                    ],
+                                    "state": {
+                                        "facing": "east"
+                                    }
                                 }
                             }
                         },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.750
-                            },
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.375
+                        {
+                            "condition": "location_check",
+                            "predicate": {
+                                "block": {
+                                    "blocks": [
+                                        "piston_head"
+                                    ],
+                                    "state": {
+                                        "facing": "west"
+                                    }
+                                }
                             }
                         }
-                    }
+                    ]
                 },
                 {
                     "condition": "entity_properties",
                     "entity": "this",
                     "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "east"
-                                }
-                            }
-                        },
                         "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.750
-                            },
                             "y": {
-                                "min": 0.6250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "east"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.750
+                                "min": 0.3750,
+                                "max": 0.62499999990
                             },
                             "z": {
-                                "min": 0.0,
-                                "max": 0.375
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "east"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.750
-                            },
-                            "z": {
-                                "min": 0.6250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "west"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.250,
-                                "max": 1.0
-                            },
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.375
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "west"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.250,
-                                "max": 1.0
-                            },
-                            "y": {
-                                "min": 0.6250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "west"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.250,
-                                "max": 1.0
-                            },
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.375
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "west"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.250,
-                                "max": 1.0
-                            },
-                            "z": {
-                                "min": 0.6250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "up"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.375
-                            },
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.750
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "up"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.6250,
-                                "max": 1.0
-                            },
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.750
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "up"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.750
-                            },
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.375
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "up"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.750
-                            },
-                            "z": {
-                                "min": 0.6250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "down"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.375
-                            },
-                            "y": {
-                                "min": 0.250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "down"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.6250,
-                                "max": 1.0
-                            },
-                            "y": {
-                                "min": 0.250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "down"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "y": {
-                                "min": 0.250,
-                                "max": 1.0
-                            },
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.375
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "piston_head"
-                                ],
-                                "state": {
-                                    "facing": "down"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "y": {
-                                "min": 0.250,
-                                "max": 1.0
-                            },
-                            "z": {
-                                "min": 0.6250,
-                                "max": 1.0
+                                "min": 0.3750,
+                                "max": 0.6250
                             }
                         }
                     }

@@ -2,182 +2,100 @@
     "condition": "any_of",
     "terms": [
         {
-            "condition": "any_of",
+            "condition": "all_of",
             "terms": [
                 {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "state": {
-                                    "attachment": "floor",
-                                    "facing": "south"
+                    "condition": "any_of",
+                    "terms": [
+                        {
+                            "condition": "location_check",
+                            "predicate": {
+                                "block": {
+                                    "state": {
+                                        "attachment": "floor",
+                                        "facing": "south"
+                                    }
                                 }
                             }
                         },
-                        "distance": {
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.250
+                        {
+                            "condition": "location_check",
+                            "predicate": {
+                                "block": {
+                                    "state": {
+                                        "attachment": "floor",
+                                        "facing": "north"
+                                    }
+                                }
                             }
                         }
-                    }
+                    ]
                 },
                 {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "state": {
-                                    "attachment": "floor",
-                                    "facing": "south"
+                    "condition": "any_of",
+                    "terms": [
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "distance": {
+                                    "z": {
+                                        "min": 0.250,
+                                        "max": 0.750
+                                    }
                                 }
                             }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.750,
-                                "max": 1.0
-                            }
                         }
-                    }
+                    ]
                 }
             ]
         },
         {
-            "condition": "any_of",
+            "condition": "all_of",
             "terms": [
                 {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "state": {
-                                    "attachment": "floor",
-                                    "facing": "north"
+                    "condition": "any_of",
+                    "terms": [
+                        {
+                            "condition": "location_check",
+                            "predicate": {
+                                "block": {
+                                    "state": {
+                                        "attachment": "floor",
+                                        "facing": "east"
+                                    }
                                 }
                             }
                         },
-                        "distance": {
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.250
+                        {
+                            "condition": "location_check",
+                            "predicate": {
+                                "block": {
+                                    "state": {
+                                        "attachment": "floor",
+                                        "facing": "west"
+                                    }
+                                }
                             }
                         }
-                    }
+                    ]
                 },
                 {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "state": {
-                                    "attachment": "floor",
-                                    "facing": "north"
+                    "condition": "any_of",
+                    "terms": [
+                        {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "distance": {
+                                    "x": {
+                                        "min": 0.250,
+                                        "max": 0.750
+                                    }
                                 }
                             }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.750,
-                                "max": 1.0
-                            }
                         }
-                    }
-                }
-            ]
-        },
-        {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "state": {
-                                    "attachment": "floor",
-                                    "facing": "east"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.250
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "state": {
-                                    "attachment": "floor",
-                                    "facing": "east"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.750,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "state": {
-                                    "attachment": "floor",
-                                    "facing": "west"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.250
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "state": {
-                                    "attachment": "floor",
-                                    "facing": "west"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.750,
-                                "max": 1.0
-                            }
-                        }
-                    }
+                    ]
                 }
             ]
         }

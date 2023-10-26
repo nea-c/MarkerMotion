@@ -2,197 +2,117 @@
     "condition": "any_of",
     "terms": [
         {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "tag": "marker_motion:mob_heads"
+                    }
+                },
+                "distance": {
+                    "x": {
+                        "min": 0.250,
+                        "max": 0.750
+                    },
+                    "y": {
+                        "min": 0.0,
+                        "max": 0.49999999990
+                    },
+                    "z": {
+                        "min": 0.250,
+                        "max": 0.750
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "piglin_head"
+                        ]
+                    }
+                },
+                "distance": {
+                    "x": {
+                        "min": 0.18750,
+                        "max": 0.81250
+                    },
+                    "y": {
+                        "min": 0.0,
+                        "max": 0.49999999990
+                    },
+                    "z": {
+                        "min": 0.18750,
+                        "max": 0.81250
+                    }
+                }
+            }
+        },
+        {
             "condition": "any_of",
             "terms": [
                 {
-                    "condition": "any_of",
-                    "terms": [
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_heads"
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.50,
-                                        "max": 1.0
-                                    }
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "tag": "marker_motion:mob_wall_heads",
+                                "state": {
+                                    "facing": "east"
                                 }
                             }
                         },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_heads"
-                                    }
-                                },
-                                "distance": {
-                                    "x": {
-                                        "min": 0.0,
-                                        "max": 0.250
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_heads"
-                                    }
-                                },
-                                "distance": {
-                                    "x": {
-                                        "min": 0.750,
-                                        "max": 1.0
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_heads"
-                                    }
-                                },
-                                "distance": {
-                                    "z": {
-                                        "min": 0.0,
-                                        "max": 0.250
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_heads"
-                                    }
-                                },
-                                "distance": {
-                                    "z": {
-                                        "min": 0.750,
-                                        "max": 1.0
-                                    }
-                                }
+                        "distance": {
+                            "x": {
+                                "min": 0.0,
+                                "max": 0.50
+                            },
+                            "y": {
+                                "min": 0.250,
+                                "max": 0.749999999990
+                            },
+                            "z": {
+                                "min": 0.250,
+                                "max": 0.750
                             }
                         }
-                    ]
+                    }
                 },
                 {
-                    "condition": "any_of",
-                    "terms": [
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_head"
-                                        ]
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.50,
-                                        "max": 1.0
-                                    }
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "blocks": [
+                                    "piglin_wall_head"
+                                ],
+                                "state": {
+                                    "facing": "east"
                                 }
                             }
                         },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_head"
-                                        ]
-                                    }
-                                },
-                                "distance": {
-                                    "x": {
-                                        "min": 0.0,
-                                        "max": 0.18750
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_head"
-                                        ]
-                                    }
-                                },
-                                "distance": {
-                                    "x": {
-                                        "min": 0.81250,
-                                        "max": 1.0
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_head"
-                                        ]
-                                    }
-                                },
-                                "distance": {
-                                    "z": {
-                                        "min": 0.0,
-                                        "max": 0.18750
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_head"
-                                        ]
-                                    }
-                                },
-                                "distance": {
-                                    "z": {
-                                        "min": 0.81250,
-                                        "max": 1.0
-                                    }
-                                }
+                        "distance": {
+                            "x": {
+                                "min": 0.0,
+                                "max": 0.50
+                            },
+                            "y": {
+                                "min": 0.250,
+                                "max": 0.749999999990
+                            },
+                            "z": {
+                                "min": 0.18750,
+                                "max": 0.81250
                             }
                         }
-                    ]
+                    }
                 }
             ]
         },
@@ -200,224 +120,62 @@
             "condition": "any_of",
             "terms": [
                 {
-                    "condition": "any_of",
-                    "terms": [
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "east"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "x": {
-                                        "min": 0.50,
-                                        "max": 1.0
-                                    }
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "tag": "marker_motion:mob_wall_heads",
+                                "state": {
+                                    "facing": "west"
                                 }
                             }
                         },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "east"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.0,
-                                        "max": 0.250
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "east"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.750,
-                                        "max": 1.0
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "east"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "z": {
-                                        "min": 0.0,
-                                        "max": 0.250
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "east"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "z": {
-                                        "min": 0.750,
-                                        "max": 1.0
-                                    }
-                                }
+                        "distance": {
+                            "x": {
+                                "min": 0.50,
+                                "max": 1.0
+                            },
+                            "y": {
+                                "min": 0.250,
+                                "max": 0.749999999990
+                            },
+                            "z": {
+                                "min": 0.250,
+                                "max": 0.750
                             }
                         }
-                    ]
+                    }
                 },
                 {
-                    "condition": "any_of",
-                    "terms": [
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "east"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "x": {
-                                        "min": 0.50,
-                                        "max": 1.0
-                                    }
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "blocks": [
+                                    "piglin_wall_head"
+                                ],
+                                "state": {
+                                    "facing": "west"
                                 }
                             }
                         },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "east"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.0,
-                                        "max": 0.250
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "east"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.750,
-                                        "max": 1.0
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "east"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "z": {
-                                        "min": 0.0,
-                                        "max": 0.18750
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "east"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "z": {
-                                        "min": 0.81250,
-                                        "max": 1.0
-                                    }
-                                }
+                        "distance": {
+                            "x": {
+                                "min": 0.50,
+                                "max": 1.0
+                            },
+                            "y": {
+                                "min": 0.250,
+                                "max": 0.749999999990
+                            },
+                            "z": {
+                                "min": 0.18750,
+                                "max": 0.81250
                             }
                         }
-                    ]
+                    }
                 }
             ]
         },
@@ -425,224 +183,62 @@
             "condition": "any_of",
             "terms": [
                 {
-                    "condition": "any_of",
-                    "terms": [
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "west"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "x": {
-                                        "min": 0.0,
-                                        "max": 0.50
-                                    }
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "tag": "marker_motion:mob_wall_heads",
+                                "state": {
+                                    "facing": "south"
                                 }
                             }
                         },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "west"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.0,
-                                        "max": 0.250
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "west"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.750,
-                                        "max": 1.0
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "west"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "z": {
-                                        "min": 0.0,
-                                        "max": 0.250
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "west"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "z": {
-                                        "min": 0.750,
-                                        "max": 1.0
-                                    }
-                                }
+                        "distance": {
+                            "x": {
+                                "min": 0.250,
+                                "max": 0.750
+                            },
+                            "y": {
+                                "min": 0.250,
+                                "max": 0.749999999990
+                            },
+                            "z": {
+                                "min": 0.0,
+                                "max": 0.50
                             }
                         }
-                    ]
+                    }
                 },
                 {
-                    "condition": "any_of",
-                    "terms": [
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "west"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "x": {
-                                        "min": 0.0,
-                                        "max": 0.50
-                                    }
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "blocks": [
+                                    "piglin_wall_head"
+                                ],
+                                "state": {
+                                    "facing": "south"
                                 }
                             }
                         },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "west"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.0,
-                                        "max": 0.250
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "west"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.750,
-                                        "max": 1.0
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "west"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "z": {
-                                        "min": 0.0,
-                                        "max": 0.18750
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "west"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "z": {
-                                        "min": 0.81250,
-                                        "max": 1.0
-                                    }
-                                }
+                        "distance": {
+                            "x": {
+                                "min": 0.18750,
+                                "max": 0.81250
+                            },
+                            "y": {
+                                "min": 0.250,
+                                "max": 0.749999999990
+                            },
+                            "z": {
+                                "min": 0.0,
+                                "max": 0.50
                             }
                         }
-                    ]
+                    }
                 }
             ]
         },
@@ -650,449 +246,62 @@
             "condition": "any_of",
             "terms": [
                 {
-                    "condition": "any_of",
-                    "terms": [
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "south"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "z": {
-                                        "min": 0.50,
-                                        "max": 1.0
-                                    }
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "tag": "marker_motion:mob_wall_heads",
+                                "state": {
+                                    "facing": "north"
                                 }
                             }
                         },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "south"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "x": {
-                                        "min": 0.0,
-                                        "max": 0.250
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "south"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "x": {
-                                        "min": 0.750,
-                                        "max": 1.0
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "south"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.0,
-                                        "max": 0.250
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "south"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.750,
-                                        "max": 1.0
-                                    }
-                                }
+                        "distance": {
+                            "x": {
+                                "min": 0.250,
+                                "max": 0.750
+                            },
+                            "y": {
+                                "min": 0.250,
+                                "max": 0.749999999990
+                            },
+                            "z": {
+                                "min": 0.50,
+                                "max": 1.0
                             }
                         }
-                    ]
+                    }
                 },
                 {
-                    "condition": "any_of",
-                    "terms": [
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "south"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "z": {
-                                        "min": 0.50,
-                                        "max": 1.0
-                                    }
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "location": {
+                            "block": {
+                                "blocks": [
+                                    "piglin_wall_head"
+                                ],
+                                "state": {
+                                    "facing": "north"
                                 }
                             }
                         },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "south"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "x": {
-                                        "min": 0.0,
-                                        "max": 0.18750
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "south"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "x": {
-                                        "min": 0.81250,
-                                        "max": 1.0
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "south"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.0,
-                                        "max": 0.250
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "south"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.750,
-                                        "max": 1.0
-                                    }
-                                }
+                        "distance": {
+                            "x": {
+                                "min": 0.18750,
+                                "max": 0.81250
+                            },
+                            "y": {
+                                "min": 0.250,
+                                "max": 0.749999999990
+                            },
+                            "z": {
+                                "min": 0.50,
+                                "max": 1.0
                             }
                         }
-                    ]
-                }
-            ]
-        },
-        {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "any_of",
-                    "terms": [
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "north"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "z": {
-                                        "min": 0.0,
-                                        "max": 0.50
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "north"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "x": {
-                                        "min": 0.0,
-                                        "max": 0.250
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "north"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "x": {
-                                        "min": 0.750,
-                                        "max": 1.0
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "north"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.0,
-                                        "max": 0.250
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "tag": "marker_motion:mob_wall_heads",
-                                        "state": {
-                                            "facing": "north"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.750,
-                                        "max": 1.0
-                                    }
-                                }
-                            }
-                        }
-                    ]
-                },
-                {
-                    "condition": "any_of",
-                    "terms": [
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "north"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "z": {
-                                        "min": 0.0,
-                                        "max": 0.50
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "north"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "x": {
-                                        "min": 0.0,
-                                        "max": 0.18750
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "north"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "x": {
-                                        "min": 0.81250,
-                                        "max": 1.0
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "north"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.0,
-                                        "max": 0.250
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "location": {
-                                    "block": {
-                                        "blocks": [
-                                            "piglin_wall_head"
-                                        ],
-                                        "state": {
-                                            "facing": "north"
-                                        }
-                                    }
-                                },
-                                "distance": {
-                                    "y": {
-                                        "min": 0.750,
-                                        "max": 1.0
-                                    }
-                                }
-                            }
-                        }
-                    ]
+                    }
                 }
             ]
         }

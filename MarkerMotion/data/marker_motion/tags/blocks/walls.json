@@ -21,6 +21,8 @@
     "polished_deepslate_wall",
     "deepslate_tile_wall",
     "deepslate_brick_wall",
-    "mud_brick_wall"
+    "mud_brick_wall",
+    "polished_tuff_wall",
+    "tuff_brick_wall"
   ]
 }

@@ -7,24 +7,20 @@
             "predicate": {
                 "location": {
                     "block": {
-                        "tag": "marker_motion:chests",
+                        "tag": "marker_motion:walls",
                         "state": {
-                            "type": "single"
+                            "up": "false"
                         }
                     }
                 },
                 "distance": {
                     "x": {
-                        "min": 0.06250,
-                        "max": 0.93750
-                    },
-                    "y": {
-                        "min": 0.0,
-                        "max": 0.874999999990
+                        "min": 0.31250,
+                        "max": 0.68750
                     },
                     "z": {
-                        "min": 0.06250,
-                        "max": 0.93750
+                        "min": 0.31250,
+                        "max": 0.68750
                     }
                 }
             }
@@ -35,25 +31,20 @@
             "predicate": {
                 "location": {
                     "block": {
-                        "tag": "marker_motion:chests",
+                        "tag": "marker_motion:walls",
                         "state": {
-                            "facing": "north",
-                            "type": "right"
+                            "up": "true"
                         }
                     }
                 },
                 "distance": {
                     "x": {
-                        "min": 0.0,
-                        "max": 0.93750
-                    },
-                    "y": {
-                        "min": 0.0,
-                        "max": 0.874999999990
+                        "min": 0.250,
+                        "max": 0.750
                     },
                     "z": {
-                        "min": 0.06250,
-                        "max": 0.93750
+                        "min": 0.250,
+                        "max": 0.750
                     }
                 }
             }
@@ -64,140 +55,23 @@
             "predicate": {
                 "location": {
                     "block": {
-                        "tag": "marker_motion:chests",
+                        "tag": "marker_motion:walls",
                         "state": {
-                            "facing": "north",
-                            "type": "left"
+                            "south": "low"
                         }
                     }
                 },
                 "distance": {
                     "x": {
-                        "min": 0.06250,
-                        "max": 1.0
+                        "min": 0.31250,
+                        "max": 0.68750
                     },
                     "y": {
                         "min": 0.0,
-                        "max": 0.874999999990
+                        "max": 0.87499999990
                     },
                     "z": {
-                        "min": 0.06250,
-                        "max": 0.93750
-                    }
-                }
-            }
-        },
-        {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "block": {
-                        "tag": "marker_motion:chests",
-                        "state": {
-                            "facing": "south",
-                            "type": "right"
-                        }
-                    }
-                },
-                "distance": {
-                    "x": {
-                        "min": 0.06250,
-                        "max": 1.0
-                    },
-                    "y": {
-                        "min": 0.0,
-                        "max": 0.874999999990
-                    },
-                    "z": {
-                        "min": 0.06250,
-                        "max": 0.93750
-                    }
-                }
-            }
-        },
-        {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "block": {
-                        "tag": "marker_motion:chests",
-                        "state": {
-                            "facing": "south",
-                            "type": "left"
-                        }
-                    }
-                },
-                "distance": {
-                    "x": {
-                        "min": 0.0,
-                        "max": 0.93750
-                    },
-                    "y": {
-                        "min": 0.0,
-                        "max": 0.874999999990
-                    },
-                    "z": {
-                        "min": 0.06250,
-                        "max": 0.93750
-                    }
-                }
-            }
-        },
-        {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "block": {
-                        "tag": "marker_motion:chests",
-                        "state": {
-                            "facing": "east",
-                            "type": "right"
-                        }
-                    }
-                },
-                "distance": {
-                    "x": {
-                        "min": 0.06250,
-                        "max": 0.93750
-                    },
-                    "y": {
-                        "min": 0.0,
-                        "max": 0.874999999990
-                    },
-                    "z": {
-                        "min": 0.0,
-                        "max": 0.93750
-                    }
-                }
-            }
-        },
-        {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "block": {
-                        "tag": "marker_motion:chests",
-                        "state": {
-                            "facing": "east",
-                            "type": "left"
-                        }
-                    }
-                },
-                "distance": {
-                    "x": {
-                        "min": 0.06250,
-                        "max": 0.93750
-                    },
-                    "y": {
-                        "min": 0.0,
-                        "max": 0.874999999990
-                    },
-                    "z": {
-                        "min": 0.06250,
+                        "min": 0.750,
                         "max": 1.0
                     }
                 }
@@ -209,24 +83,19 @@
             "predicate": {
                 "location": {
                     "block": {
-                        "tag": "marker_motion:chests",
+                        "tag": "marker_motion:walls",
                         "state": {
-                            "facing": "west",
-                            "type": "right"
+                            "south": "tall"
                         }
                     }
                 },
                 "distance": {
                     "x": {
-                        "min": 0.06250,
-                        "max": 0.93750
-                    },
-                    "y": {
-                        "min": 0.0,
-                        "max": 0.874999999990
+                        "min": 0.31250,
+                        "max": 0.68750
                     },
                     "z": {
-                        "min": 0.06250,
+                        "min": 0.750,
                         "max": 1.0
                     }
                 }
@@ -238,25 +107,152 @@
             "predicate": {
                 "location": {
                     "block": {
-                        "tag": "marker_motion:chests",
+                        "tag": "marker_motion:walls",
                         "state": {
-                            "facing": "west",
-                            "type": "left"
+                            "north": "low"
                         }
                     }
                 },
                 "distance": {
                     "x": {
-                        "min": 0.06250,
-                        "max": 0.93750
+                        "min": 0.31250,
+                        "max": 0.68750
                     },
                     "y": {
                         "min": 0.0,
-                        "max": 0.874999999990
+                        "max": 0.87499999990
                     },
                     "z": {
                         "min": 0.0,
-                        "max": 0.93750
+                        "max": 0.250
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "tag": "marker_motion:walls",
+                        "state": {
+                            "north": "tall"
+                        }
+                    }
+                },
+                "distance": {
+                    "x": {
+                        "min": 0.31250,
+                        "max": 0.68750
+                    },
+                    "z": {
+                        "min": 0.0,
+                        "max": 0.250
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "tag": "marker_motion:walls",
+                        "state": {
+                            "east": "low"
+                        }
+                    }
+                },
+                "distance": {
+                    "x": {
+                        "min": 0.750,
+                        "max": 1.0
+                    },
+                    "y": {
+                        "min": 0.0,
+                        "max": 0.87499999990
+                    },
+                    "z": {
+                        "min": 0.31250,
+                        "max": 0.68750
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "tag": "marker_motion:walls",
+                        "state": {
+                            "east": "tall"
+                        }
+                    }
+                },
+                "distance": {
+                    "x": {
+                        "min": 0.750,
+                        "max": 1.0
+                    },
+                    "z": {
+                        "min": 0.31250,
+                        "max": 0.68750
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "tag": "marker_motion:walls",
+                        "state": {
+                            "west": "low"
+                        }
+                    }
+                },
+                "distance": {
+                    "x": {
+                        "min": 0.0,
+                        "max": 0.250
+                    },
+                    "y": {
+                        "min": 0.0,
+                        "max": 0.87499999990
+                    },
+                    "z": {
+                        "min": 0.31250,
+                        "max": 0.68750
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "tag": "marker_motion:walls",
+                        "state": {
+                            "west": "tall"
+                        }
+                    }
+                },
+                "distance": {
+                    "x": {
+                        "min": 0.0,
+                        "max": 0.250
+                    },
+                    "z": {
+                        "min": 0.31250,
+                        "max": 0.68750
                     }
                 }
             }

@@ -2,515 +2,170 @@
     "condition": "any_of",
     "terms": [
         {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "base"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.1250
-                            }
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "pointed_dripstone"
+                        ],
+                        "state": {
+                            "thickness": "base"
                         }
                     }
                 },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "base"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.8750,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "base"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.1250
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "base"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.8750,
-                                "max": 1.0
-                            }
-                        }
+                "distance": {
+                    "x": {
+                        "min": 0.1250,
+                        "max": 0.8750
+                    },
+                    "z": {
+                        "min": 0.1250,
+                        "max": 0.8750
                     }
                 }
-            ]
+            }
         },
         {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "middle"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.18750
-                            }
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "pointed_dripstone"
+                        ],
+                        "state": {
+                            "thickness": "middle"
                         }
                     }
                 },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "middle"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.81250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "middle"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.18750
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "middle"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.81250,
-                                "max": 1.0
-                            }
-                        }
+                "distance": {
+                    "x": {
+                        "min": 0.18750,
+                        "max": 0.81250
+                    },
+                    "z": {
+                        "min": 0.18750,
+                        "max": 0.81250
                     }
                 }
-            ]
+            }
         },
         {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "frustum"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.250
-                            }
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "pointed_dripstone"
+                        ],
+                        "state": {
+                            "thickness": "frustum"
                         }
                     }
                 },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "frustum"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.750,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "frustum"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.250
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "frustum"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.750,
-                                "max": 1.0
-                            }
-                        }
+                "distance": {
+                    "x": {
+                        "min": 0.250,
+                        "max": 0.750
+                    },
+                    "z": {
+                        "min": 0.250,
+                        "max": 0.750
                     }
                 }
-            ]
+            }
         },
         {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "tip",
-                                    "vertical_direction": "up"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "y": {
-                                "min": 0.68750,
-                                "max": 1.0
-                            }
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "pointed_dripstone"
+                        ],
+                        "state": {
+                            "thickness": "tip",
+                            "vertical_direction": "up"
                         }
                     }
                 },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "tip",
-                                    "vertical_direction": "down"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "y": {
-                                "min": 0.0,
-                                "max": 0.31250
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "tip"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.31250
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "tip"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.68750,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "tip"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.31250
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "tip"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.68750,
-                                "max": 1.0
-                            }
-                        }
+                "distance": {
+                    "x": {
+                        "min": 0.31250,
+                        "max": 0.68750
+                    },
+                    "y": {
+                        "min": 0.0,
+                        "max": 0.687499999990
+                    },
+                    "z": {
+                        "min": 0.31250,
+                        "max": 0.68750
                     }
                 }
-            ]
+            }
         },
         {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "tip_merge"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.31250
-                            }
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "pointed_dripstone"
+                        ],
+                        "state": {
+                            "thickness": "tip",
+                            "vertical_direction": "down"
                         }
                     }
                 },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "tip_merge"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.68750,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "tip_merge"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.31250
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "pointed_dripstone"
-                                ],
-                                "state": {
-                                    "thickness": "tip_merge"
-                                }
-                            }
-                        },
-                        "distance": {
-                            "z": {
-                                "min": 0.68750,
-                                "max": 1.0
-                            }
-                        }
+                "distance": {
+                    "x": {
+                        "min": 0.31250,
+                        "max": 0.68750
+                    },
+                    "y": {
+                        "min": 0.31250,
+                        "max": 1.0
+                    },
+                    "z": {
+                        "min": 0.31250,
+                        "max": 0.68750
                     }
                 }
-            ]
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "pointed_dripstone"
+                        ],
+                        "state": {
+                            "thickness": "tip_merge"
+                        }
+                    }
+                },
+                "distance": {
+                    "x": {
+                        "min": 0.31250,
+                        "max": 0.68750
+                    },
+                    "z": {
+                        "min": 0.31250,
+                        "max": 0.68750
+                    }
+                }
+            }
         }
     ]
 }

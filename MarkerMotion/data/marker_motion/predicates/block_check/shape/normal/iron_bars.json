@@ -2,101 +2,27 @@
     "condition": "any_of",
     "terms": [
         {
-            "condition": "any_of",
-            "terms": [
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "iron_bars"
-                                ]
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.43750
-                            },
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.43750
-                            }
-                        }
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "iron_bars"
+                        ]
                     }
                 },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "iron_bars"
-                                ]
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.56250,
-                                "max": 1.0
-                            },
-                            "z": {
-                                "min": 0.0,
-                                "max": 0.43750
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "iron_bars"
-                                ]
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.0,
-                                "max": 0.43750
-                            },
-                            "z": {
-                                "min": 0.56250,
-                                "max": 1.0
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "location": {
-                            "block": {
-                                "blocks": [
-                                    "iron_bars"
-                                ]
-                            }
-                        },
-                        "distance": {
-                            "x": {
-                                "min": 0.56250,
-                                "max": 1.0
-                            },
-                            "z": {
-                                "min": 0.56250,
-                                "max": 1.0
-                            }
-                        }
+                "distance": {
+                    "x": {
+                        "min": 0.43750,
+                        "max": 0.56250
+                    },
+                    "z": {
+                        "min": 0.43750,
+                        "max": 0.56250
                     }
                 }
-            ]
+            }
         },
         {
             "condition": "entity_properties",
@@ -108,7 +34,7 @@
                             "iron_bars"
                         ],
                         "state": {
-                            "south": "false"
+                            "south": "true"
                         }
                     }
                 },
@@ -134,7 +60,7 @@
                             "iron_bars"
                         ],
                         "state": {
-                            "north": "false"
+                            "north": "true"
                         }
                     }
                 },
@@ -160,7 +86,7 @@
                             "iron_bars"
                         ],
                         "state": {
-                            "east": "false"
+                            "east": "true"
                         }
                     }
                 },
@@ -186,7 +112,7 @@
                             "iron_bars"
                         ],
                         "state": {
-                            "west": "false"
+                            "west": "true"
                         }
                     }
                 },

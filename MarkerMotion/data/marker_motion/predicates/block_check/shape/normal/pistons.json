@@ -12,6 +12,23 @@
                             "sticky_piston"
                         ],
                         "state": {
+                            "extended": "false"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "block": {
+                        "blocks": [
+                            "piston",
+                            "sticky_piston"
+                        ],
+                        "state": {
                             "facing": "up",
                             "extended": "true"
                         }
@@ -19,8 +36,8 @@
                 },
                 "distance": {
                     "y": {
-                        "min": 0.750,
-                        "max": 1.0
+                        "min": 0.0,
+                        "max": 0.74999999990
                     }
                 }
             }
@@ -43,8 +60,8 @@
                 },
                 "distance": {
                     "y": {
-                        "min": 0.0,
-                        "max": 0.250
+                        "min": 0.250,
+                        "max": 1.0
                     }
                 }
             }
@@ -67,8 +84,8 @@
                 },
                 "distance": {
                     "z": {
-                        "min": 0.750,
-                        "max": 1.0
+                        "min": 0.0,
+                        "max": 0.750
                     }
                 }
             }
@@ -91,8 +108,8 @@
                 },
                 "distance": {
                     "z": {
-                        "min": 0.0,
-                        "max": 0.250
+                        "min": 0.250,
+                        "max": 1.0
                     }
                 }
             }
@@ -115,8 +132,8 @@
                 },
                 "distance": {
                     "x": {
-                        "min": 0.750,
-                        "max": 1.0
+                        "min": 0.0,
+                        "max": 0.750
                     }
                 }
             }
@@ -139,8 +156,8 @@
                 },
                 "distance": {
                     "x": {
-                        "min": 0.0,
-                        "max": 0.250
+                        "min": 0.250,
+                        "max": 1.0
                     }
                 }
             }

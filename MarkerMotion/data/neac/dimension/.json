@@ -1,5 +1,5 @@
 {
-  "type": "marker_motion:void",
+  "type": "neac:void",
   "generator": {
     "type": "flat",
     "settings": {

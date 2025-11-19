@@ -1,0 +1,130 @@
+{
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "all_of",
+      "terms": [
+        {
+          "condition": "location_check",
+          "predicate": {
+            "block": {
+              "blocks": "#marker_motion:lanterns",
+              "state": {
+                "hanging": "false"
+              }
+            }
+          }
+        },
+        {
+          "condition": "any_of",
+          "terms": [
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.31250,
+                    "max": 0.68750
+                  },
+                  "y": {
+                    "min": 0.0,
+                    "max": 0.437499999990
+                  },
+                  "z": {
+                    "min": 0.31250,
+                    "max": 0.68750
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  },
+                  "y": {
+                    "min": 0.43750,
+                    "max": 0.562499999990
+                  },
+                  "z": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition": "all_of",
+      "terms": [
+        {
+          "condition": "location_check",
+          "predicate": {
+            "block": {
+              "blocks": [
+                "lantern",
+                "soul_lantern"
+              ],
+              "state": {
+                "hanging": "true"
+              }
+            }
+          }
+        },
+        {
+          "condition": "any_of",
+          "terms": [
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.31250,
+                    "max": 0.68750
+                  },
+                  "y": {
+                    "min": 0.06250,
+                    "max": 0.499999990
+                  },
+                  "z": {
+                    "min": 0.31250,
+                    "max": 0.68750
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  },
+                  "y": {
+                    "min": 0.50,
+                    "max": 0.62499999990
+                  },
+                  "z": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

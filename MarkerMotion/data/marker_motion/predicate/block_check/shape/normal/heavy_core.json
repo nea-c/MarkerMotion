@@ -1,0 +1,25 @@
+{
+  "condition": "entity_properties",
+  "entity": "this",
+  "predicate": {
+    "location": {
+      "block": {
+        "blocks": "heavy_core"
+      }
+    },
+    "distance": {
+      "x": {
+        "min": 0.250,
+        "max": 0.750
+      },
+      "y": {
+        "min": 0.0,
+        "max": 0.49999999990
+      },
+      "z": {
+        "min": 0.250,
+        "max": 0.750
+      }
+    }
+  }
+}

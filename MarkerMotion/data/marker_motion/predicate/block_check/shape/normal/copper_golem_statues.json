@@ -1,0 +1,25 @@
+{
+  "condition": "entity_properties",
+  "entity": "this",
+  "predicate": {
+    "location": {
+      "block": {
+        "blocks": "#marker_motion:copper_golem_statues"
+      }
+    },
+    "distance": {
+      "x": {
+        "min": 0.18750,
+        "max": 0.81250
+      },
+      "y": {
+        "min": 0.0,
+        "max": 0.87499990
+      },
+      "z": {
+        "min": 0.18750,
+        "max": 0.81250
+      }
+    }
+  }
+}

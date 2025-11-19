@@ -1,0 +1,913 @@
+{
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "all_of",
+      "terms": [
+        {
+          "condition": "any_of",
+          "terms": [
+            {
+              "condition": "location_check",
+              "predicate": {
+                "block": {
+                  "blocks": [
+                    "grindstone"
+                  ],
+                  "state": {
+                    "face": "floor",
+                    "facing": "south"
+                  }
+                }
+              }
+            },
+            {
+              "condition": "location_check",
+              "predicate": {
+                "block": {
+                  "blocks": [
+                    "grindstone"
+                  ],
+                  "state": {
+                    "face": "floor",
+                    "facing": "north"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "condition": "any_of",
+          "terms": [
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.250,
+                    "max": 0.750
+                  },
+                  "y": {
+                    "min": 0.250,
+                    "max": 1.0
+                  },
+                  "z": {
+                    "min": 0.1250,
+                    "max": 0.8750
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.1250,
+                    "max": 0.8750
+                  },
+                  "y": {
+                    "min": 0.43750,
+                    "max": 0.812499999990
+                  },
+                  "z": {
+                    "min": 0.31250,
+                    "max": 0.68750
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.1250,
+                    "max": 0.250
+                  },
+                  "y": {
+                    "min": 0.0,
+                    "max": 0.437499999990
+                  },
+                  "z": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.750,
+                    "max": 0.8750
+                  },
+                  "y": {
+                    "min": 0.0,
+                    "max": 0.437499999990
+                  },
+                  "z": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition": "all_of",
+      "terms": [
+        {
+          "condition": "any_of",
+          "terms": [
+            {
+              "condition": "location_check",
+              "predicate": {
+                "block": {
+                  "blocks": [
+                    "grindstone"
+                  ],
+                  "state": {
+                    "face": "floor",
+                    "facing": "east"
+                  }
+                }
+              }
+            },
+            {
+              "condition": "location_check",
+              "predicate": {
+                "block": {
+                  "blocks": [
+                    "grindstone"
+                  ],
+                  "state": {
+                    "face": "floor",
+                    "facing": "west"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "condition": "any_of",
+          "terms": [
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.1250,
+                    "max": 0.8750
+                  },
+                  "y": {
+                    "min": 0.250,
+                    "max": 1.0
+                  },
+                  "z": {
+                    "min": 0.250,
+                    "max": 0.750
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.31250,
+                    "max": 0.68750
+                  },
+                  "y": {
+                    "min": 0.43750,
+                    "max": 0.812499999990
+                  },
+                  "z": {
+                    "min": 0.1250,
+                    "max": 0.8750
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  },
+                  "y": {
+                    "min": 0.0,
+                    "max": 0.437499999990
+                  },
+                  "z": {
+                    "min": 0.1250,
+                    "max": 0.250
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  },
+                  "y": {
+                    "min": 0.0,
+                    "max": 0.437499999990
+                  },
+                  "z": {
+                    "min": 0.750,
+                    "max": 0.8750
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition": "all_of",
+      "terms": [
+        {
+          "condition": "any_of",
+          "terms": [
+            {
+              "condition": "location_check",
+              "predicate": {
+                "block": {
+                  "blocks": [
+                    "grindstone"
+                  ],
+                  "state": {
+                    "face": "ceiling",
+                    "facing": "south"
+                  }
+                }
+              }
+            },
+            {
+              "condition": "location_check",
+              "predicate": {
+                "block": {
+                  "blocks": [
+                    "grindstone"
+                  ],
+                  "state": {
+                    "face": "ceiling",
+                    "facing": "north"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "condition": "any_of",
+          "terms": [
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.250,
+                    "max": 0.750
+                  },
+                  "y": {
+                    "min": 0.0,
+                    "max": 0.7499999990
+                  },
+                  "z": {
+                    "min": 0.1250,
+                    "max": 0.8750
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.1250,
+                    "max": 0.8750
+                  },
+                  "y": {
+                    "min": 0.18750,
+                    "max": 0.562499999990
+                  },
+                  "z": {
+                    "min": 0.31250,
+                    "max": 0.68750
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.1250,
+                    "max": 0.250
+                  },
+                  "y": {
+                    "min": 0.56250,
+                    "max": 1.0
+                  },
+                  "z": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.750,
+                    "max": 0.8750
+                  },
+                  "y": {
+                    "min": 0.56250,
+                    "max": 1.0
+                  },
+                  "z": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition": "all_of",
+      "terms": [
+        {
+          "condition": "any_of",
+          "terms": [
+            {
+              "condition": "location_check",
+              "predicate": {
+                "block": {
+                  "blocks": [
+                    "grindstone"
+                  ],
+                  "state": {
+                    "face": "ceiling",
+                    "facing": "east"
+                  }
+                }
+              }
+            },
+            {
+              "condition": "location_check",
+              "predicate": {
+                "block": {
+                  "blocks": [
+                    "grindstone"
+                  ],
+                  "state": {
+                    "face": "ceiling",
+                    "facing": "west"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "condition": "any_of",
+          "terms": [
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.1250,
+                    "max": 0.8750
+                  },
+                  "y": {
+                    "min": 0.0,
+                    "max": 0.7499999990
+                  },
+                  "z": {
+                    "min": 0.250,
+                    "max": 0.750
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.31250,
+                    "max": 0.68750
+                  },
+                  "y": {
+                    "min": 0.18750,
+                    "max": 0.562499999990
+                  },
+                  "z": {
+                    "min": 0.1250,
+                    "max": 0.8750
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  },
+                  "y": {
+                    "min": 0.56250,
+                    "max": 1.0
+                  },
+                  "z": {
+                    "min": 0.1250,
+                    "max": 0.250
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  },
+                  "y": {
+                    "min": 0.56250,
+                    "max": 1.0
+                  },
+                  "z": {
+                    "min": 0.750,
+                    "max": 0.8750
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition": "all_of",
+      "terms": [
+        {
+          "condition": "location_check",
+          "predicate": {
+            "block": {
+              "blocks": [
+                "grindstone"
+              ],
+              "state": {
+                "face": "wall",
+                "facing": "south"
+              }
+            }
+          }
+        },
+        {
+          "condition": "any_of",
+          "terms": [
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.250,
+                    "max": 0.750
+                  },
+                  "y": {
+                    "min": 0.1250,
+                    "max": 0.87499999990
+                  },
+                  "z": {
+                    "min": 0.250,
+                    "max": 1.0
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.1250,
+                    "max": 0.8750
+                  },
+                  "y": {
+                    "min": 0.31250,
+                    "max": 0.68750
+                  },
+                  "z": {
+                    "min": 0.43750,
+                    "max": 0.81250
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.1250,
+                    "max": 0.250
+                  },
+                  "y": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  },
+                  "z": {
+                    "min": 0.0,
+                    "max": 0.43750
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.750,
+                    "max": 0.8750
+                  },
+                  "y": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  },
+                  "z": {
+                    "min": 0.0,
+                    "max": 0.43750
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition": "all_of",
+      "terms": [
+        {
+          "condition": "location_check",
+          "predicate": {
+            "block": {
+              "blocks": [
+                "grindstone"
+              ],
+              "state": {
+                "face": "wall",
+                "facing": "north"
+              }
+            }
+          }
+        },
+        {
+          "condition": "any_of",
+          "terms": [
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.250,
+                    "max": 0.750
+                  },
+                  "y": {
+                    "min": 0.1250,
+                    "max": 0.87499999990
+                  },
+                  "z": {
+                    "min": 0.0,
+                    "max": 0.750
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.1250,
+                    "max": 0.8750
+                  },
+                  "y": {
+                    "min": 0.31250,
+                    "max": 0.68750
+                  },
+                  "z": {
+                    "min": 0.18750,
+                    "max": 0.56250
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.1250,
+                    "max": 0.250
+                  },
+                  "y": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  },
+                  "z": {
+                    "min": 0.56250,
+                    "max": 1.0
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.750,
+                    "max": 0.8750
+                  },
+                  "y": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  },
+                  "z": {
+                    "min": 0.56250,
+                    "max": 1.0
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition": "all_of",
+      "terms": [
+        {
+          "condition": "location_check",
+          "predicate": {
+            "block": {
+              "blocks": [
+                "grindstone"
+              ],
+              "state": {
+                "face": "wall",
+                "facing": "east"
+              }
+            }
+          }
+        },
+        {
+          "condition": "any_of",
+          "terms": [
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.250,
+                    "max": 1.0
+                  },
+                  "y": {
+                    "min": 0.1250,
+                    "max": 0.87499999990
+                  },
+                  "z": {
+                    "min": 0.250,
+                    "max": 0.750
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.43750,
+                    "max": 0.81250
+                  },
+                  "y": {
+                    "min": 0.31250,
+                    "max": 0.68750
+                  },
+                  "z": {
+                    "min": 0.1250,
+                    "max": 0.8750
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.0,
+                    "max": 0.43750
+                  },
+                  "y": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  },
+                  "z": {
+                    "min": 0.1250,
+                    "max": 0.250
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.0,
+                    "max": 0.43750
+                  },
+                  "y": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  },
+                  "z": {
+                    "min": 0.750,
+                    "max": 0.8750
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition": "all_of",
+      "terms": [
+        {
+          "condition": "location_check",
+          "predicate": {
+            "block": {
+              "blocks": [
+                "grindstone"
+              ],
+              "state": {
+                "face": "wall",
+                "facing": "west"
+              }
+            }
+          }
+        },
+        {
+          "condition": "any_of",
+          "terms": [
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.0,
+                    "max": 0.750
+                  },
+                  "y": {
+                    "min": 0.1250,
+                    "max": 0.87499999990
+                  },
+                  "z": {
+                    "min": 0.250,
+                    "max": 0.750
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.18750,
+                    "max": 0.56250
+                  },
+                  "y": {
+                    "min": 0.31250,
+                    "max": 0.68750
+                  },
+                  "z": {
+                    "min": 0.1250,
+                    "max": 0.8750
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.56250,
+                    "max": 1.0
+                  },
+                  "y": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  },
+                  "z": {
+                    "min": 0.1250,
+                    "max": 0.250
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.56250,
+                    "max": 1.0
+                  },
+                  "y": {
+                    "min": 0.3750,
+                    "max": 0.6250
+                  },
+                  "z": {
+                    "min": 0.750,
+                    "max": 0.8750
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

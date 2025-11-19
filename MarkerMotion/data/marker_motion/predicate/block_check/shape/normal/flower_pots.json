@@ -1,0 +1,25 @@
+{
+  "condition": "entity_properties",
+  "entity": "this",
+  "predicate": {
+    "location": {
+      "block": {
+        "blocks": "#marker_motion:flower_pots"
+      }
+    },
+    "distance": {
+      "x": {
+        "min": 0.31250,
+        "max": 0.68750
+      },
+      "y": {
+        "min": 0.0,
+        "max": 0.37499999990
+      },
+      "z": {
+        "min": 0.31250,
+        "max": 0.68750
+      }
+    }
+  }
+}

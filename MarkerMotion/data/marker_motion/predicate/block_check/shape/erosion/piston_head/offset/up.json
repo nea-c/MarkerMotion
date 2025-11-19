@@ -1,0 +1,40 @@
+{
+  "condition": "all_of",
+  "terms": [
+    {
+      "condition": "location_check",
+      "offsetY": 1,
+      "predicate": {
+        "block": {
+          "blocks": [
+            "piston_head"
+          ],
+          "state": {
+            "facing": "up",
+            "short": "false"
+          }
+        }
+      }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "distance": {
+          "x": {
+            "min": 0.3750,
+            "max": 0.6250
+          },
+          "y": {
+            "min": 0.750,
+            "max": 1.0
+          },
+          "z": {
+            "min": 0.3750,
+            "max": 0.6250
+          }
+        }
+      }
+    }
+  ]
+}

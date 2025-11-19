@@ -1,0 +1,185 @@
+{
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "block": {
+            "blocks": [
+              "large_amethyst_bud"
+            ],
+            "state": {
+              "facing": "up"
+            }
+          }
+        },
+        "distance": {
+          "x": {
+            "min": 0.18750,
+            "max": 0.81250
+          },
+          "y": {
+            "min": 0.0,
+            "max": 0.312499999990
+          },
+          "z": {
+            "min": 0.18750,
+            "max": 0.81250
+          }
+        }
+      }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "block": {
+            "blocks": [
+              "large_amethyst_bud"
+            ],
+            "state": {
+              "facing": "down"
+            }
+          }
+        },
+        "distance": {
+          "x": {
+            "min": 0.18750,
+            "max": 0.81250
+          },
+          "y": {
+            "min": 0.68750,
+            "max": 1.0
+          },
+          "z": {
+            "min": 0.18750,
+            "max": 0.81250
+          }
+        }
+      }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "block": {
+            "blocks": [
+              "large_amethyst_bud"
+            ],
+            "state": {
+              "facing": "south"
+            }
+          }
+        },
+        "distance": {
+          "x": {
+            "min": 0.18750,
+            "max": 0.81250
+          },
+          "y": {
+            "min": 0.18750,
+            "max": 0.81249999990
+          },
+          "z": {
+            "min": 0.0,
+            "max": 0.31250
+          }
+        }
+      }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "block": {
+            "blocks": [
+              "large_amethyst_bud"
+            ],
+            "state": {
+              "facing": "north"
+            }
+          }
+        },
+        "distance": {
+          "x": {
+            "min": 0.18750,
+            "max": 0.81250
+          },
+          "y": {
+            "min": 0.18750,
+            "max": 0.81249999990
+          },
+          "z": {
+            "min": 0.68750,
+            "max": 1.0
+          }
+        }
+      }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "block": {
+            "blocks": [
+              "large_amethyst_bud"
+            ],
+            "state": {
+              "facing": "east"
+            }
+          }
+        },
+        "distance": {
+          "x": {
+            "min": 0.0,
+            "max": 0.31250
+          },
+          "y": {
+            "min": 0.18750,
+            "max": 0.81249999990
+          },
+          "z": {
+            "min": 0.18750,
+            "max": 0.81250
+          }
+        }
+      }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "block": {
+            "blocks": [
+              "large_amethyst_bud"
+            ],
+            "state": {
+              "facing": "west"
+            }
+          }
+        },
+        "distance": {
+          "x": {
+            "min": 0.68750,
+            "max": 1.0
+          },
+          "y": {
+            "min": 0.18750,
+            "max": 0.81249999990
+          },
+          "z": {
+            "min": 0.18750,
+            "max": 0.81250
+          }
+        }
+      }
+    }
+  ]
+}

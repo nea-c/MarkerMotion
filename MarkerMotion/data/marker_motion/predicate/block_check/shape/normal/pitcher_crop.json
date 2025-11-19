@@ -1,0 +1,81 @@
+{
+  "condition": "all_of",
+  "terms": [
+    {
+      "condition": "location_check",
+      "predicate": {
+        "block": {
+          "blocks": [
+            "pitcher_crop"
+          ],
+          "state": {
+            "half": "lower"
+          }
+        }
+      }
+    },
+    {
+      "condition": "any_of",
+      "terms": [
+        {
+          "condition": "entity_properties",
+          "entity": "this",
+          "predicate": {
+            "distance": {
+              "x": {
+                "min": 0.31250,
+                "max": 0.68750
+              },
+              "y": {
+                "min": 0.0,
+                "max": 0.187499999990
+              },
+              "z": {
+                "min": 0.31250,
+                "max": 0.68750
+              }
+            }
+          }
+        },
+        {
+          "condition": "all_of",
+          "terms": [
+            {
+              "condition": "inverted",
+              "term": {
+                "condition": "location_check",
+                "predicate": {
+                  "block": {
+                    "state": {
+                      "age": "0"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "condition": "entity_properties",
+              "entity": "this",
+              "predicate": {
+                "distance": {
+                  "x": {
+                    "min": 0.18750,
+                    "max": 0.81250
+                  },
+                  "y": {
+                    "min": 0.0,
+                    "max": 0.8750
+                  },
+                  "z": {
+                    "min": 0.18750,
+                    "max": 0.81250
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

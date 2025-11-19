@@ -1,0 +1,23 @@
+{
+  "condition": "entity_properties",
+  "entity": "this",
+  "predicate": {
+    "location": {
+      "block": {
+        "blocks": [
+          "sniffer_egg"
+        ]
+      }
+    },
+    "distance": {
+      "x": {
+        "min": 0.06250,
+        "max": 0.93750
+      },
+      "z": {
+        "min": 0.1250,
+        "max": 0.8750
+      }
+    }
+  }
+}

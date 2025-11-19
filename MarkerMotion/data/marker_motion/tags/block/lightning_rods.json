@@ -1,0 +1,12 @@
+{
+  "values": [
+    "lightning_rod",
+    "exposed_lightning_rod",
+    "weathered_lightning_rod",
+    "oxidized_lightning_rod",
+    "waxed_lightning_rod",
+    "waxed_exposed_lightning_rod",
+    "waxed_weathered_lightning_rod",
+    "waxed_oxidized_lightning_rod"
+  ]
+}

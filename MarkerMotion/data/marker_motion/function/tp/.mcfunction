@@ -49,5 +49,5 @@
 
 
 # kill
-    execute in marker_motion: run tp @s 0.0 0.0 0.0
-    execute in marker_motion: run tp 1604-1604-1604-1604-1604 0.0 0.0 0.0
+    execute in neac: run tp @s 0.0 0.0 0.0
+    execute in neac: run tp 1604-1604-1604-1604-1604 0.0 0.0 0.0

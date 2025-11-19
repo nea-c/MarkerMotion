@@ -1,5 +1,6 @@
 {
-    "values": [
-        "marker_motion:load"
-    ]
+  "values": [
+    "marker_motion:load",
+    "neac:load"
+  ]
 }

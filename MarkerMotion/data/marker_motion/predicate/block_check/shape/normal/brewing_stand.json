@@ -1,0 +1,69 @@
+{
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "any_of",
+      "terms": [
+        {
+          "condition": "entity_properties",
+          "entity": "this",
+          "predicate": {
+            "location": {
+              "block": {
+                "blocks": [
+                  "brewing_stand"
+                ]
+              }
+            },
+            "distance": {
+              "x": {
+                "min": 0.43750,
+                "max": 0.56250
+              },
+              "y": {
+                "min": 0.0,
+                "max": 0.87499999990
+              },
+              "z": {
+                "min": 0.43750,
+                "max": 0.56250
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "condition": "any_of",
+      "terms": [
+        {
+          "condition": "entity_properties",
+          "entity": "this",
+          "predicate": {
+            "location": {
+              "block": {
+                "blocks": [
+                  "brewing_stand"
+                ]
+              }
+            },
+            "distance": {
+              "x": {
+                "min": 0.06250,
+                "max": 0.93750
+              },
+              "y": {
+                "min": 0.0,
+                "max": 0.12499999990
+              },
+              "z": {
+                "min": 0.06250,
+                "max": 0.93750
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

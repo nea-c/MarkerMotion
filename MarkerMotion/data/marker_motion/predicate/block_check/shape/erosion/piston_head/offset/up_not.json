@@ -1,0 +1,18 @@
+{
+  "condition": "inverted",
+  "term": {
+    "condition": "location_check",
+    "offsetY": 1,
+    "predicate": {
+      "block": {
+        "blocks": [
+          "piston_head"
+        ],
+        "state": {
+          "facing": "up",
+          "short": "false"
+        }
+      }
+    }
+  }
+}

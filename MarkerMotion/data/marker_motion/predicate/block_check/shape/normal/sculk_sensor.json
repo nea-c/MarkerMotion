@@ -1,0 +1,22 @@
+{
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "block": {
+            "blocks": "#marker_motion:sculk_sensor"
+          }
+        },
+        "distance": {
+          "y": {
+            "min": 0.0,
+            "max": 0.499999990
+          }
+        }
+      }
+    }
+  ]
+}

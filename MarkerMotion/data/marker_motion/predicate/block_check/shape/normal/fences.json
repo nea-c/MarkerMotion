@@ -1,0 +1,122 @@
+{
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "block": {
+            "blocks": "#marker_motion:fences"
+          }
+        },
+        "distance": {
+          "x": {
+            "min": 0.3750,
+            "max": 0.6250
+          },
+          "z": {
+            "min": 0.3750,
+            "max": 0.6250
+          }
+        }
+      }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "block": {
+            "blocks": "#marker_motion:fences",
+            "state": {
+              "south": "true"
+            }
+          }
+        },
+        "distance": {
+          "x": {
+            "min": 0.3750,
+            "max": 0.6250
+          },
+          "z": {
+            "min": 0.6250,
+            "max": 1.0
+          }
+        }
+      }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "block": {
+            "blocks": "#marker_motion:fences",
+            "state": {
+              "north": "true"
+            }
+          }
+        },
+        "distance": {
+          "x": {
+            "min": 0.3750,
+            "max": 0.6250
+          },
+          "z": {
+            "min": 0.0,
+            "max": 0.3750
+          }
+        }
+      }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "block": {
+            "blocks": "#marker_motion:fences",
+            "state": {
+              "west": "true"
+            }
+          }
+        },
+        "distance": {
+          "x": {
+            "min": 0.0,
+            "max": 0.3750
+          },
+          "z": {
+            "min": 0.3750,
+            "max": 0.6250
+          }
+        }
+      }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "block": {
+            "blocks": "#marker_motion:fences",
+            "state": {
+              "east": "true"
+            }
+          }
+        },
+        "distance": {
+          "x": {
+            "min": 0.6250,
+            "max": 1.0
+          },
+          "z": {
+            "min": 0.3750,
+            "max": 0.6250
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "block": {
+            "blocks": "pale_moss_carpet",
+            "state": {
+              "bottom": "true"
+            }
+          }
+        },
+        "distance": {
+          "y": {
+            "min": 0.0,
+            "max": 0.062499999990
+          }
+        }
+      }
+    }
+  ]
+}

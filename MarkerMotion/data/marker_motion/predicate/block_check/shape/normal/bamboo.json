@@ -1,0 +1,23 @@
+{
+  "condition": "entity_properties",
+  "entity": "this",
+  "predicate": {
+    "location": {
+      "block": {
+        "blocks": [
+          "bamboo"
+        ]
+      }
+    },
+    "distance": {
+      "x": {
+        "min": 0.343750,
+        "max": 0.656250
+      },
+      "z": {
+        "min": 0.343750,
+        "max": 0.656250
+      }
+    }
+  }
+}

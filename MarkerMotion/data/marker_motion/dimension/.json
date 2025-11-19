@@ -1,0 +1,13 @@
+{
+  "type": "marker_motion:void",
+  "generator": {
+    "type": "flat",
+    "settings": {
+      "biome": "the_void",
+      "lakes": false,
+      "features": false,
+      "layers": [],
+      "structure_overrides": []
+    }
+  }
+}

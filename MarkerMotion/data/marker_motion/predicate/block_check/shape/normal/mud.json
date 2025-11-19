@@ -1,0 +1,19 @@
+{
+  "condition": "entity_properties",
+  "entity": "this",
+  "predicate": {
+    "location": {
+      "block": {
+        "blocks": [
+          "mud"
+        ]
+      }
+    },
+    "distance": {
+      "y": {
+        "min": 0.0,
+        "max": 0.87499999990
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "values": [
+    "acacia_trapdoor",
+    "birch_trapdoor",
+    "dark_oak_trapdoor",
+    "pale_oak_trapdoor",
+    "jungle_trapdoor",
+    "oak_trapdoor",
+    "spruce_trapdoor",
+    "crimson_trapdoor",
+    "warped_trapdoor",
+    "mangrove_trapdoor",
+    "bamboo_trapdoor",
+    "cherry_trapdoor",
+    "iron_trapdoor",
+    "copper_trapdoor",
+    "exposed_copper_trapdoor",
+    "weathered_copper_trapdoor",
+    "oxidized_copper_trapdoor",
+    "waxed_copper_trapdoor",
+    "waxed_exposed_copper_trapdoor",
+    "waxed_weathered_copper_trapdoor",
+    "waxed_oxidized_copper_trapdoor"
+  ]
+}

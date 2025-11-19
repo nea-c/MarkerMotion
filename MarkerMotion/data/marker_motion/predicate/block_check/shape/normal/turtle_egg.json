@@ -1,0 +1,104 @@
+{
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "location": {
+          "block": {
+            "blocks": [
+              "turtle_egg"
+            ],
+            "state": {
+              "eggs": "1"
+            }
+          }
+        },
+        "distance": {
+          "x": {
+            "min": 0.18750,
+            "max": 0.750
+          },
+          "y": {
+            "min": 0.0,
+            "max": 0.43749999990
+          },
+          "z": {
+            "min": 0.18750,
+            "max": 0.750
+          }
+        }
+      }
+    },
+    {
+      "condition": "all_of",
+      "terms": [
+        {
+          "condition": "any_of",
+          "terms": [
+            {
+              "condition": "location_check",
+              "predicate": {
+                "block": {
+                  "blocks": [
+                    "turtle_egg"
+                  ],
+                  "state": {
+                    "eggs": "2"
+                  }
+                }
+              }
+            },
+            {
+              "condition": "location_check",
+              "predicate": {
+                "block": {
+                  "blocks": [
+                    "turtle_egg"
+                  ],
+                  "state": {
+                    "eggs": "3"
+                  }
+                }
+              }
+            },
+            {
+              "condition": "location_check",
+              "predicate": {
+                "block": {
+                  "blocks": [
+                    "turtle_egg"
+                  ],
+                  "state": {
+                    "eggs": "4"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "condition": "entity_properties",
+          "entity": "this",
+          "predicate": {
+            "distance": {
+              "x": {
+                "min": 0.06250,
+                "max": 0.93750
+              },
+              "y": {
+                "min": 0.0,
+                "max": 0.43749999990
+              },
+              "z": {
+                "min": 0.06250,
+                "max": 0.93750
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
